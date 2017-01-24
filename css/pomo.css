@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Scope+One);
+
+* {
+  font-family: 'Scope One', serif;
+  text-align: center;
+}
+#pomo {
+  margin: 100px;
+}
+input {
+  width: 75px;
+  font-size: 24px;
+}
+.fa {
+  margin: 0px 10px;
+}
+.fa:hover{
+  cursor: pointer;
+}
+i.fa-pause {
+  display: none;
+}
+#reset h3{
+  font-weight: bold;
+}
+#reset:hover {
+  font-size: 28px;
+}
+.pointer {
+  cursor: pointer;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.row {
+  width: 65%;
+  margin: auto;
+  padding: 15px;
+}
+#wrk {
+  background-color: #dedeed;
+  border-radius: 50%;
+  padding-bottom: 50px;
+  padding-top: 35px;
+  border: solid 10px #9999e6;
+}
+#brk {
+  background-color: #dedeed;
+  border-radius: 50%;
+  padding-bottom: 50px;
+  padding-top: 35px;
+  border: solid 10px #afafcf;
+}
+#line {
+  background-color:#e8e8fc;
+  height: 15px;
+}
+#circle{
+  background-color:#8c8cf2;
+  border: solid 2px black;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-left: -2%;
+  margin-right: 98%;
+  transform: translate(0, -20%);
+}
+
+@media (max-width: 900px) {
+  .row {
+    width: 80%;
+  }
+}
+@media (max-width: 750px) {
+  #brk .fa {
+    width: 70%;
+    margin: auto;
+  }
+   #wrk .fa {
+    width: 70%;
+    margin: auto;
+  }
+}
+#designed a {
+  color: #8c8cf2;
+}
+#designed a:visited {
+  color: #8c8cf2;
+}
