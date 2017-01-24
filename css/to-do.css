@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+  font-family: 'Raleway', serif;
+}
+
+#box {
+  text-align: center;
+  border: 3px solid #3F4C59;
+  float: none;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #E5CAE6;
+  padding: 0;
+  padding-bottom: 25px;
+}
+
+#title {
+  padding: 15px;
+}
+
+.big {
+  text-align: left;
+  background-color: #ADAFDB;
+  padding: 12px;
+  border: 3px solid #E1E5E9;
+}
+
+.little {
+  display: none;
+  border: 3px solid #E1E5E9;
+  text-align: left;
+  background-color: #ADDBC2;
+  padding: 8px;
+}
+
+.little-check {
+  float: left;
+}
+
+.little h5 {
+  padding-left: 10px;
+}
+
+.text {
+  word-wrap: break-word;
+  max-width: 95%;
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.fa {
+  float: right;
+  cursor: pointer;
+}
+
+.done {
+  background-color: #c4ccd4;
+  text-decoration: line-through;
+  font-style: italic;
+  padding: 2px 8px 2px 15px;
+}
+
+.big-done {
+  background-color: #cdcee4;
+  font-style: italic;
+}
+
+.delete,
+.short-add,
+.comp-icon {
+  padding-right: 10px;
+}
+
+.new-do {
+  margin-left: 3px;
+}
+
+.complete h5 {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.complete {
+  border: 3px solid #E1E5E9;
+  text-align: left;
+  background-color: #a3c2b0;
+  padding: 4px 8px 4px 15px;
+}
+
+#check-alert {
+  float: none;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+button .fa-times {
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+}
+
+.fa-times-circle:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  border: 3px solid #E1E5E9;
+  border-radius: 0;
+}
+
+.modal-header {
+  background-color: #E5CAE6;
+  border: 3px solid #E1E5E9;
+  padding-top: 8px;
+}
+
+.modal-body {
+  border: 3px solid #E1E5E9;
+}
+
+#delete-alert {
+  text-align: center;
+}
+
+#delete-alert .btn {
+  border: 3px solid #E1E5E9;
+  padding: 15px;
+}
+
+.big-check {
+  float: left;
+}
+
+.delete-big {
+  float: left;
+  padding-right: 10px;
+}
+
+.little-complete {
+  display: none;
+}
+
+.finished {
+  display: none;
+}
