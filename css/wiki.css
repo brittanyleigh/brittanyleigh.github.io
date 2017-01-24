@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Work+Sans:300');
+
+body {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: #68656e;
+}
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  margin-top: 50px;
+  font-size: 64px;
+  color: #3e4761;
+}
+h2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 48px;
+  color: #3e4761;
+}
+a {
+  color: #bfabae;
+}
+#search {
+  font-size: 32px;
+  margin: 10px;
+}
+#random {
+  margin: 10px;
+}
+.fa:hover {
+  cursor: pointer;
+}
+#input {
+  border: none;
+  width: 85%;
+}
+*:focus {
+    outline: none;
+}
+button {
+  background-color: #bfabae;
+  border: none;
+  
+}
+#search-form button {
+  background-color: white;
+  float: right;
+}
+#search-form {
+  border: solid 1px #bfabae;
+  height: 30px;
+  width: 16%;
+  margin: auto;
+}
+#search p {
+  margin: 15px;
+  font-size: 18px;
+}
+#submit {
+  background-color: #bfabae;
+  box-shadow: inset 0px 0px 12px 1px rgba(161,141,144,1);
+  
+  width: 10%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  
+  padding: 5px;
+}
+.box{
+  border: solid 2px #bfabae;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 75%;  
+}
+.box:hover{
+  border: solid 10px #a8888d;
+  cursor: pointer;
+}
+
+footer {
+  
+  padding-top: 50px;
+}
+#submit:hover{
+  cursor: pointer; 
+  box-shadow: inset 0px 0px 5px 2px rgba(138,117,121,1);
+  
+}
+
+.fa-search {
+  color: #a8888d;
+}
+a:hover {
+  color: #a8888d;
+}
+@media (max-width: 1215px) {
+  #search-form {
+    width: 25%;
+  }
+}
+@media (max-width: 1030px) {
+  #submit {
+    width: 15%;
+  }
+}
+@media (max-width: 725px) {
+  #submit {
+    width: 30%;
+  }
+  #search-form {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  #submit {
+    width: 50%;
+  }
+  #search-form {
+    width: 65%;
+  }
+}
