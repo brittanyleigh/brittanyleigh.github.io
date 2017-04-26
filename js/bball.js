@@ -63,8 +63,8 @@ $.ajax
       var awayID = dataScore[i].game.awayTeam.ID;
       var homeTeam = dataScore[i].game.homeTeam.Name;
       var awayTeam = dataScore[i].game.awayTeam.Name;
-      var homeScore = dataScore[i].homeScore;
-      var awayScore = dataScore[i].awayScore;
+      var homeScore = Number(dataScore[i].homeScore);
+      var awayScore = Number(dataScore[i].awayScore);
       var homeColor = teamColor(homeID);
       var awayColor = teamColor(awayID);
       if (homeID == 131 || awayID == 131){
@@ -74,7 +74,7 @@ $.ajax
         if (homeID == 131 && homeScore > awayScore || awayID == 131 && awayScore > homeScore){
           $('#yesterday .game .WL h1').html('W');
         }
-        else {
+        else{
           $('#yesterday .game .WL h1').html('L');
         }
         break;
