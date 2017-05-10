@@ -6,17 +6,23 @@ $(document).ready(function() {
   var year = today.getFullYear();
   var month = today.getMonth() + 1;
   var date = today.getDate();
-  var schedDate = year + '-0' + month + '-' + date;
-  var scoreDate = year + '0' + month + '' + date-1;
+  if (month < 10) {
+    var scoreDate = year + '0' + month + '' + date-1;
+  }
+  else {
+    var scoreDate = year + '' + month + '' + date-1;
+  }
+
 
 
   $('#heading h1').append(today.toDateString());
   $('.teams').hide();
+  $('#doubleheader').hide();
 
 $.ajax
 ({
   type: "GET",
-  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/2017-regular/full_game_schedule.json',
+  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team=chc',
   dataType: 'json',
   async: false,
   headers: {
@@ -24,32 +30,41 @@ $.ajax
   },
   //data: formdata,
   success:
-  function todaysGame (data) {
+  function (data) {
     var dataSched = data.fullgameschedule.gameentry;
-    for (var i=0; i<= dataSched.length; i++){
-      var homeID = dataSched[i].homeTeam.ID;
-      var awayID = dataSched[i].awayTeam.ID;
-      var homeTeam = dataSched[i].homeTeam.Name;
-      var awayTeam = dataSched[i].awayTeam.Name;
-      var time = dataSched[i].time;
-      var homeColor = teamColor(homeID);
-      var awayColor = teamColor(awayID);
-        if (dataSched[i].date == schedDate &&
-          (homeID == 131 || awayID == 131)){
-            $('#today .teams').show();
-            $('#today .game .time h1').html(time.slice(0, -2));
-            $('#today .teams .away').append(awayTeam + ' @').addClass(awayColor);
-            $('#today .teams .home').append(homeTeam).addClass(homeColor);
-        } // if
-    } // for
+    if (dataSched[0]){
+      displayGame (dataSched[0], '#today');
+    }
+    if (dataSched[1]){
+      $('#doubleheader').show();
+      displayGame(dataSched[1], '#doubleheader');
+    }
+
+
+
+     
+
   } // function/success
 }); // ajax call
-// todays game - full schedule API
 
+// todays game - full schedule API
+function displayGame (gameData, game){
+    var homeID = gameData.homeTeam.ID;
+    var awayID = gameData.awayTeam.ID;
+    var homeTeam = gameData.homeTeam.Name;
+    var awayTeam = gameData.awayTeam.Name;
+    var time = gameData.time;
+    var homeColor = teamColor(homeID);
+    var awayColor = teamColor(awayID);
+    $(game + ' .teams').show();
+    $(game + ' .game .time h1').html(time.slice(0, -2));
+    $(game + ' .teams .away').append(awayTeam + ' @').addClass(awayColor);
+    $(game + ' .teams .home').append(homeTeam).addClass(homeColor);    
+    }
 $.ajax
 ({
   type: "GET",
-  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/2017-regular/scoreboard.json?fordate='+ scoreDate,
+  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/scoreboard.json?fordate='+ scoreDate,
   dataType: 'json',
   async: false,
   headers: {
