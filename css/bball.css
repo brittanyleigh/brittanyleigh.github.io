@@ -31,7 +31,8 @@ h3 {
     max-width: 175px;
     max-height: 175px; }
   #heading h1 {
-    padding: 15px; }
+    padding: 15px;
+    margin: 15px; }
   @media (max-width: 950px) {
     #heading h1 {
       font-size: 48px; } }
@@ -46,13 +47,13 @@ h3 {
       max-width: 50px;
       max-height: 50px; } }
 
-#logo, #date {
-  width: 50%; }
+#date, #teamform {
+  width: 300px; }
 
-#today, #yesterday, #doubleheader {
+#today, #yesterday {
   width: 400px; }
   @media (max-width: 525px) {
-    #today h2, #yesterday h2, #doubleheader h2 {
+    #today h2, #yesterday h2 {
       font-size: 28px; } }
 
 .game {
@@ -100,5 +101,14 @@ h3 {
     border: solid 2px #FD5A1E;
     background-color: #ead3ca;
     margin: 5px; }
+
+#teamForm h3 {
+  margin: 10px; }
+
+select {
+  height: 50px;
+  font-size: 28px;
+  border: solid 2px black;
+  font-family: "Passion One", Verdana, sans-serif; }
 
 /*# sourceMappingURL=bball.css.map */

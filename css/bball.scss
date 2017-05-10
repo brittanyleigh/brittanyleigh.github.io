@@ -48,6 +48,7 @@ h3 {
   }
   h1 {
     padding: 15px;
+    margin: 15px;
   }
   @media (max-width: 950px){
     h1 {
@@ -71,8 +72,8 @@ h3 {
     }
 }
 
-#logo, #date {
-  width: 50%;
+#date, #teamform {
+  width: 300px;
 }
 #today, #yesterday {
   width: 400px;
@@ -126,4 +127,15 @@ h3 {
   .orange-team {
     @include team-color($orange-team);
   }
+}
+#teamForm {
+  h3 {
+    margin: 10px;
+  }
+}
+select {
+  height: 50px;
+  font-size: $h3-size;
+  border: solid 2px black;
+  font-family: $font-stack;
 }

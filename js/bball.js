@@ -12,17 +12,31 @@ $(document).ready(function() {
   else {
     var scoreDate = year + '' + month + '' + date-1;
   }
+  var teamID = '131';
+    $('.teams').hide();
+    $('#doubleheader').hide();
+  ajax1();
+  ajax2();
+  
 
-
-
+ 
   $('#heading h1').append(today.toDateString());
-  $('.teams').hide();
-  $('#doubleheader').hide();
 
+  
+  $('#selectTeam').change(function(){
+    teamID = $(this).val();
+    $('#heading img').attr("src", 'img/' + teamID + '.png');
+    ajax1();
+    ajax2();
+  });
+
+
+
+function ajax1(){
 $.ajax
 ({
   type: "GET",
-  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team=chc',
+  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
   dataType: 'json',
   async: false,
   headers: {
@@ -32,12 +46,19 @@ $.ajax
   success:
   function (data) {
     var dataSched = data.fullgameschedule.gameentry;
-    if (dataSched[0]){
+    if (dataSched){
       displayGame (dataSched[0], '#today');
     }
+    else {
+      $('#today .game .time h1').html('Off Day!');
+      $('#today .teams').hide();
+    };
     if (dataSched[1]){
       $('#doubleheader').show();
       displayGame(dataSched[1], '#doubleheader');
+    }
+    else {
+      $('#doubleheader').hide();
     }
 
 
@@ -46,7 +67,7 @@ $.ajax
 
   } // function/success
 }); // ajax call
-
+};
 // todays game - full schedule API
 function displayGame (gameData, game){
     var homeID = gameData.homeTeam.ID;
@@ -56,11 +77,17 @@ function displayGame (gameData, game){
     var time = gameData.time;
     var homeColor = teamColor(homeID);
     var awayColor = teamColor(awayID);
+    var awayDiv = ' .teams .away';
+    var homeDiv = ' .teams .home';
+    clearBgColor(awayDiv);
+    clearBgColor(homeDiv);
     $(game + ' .teams').show();
     $(game + ' .game .time h1').html(time.slice(0, -2));
-    $(game + ' .teams .away').append(awayTeam + ' @').addClass(awayColor);
-    $(game + ' .teams .home').append(homeTeam).addClass(homeColor);    
+    $(game + awayDiv).html(awayTeam + ' @').addClass(awayColor);
+    $(game + homeDiv).html(homeTeam).addClass(homeColor);    
     }
+
+function ajax2(){    
 $.ajax
 ({
   type: "GET",
@@ -82,11 +109,15 @@ $.ajax
       var awayScore = Number(dataScore[i].awayScore);
       var homeColor = teamColor(homeID);
       var awayColor = teamColor(awayID);
-      if (homeID == 131 || awayID == 131){
+      var awayDiv = '#yesterday .teams .away';
+      var homeDiv = '#yesterday .teams .home';
+      if (homeID == teamID || awayID == teamID){
         $('#yesterday .teams').show();
-        $('#yesterday .teams .away').append(awayTeam + ' : ' + awayScore).addClass(awayColor);
-        $('#yesterday .teams .home').append(homeTeam + ' : ' + homeScore).addClass(homeColor);
-        if (homeID == 131 && homeScore > awayScore || awayID == 131 && awayScore > homeScore){
+        clearBgColor(awayDiv);
+        clearBgColor(homeDiv);
+        $(awayDiv).html(awayTeam + ' : ' + awayScore).addClass(awayColor);
+        $(homeDiv).html(homeTeam + ' : ' + homeScore).addClass(homeColor);
+        if (homeID == teamID && homeScore > awayScore || awayID == teamID && awayScore > homeScore){
           $('#yesterday .game .WL h1').html('W');
         }
         else{
@@ -95,12 +126,20 @@ $.ajax
         break;
       } // if
       else {
+        $('#yesterday .game .WL h1').html('Off Day!');
+        $('#yesterday .teams').hide();
         continue;
       } // else
 
     } // for
   } // success function
 }); //ajax call
+}
+
+function clearBgColor(teamDiv){
+  $(teamDiv).removeClass('red-team blue-team black-team green-team yellow-team orange-team navy-team');
+}
+
 // yesterdays score - scoreboard API
 function teamColor(id) {
   var teamColorClass;
