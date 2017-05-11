@@ -74,32 +74,32 @@ h3 {
   text-align: center;
   width: 100%; }
   .teams .blue-team {
-    border: solid 2px #0E3386;
-    background-color: #7b8cb2;
+    border: solid 2px #071941;
+    background-color: #8b9abb;
     margin: 5px; }
   .teams .navy-team {
-    border: solid 2px #0C2340;
-    background-color: #637182;
+    border: solid 2px black;
+    background-color: #6e7d90;
     margin: 5px; }
   .teams .black-team {
     border: solid 2px black;
-    background-color: #4d4d4d;
+    background-color: #595959;
     margin: 5px; }
   .teams .red-team {
-    border: solid 2px red;
-    background-color: #e3b5b5;
+    border: solid 2px #b30000;
+    background-color: #eac8c8;
     margin: 5px; }
   .teams .yellow-team {
-    border: solid 2px #FDB827;
-    background-color: #ede3d0;
+    border: solid 2px #d69102;
+    background-color: #f4eee3;
     margin: 5px; }
   .teams .green-team {
-    border: solid 2px #003831;
-    background-color: #39988c;
+    border: solid 2px #010200;
+    background-color: #70966b;
     margin: 5px; }
   .teams .orange-team {
-    border: solid 2px #FD5A1E;
-    background-color: #ead3ca;
+    border: solid 2px #cd3802;
+    background-color: #f1e2dc;
     margin: 5px; }
 
 #teamForm h3 {

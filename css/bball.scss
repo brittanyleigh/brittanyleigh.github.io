@@ -10,7 +10,7 @@ $navy-team: #0C2340;
 $yellow-team: #FDB827;
 $black-team: black;
 $orange-team: #FD5A1E;
-$green-team: #003831;
+$green-team: #12440b;
 
 h1 {
   font-size: $h1-size;
@@ -96,8 +96,8 @@ h3 {
   margin: 10px;
 }
 @mixin team-color($color) {
-  border: solid 2px $color;
-  background-color: desaturate(lighten($color, 30%), 55%);
+  border: solid 2px darken($color, 15%);
+  background-color: desaturate(lighten($color, 35%), 55%);
   margin: 5px;
 }
 
