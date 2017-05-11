@@ -83,7 +83,7 @@ h3 {
     }
   }
 }
-.game {
+.game, .game2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +91,7 @@ h3 {
   border: solid 2px black;
   padding: 15px;
   text-align: center;
+  margin-bottom: 15px;
 }
 .time h1, .WL h1{
   margin: 10px;

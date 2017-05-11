@@ -1,93 +1,100 @@
 <head>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="js/bball.js"></script>
+  <script src="js/bball.js"></script>
   <link rel="stylesheet" href="css/bball.css">
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div id="heading">
-    <img src="img/131.png"/>
-    <form id="teamForm">
-  <h3>Choose your team:</h3>
-  <select id="selectTeam">
-    <option value="140"><h3>Arizona Diamondbacks</h3></option>
-    <option value="130">Atlanta Braves</option>
-    <option value="111">Baltimore Orioles</option>
-    <option value="113">Boston Red Sox</option>
-    <option value="131" selected="selected">Chicago Cubs</option>
-    <option value="119">Chicago White Sox</option>
-    <option value="135">Cincinnati Reds</option>
-    <option value="138">Colorado Rockies</option>  
-    <option value="117">Detroit Tigers</option>  
-    <option value="122">Houston Astros</option>
-    <option value="118">Kansas City Royals</option>
-    <option value="124">Los Angeles Angels</option>
-    <option value="137">Los Angeles Dodgers</option>
-    <option value="128">Miami Marlins</option>
-    <option value="134">Milwaukee Brewers</option>
-    <option value="120">Minnesota Twins</option>
-    <option value="127">New York Mets</option>
-    <option value="114">New York Yankees</option>
-    <option value="125">Oakland Athletics</option>
-    <option value="129">Philadelphia Phillies</option>
-    <option value="132">Pittsburgh Pirates</option>
-    <option value="139">San Diego Padres</option>
-    <option value="136">San Francisco Giants</option>
-    <option value="123">Seattle Mariners</option>
-    <option value="133">St. Louis Cardinals</option>
-    <option value="115">Tampa Bay Rays</option>
-    <option value="121">Texas Rangers</option>
-    <option value="112">Toronto Blue Jays</option>
-    <option value="126">Washington Nationals</option>
-  </select>
-</form>
-    <h1></h1>
-  </div>
-
-
+    <div id="heading">
+      <img src="img/131.png"/>
+      <form id="teamForm">
+        <h3>Choose your team:</h3>
+        <select id="selectTeam">
+          <option value="140"><h3>Arizona Diamondbacks</h3></option>
+          <option value="130">Atlanta Braves</option>
+          <option value="111">Baltimore Orioles</option>
+          <option value="113">Boston Red Sox</option>
+          <option value="131" selected="selected">Chicago Cubs</option>
+          <option value="119">Chicago White Sox</option>
+          <option value="135">Cincinnati Reds</option>
+          <option value="138">Colorado Rockies</option>  
+          <option value="117">Detroit Tigers</option>  
+          <option value="122">Houston Astros</option>
+          <option value="118">Kansas City Royals</option>
+          <option value="124">Los Angeles Angels</option>
+          <option value="137">Los Angeles Dodgers</option>
+          <option value="128">Miami Marlins</option>
+          <option value="134">Milwaukee Brewers</option>
+          <option value="120">Minnesota Twins</option>
+          <option value="127">New York Mets</option>
+          <option value="114">New York Yankees</option>
+          <option value="125">Oakland Athletics</option>
+          <option value="129">Philadelphia Phillies</option>
+          <option value="132">Pittsburgh Pirates</option>
+          <option value="139">San Diego Padres</option>
+          <option value="136">San Francisco Giants</option>
+          <option value="123">Seattle Mariners</option>
+          <option value="133">St. Louis Cardinals</option>
+          <option value="115">Tampa Bay Rays</option>
+          <option value="121">Texas Rangers</option>
+          <option value="112">Toronto Blue Jays</option>
+          <option value="126">Washington Nationals</option>
+        </select>
+      </form>
+      <h1></h1>
+    </div>
 
 
-  <div id="today">
-    <h2>Today's Game:</h2>
-    <div class="game">
-      <div class="time">
-        <h1>Off Day!</h1>
+
+
+    <div id="today">
+      <h2>Today's Game:</h2>
+      <div class="game">
+        <div class="time">
+          <h1>Off Day!</h1>
+        </div>
+        <div class="teams">
+          <h3 class="away"></h3>
+          <h3 class="home"></h3>
+        </div>
       </div>
-      <div class="teams">
-        <h3 class="away"></h3>
-        <h3 class="home"></h3>
+      <div class="game2">
+        <div class="time">
+          <h1>Off Day!</h1>
+        </div>
+        <div class="teams">
+          <h3 class="away"></h3>
+          <h3 class="home"></h3>
+        </div>
       </div>
     </div>
-  </div>
-    <div id="doubleheader">
-  <h2>Double Header!</h2>
-    <div class="game">
-      <div class="time">
-        <h1></h1>
+    <div id="yesterday">
+      <h2>Yesterday's Score: </h2>
+      <div class="game">
+        <div class="WL">
+          <h1>Off Day!</h1>
+        </div>
+        <div class="teams">
+          <h3 class="away"></h3>
+          <h3 class="home"></h3>
+        </div>
       </div>
-      <div class="teams">
-        <h3 class="away"></h3>
-        <h3 class="home"></h3>
-      </div>
-    </div>
-  </div>
-  <div id="yesterday">
-    <h2>Yesterday's Score: </h2>
-    <div class="game">
-      <div class="WL">
-        <h1>Off Day!</h1>
-      </div>
-      <div class="teams">
-        <h3 class="away"></h3>
-        <h3 class="home"></h3>
+            <div class="game2">
+        <div class="WL">
+          <h1></h1>
+        </div>
+        <div class="teams">
+          <h3 class="away"></h3>
+          <h3 class="home"></h3>
+        </div>
       </div>
     </div>
+
+
+
   </div>
-
-
-</div>
 
 </body>
