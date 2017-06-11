@@ -1,0 +1,264 @@
+.container {
+	width: 100%;
+	background-color: #b490ca;
+}
+/* Backgrounds */
+.background-img {
+	min-height: 500px;
+	background-image: url('coffee.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.background-img-parallax {
+	min-height: 500px;
+	background-image: url('mountains.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.gradient-background{
+	background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+	min-height: 250px;
+}
+.background-solid {
+	background-color: #c29cad;
+	min-height: 250px;
+}
+.color-border {
+	background-color: #5ee7df;
+	height: 35px;
+	min-height: 0px;
+}
+
+/* General/All */
+.row-content {
+	padding: 50px;
+}
+.section { /* for all text components */
+	padding: 25px;
+	text-align: center;
+}
+.content-box {
+	border: solid 2px black;
+	padding: 15px;
+}
+
+/* Bullets */
+.bullets .content-box {
+	min-height: 265px; /* change to suit content, adjust with media queries */
+}
+
+/* Image Bars */
+/* All Image Bars */
+.image-bar {
+	height: 250px; /* change as needed, adjust with media queries */
+	/* images are xs-12 by default - @768 either hide 3, change to xs-3, or adjust height to contain all 4 stacked */
+}
+.image-bar-1, .image-bar-2, .image-bar-3, .image-bar-4 {
+	height:100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* these next 3 lines utilize flexbox to center any children inside */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.image-bar-1 {
+	background-image: url('mountains.jpg');
+}
+.image-bar-2 {
+	background-image: url('coffee.jpg');
+}
+.image-bar-3 {
+	background-image: url('mountains.jpg');
+}
+.image-bar-4 {
+	background-image: url('coffee.jpg');
+}
+/* Image Bar (One) */
+@media (max-width: 768px){
+	.image-bar .image-bar-2, .image-bar .image-bar-3, .image-bar .image-bar-4 {
+		display: none;
+	}
+}
+/* Image Bar Two (text on top) */
+.image-bar-two {
+	background-color: #fff;
+	height: 350px; /* change as needed, adjust with media queries */
+	/* images are xs-12 by default - @768 either hide 3, change to xs-3, or adjust height to contain all 4 stacked */
+}
+.image-bar-two .section {
+	background-color: #fff;
+	border: solid 2px gray;
+}
+.image-bar-two h3 {
+	margin: 0px;
+}
+@media (max-width: 768px){
+	.image-bar-two {
+		height: 600px;
+	}
+	.image-bar-two .image-bar-1, .image-bar-two .image-bar-2, .image-bar-two .image-bar-3 {
+		height: 33.3333%;
+	}
+}
+/* Image Bar Hover Overlay */
+.hover-overlay:hover .image-overlay{
+	opacity: 0.3;
+	cursor: pointer;
+}
+.hover-overlay:hover .sec-no-overlay {
+	cursor: pointer;
+}
+.hover-overlay {
+	position: relative;
+	padding: 0px;
+}
+.sec-no-overlay {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+/* Image Bar Three (text below) */
+.image-bar-three {
+	height: 350;
+}
+@media (max-width: 768px){
+	.image-bar-three {
+		height: 1000px;
+	}
+	.image-bar-three .sec-1, .image-bar-three .sec-2, .image-bar-three .sec-3 {
+		height: 33.3333%;
+	}
+}
+.img-text-below {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.image-bar-three .section {
+	padding: 5px;
+	width: 100%;
+}
+.image-bar-three .sec-1, .image-bar-three .sec-2, .image-bar-three .sec-3 {
+	padding: 0px;
+}
+.sec-1 .section {
+	background-color: #9D9CC1;
+}
+.sec-2 .section{
+	background-color: #E5DF6B;
+}
+.sec-3 .section{
+	background-color: #9cbfc1;
+}
+.image-bar-three .section h2{
+    margin: 10px;
+}
+
+/* Color Blocks */
+.color-blocks .content-box {
+	min-height: 350px; /* change to suit content, adjust with media queries */
+}
+@media (max-width: 992px){
+	.color-blocks .content-box {
+		min-height: 150px; 
+	}
+}
+.color-block-1 {
+	background-color: #9cbfc1;
+}
+.color-block-2 {
+	background-color: #9d9cc1;
+}
+.color-block-3 {
+	background-color: #e5df6b;
+}
+
+/* Angled Edges */
+.angled-edges {
+	background-color: #9cbfc1;
+	position: relative;
+	z-index: 1;
+	/*margin-top: 15px;*/
+}
+.angled-edges::before, .angled-edges::after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; 
+}
+.angled-edges::before {
+    top: 0;
+    transform: skewY(2.5deg);
+    transform-origin: 100% 0;
+}
+.angled-edges::after {
+    bottom: 0;
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
+  }
+/* Give bordering sections extra padding to clear angled edges */
+.above-angled {
+	padding-bottom: 50px;
+}
+.below-angled {
+	padding-top: 50px;
+}
+
+/* One Box Section */
+.one-box .content-box{
+	min-height: 0px;
+	margin: 30px;
+    background-color: #fff;
+}
+
+/* One Box and One Photo */
+.side-img {
+	background-image: url('mountains.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 250px;
+}
+@media (max-width: 991px){
+	.side-img {
+		height: 500px;
+	}
+	.box-and-photo .section {
+		width: 100%;
+	}
+}
+@media (max-width: 768px){
+	.side-img {
+		height: 400px;
+	}
+}
+.box-and-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box-and-photo .section {
+	text-align: left;
+}
+.box-and-photo .content-box {
+	background-color: #fff;
+}
+.full-width-img .side-img{
+	min-height: 350px; /* Needs to be taller than content on other side to be full width */
+}
+.full-width-img .img-sec {
+	padding: 0px;
+}
