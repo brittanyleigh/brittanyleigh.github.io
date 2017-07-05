@@ -17,6 +17,11 @@
     background-attachment: fixed;
     background-position: center;
 }
+@media (max-width: 768px){
+	.background-img-parallax {
+		max-width: 768px;
+	}
+}
 .gradient-background{
 	background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
 	min-height: 250px;
@@ -35,18 +40,23 @@
 .row-content {
 	padding: 50px;
 }
-.section { /* for all text components */
+/*.section {  for all text components 
 	padding: 25px;
 	text-align: center;
-}
+}*/
 .content-box {
 	border: solid 2px black;
 	padding: 15px;
+	margin: 25px;
+	text-align: center;
 }
 
 /* Bullets */
 .bullets .content-box {
 	min-height: 265px; /* change to suit content, adjust with media queries */
+}
+.bullets {
+	text-align: center;
 }
 
 /* Image Bars */
@@ -88,9 +98,10 @@
 	height: 350px; /* change as needed, adjust with media queries */
 	/* images are xs-12 by default - @768 either hide 3, change to xs-3, or adjust height to contain all 4 stacked */
 }
-.image-bar-two .section {
+.image-bar-two .heading {
 	background-color: #fff;
 	border: solid 2px gray;
+	padding: 10px;
 }
 .image-bar-two h3 {
 	margin: 0px;
@@ -141,24 +152,23 @@
 	justify-content: center;
 	align-items: flex-end;
 }
-.image-bar-three .section {
+.image-bar-three .heading {
 	padding: 5px;
 	width: 100%;
+	margin: 0px;
+	text-align: center;
 }
 .image-bar-three .sec-1, .image-bar-three .sec-2, .image-bar-three .sec-3 {
 	padding: 0px;
 }
-.sec-1 .section {
+.sec-1 .heading {
 	background-color: #9D9CC1;
 }
-.sec-2 .section{
+.sec-2 .heading{
 	background-color: #E5DF6B;
 }
-.sec-3 .section{
+.sec-3 .heading{
 	background-color: #9cbfc1;
-}
-.image-bar-three .section h2{
-    margin: 10px;
 }
 
 /* Image Bar Four */
