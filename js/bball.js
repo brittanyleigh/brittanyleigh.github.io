@@ -32,7 +32,7 @@ $(document).ready(function() {
     $.ajax
     ({
       type: "GET",
-      url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
       dataType: 'json',
       async: false,
       headers: {
@@ -65,7 +65,7 @@ $(document).ready(function() {
     $.ajax
     ({
       type: "GET",
-      url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/scoreboard.json?fordate=' + scoreDate + '&team=' + teamID,
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/scoreboard.json?fordate=' + scoreDate + '&team=' + teamID,
       dataType: 'json',
       async: false,
       headers: {
