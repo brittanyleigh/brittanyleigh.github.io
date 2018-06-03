@@ -10,7 +10,7 @@ $team-primary-colors: (
   dbacks: #A71930,
   braves: #002456,
   orioles: #000000,
-  redsox: #D90016,
+  redsox: #D60020,
   cubs: #002F6C,
   whitesox: #27261F,
   reds: #E70019,
@@ -32,9 +32,9 @@ $team-primary-colors: (
   cardinals: #CA001D,
   padres: #002863,
   giants: #27261F,
-  mariners: #0A2141,
+  mariners: #004467,
   rays: #09275D,
-  rangers: #07297A,
+  rangers: #004286,
   bluejays: #104490,
   nationals: #C90016
   );
@@ -57,19 +57,19 @@ $team-secondary-colors: (
   marlins: #FF4C00,
   brewers: #87714A,
   twins: #CA001C,
-  mets: #FF0F00,
+  mets: #FF6B16,
   yankees: #97999B,
   as: #F6B200,
-  phillies: #112189,
+  phillies: #004C9D,
   pirates: #27261F,
   cardinals: #0A2141,
   padres: #9EAAB3,
   giants: #FF0000,
   mariners: #006C5F,
   rays: #88BBE9,
-  rangers: #D00000,
-  bluejays: #FA0000,
-  nationals: #1A195B
+  rangers: #DE0033,
+  bluejays: #EB0000,
+  nationals: #041A43
   );
 
 @mixin team-colors($team) {
@@ -139,7 +139,7 @@ body {
   @include team-colors(angels);
 }
 .team-137 {
-  @include team-colors(dodgerss);
+  @include team-colors(dodgers);
 }
 .team-128 {
   @include team-colors(marlins);
@@ -166,7 +166,7 @@ body {
   @include team-colors(pirates);
 }
 .team-139 {
-  @include team-colors(piratess);
+  @include team-colors(padres);
 }
 .team-136 {
   @include team-colors(giants);

@@ -40,7 +40,7 @@ body {
     border-bottom: solid 15px #FF0F00; }
 
 .team-113 {
-  background: #D90016; }
+  background: #D60020; }
   .team-113 #heading {
     border-bottom: solid 15px #0A2141; }
 
@@ -79,8 +79,10 @@ body {
   .team-124 #heading {
     border-bottom: solid 15px #002E64; }
 
-.team-137 #heading {
-  border-bottom: solid 15px; }
+.team-137 {
+  background: #04286D; }
+  .team-137 #heading {
+    border-bottom: solid 15px #FF002D; }
 
 .team-128 {
   background: #000000; }
@@ -100,7 +102,7 @@ body {
 .team-127 {
   background: #092474; }
   .team-127 #heading {
-    border-bottom: solid 15px #FF0F00; }
+    border-bottom: solid 15px #FF6B16; }
 
 .team-114 {
   background: #172247; }
@@ -115,15 +117,17 @@ body {
 .team-129 {
   background: #CA001D; }
   .team-129 #heading {
-    border-bottom: solid 15px #112189; }
+    border-bottom: solid 15px #004C9D; }
 
 .team-132 {
   background: #FFC900; }
   .team-132 #heading {
     border-bottom: solid 15px #27261F; }
 
-.team-139 #heading {
-  border-bottom: solid 15px; }
+.team-139 {
+  background: #002863; }
+  .team-139 #heading {
+    border-bottom: solid 15px #9EAAB3; }
 
 .team-136 {
   background: #27261F; }
@@ -131,7 +135,7 @@ body {
     border-bottom: solid 15px #FF0000; }
 
 .team-123 {
-  background: #0A2141; }
+  background: #004467; }
   .team-123 #heading {
     border-bottom: solid 15px #006C5F; }
 
@@ -146,19 +150,19 @@ body {
     border-bottom: solid 15px #88BBE9; }
 
 .team-121 {
-  background: #07297A; }
+  background: #004286; }
   .team-121 #heading {
-    border-bottom: solid 15px #D00000; }
+    border-bottom: solid 15px #DE0033; }
 
 .team-112 {
   background: #104490; }
   .team-112 #heading {
-    border-bottom: solid 15px #FA0000; }
+    border-bottom: solid 15px #EB0000; }
 
 .team-126 {
   background: #C90016; }
   .team-126 #heading {
-    border-bottom: solid 15px #1A195B; }
+    border-bottom: solid 15px #041A43; }
 
 .container {
   display: grid;
