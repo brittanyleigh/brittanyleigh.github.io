@@ -1,30 +1,187 @@
-@import url("https://fonts.googleapis.com/css?family=Passion+One");
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700");
 h1 {
-  font-size: 72px; }
+  font-size: 72px;
+  line-height: 72px; }
 
 h2 {
-  font-size: 48px; }
+  font-size: 48px;
+  line-height: 52px; }
 
 h3 {
-  font-size: 28px; }
+  font-size: 28px;
+  line-height: 30px; }
+
+h4 {
+  font-size: 24px;
+  padding: 5px; }
+
+body {
+  margin: 0px;
+  color: #2d2d2d; }
+
+.team-131 {
+  background: #002F6C; }
+  .team-131 #heading {
+    border-bottom: solid 15px #C8102E; }
+
+.team-140 {
+  background: #A71930; }
+  .team-140 #heading {
+    border-bottom: solid 15px #000000; }
+
+.team-130 {
+  background: #002456; }
+  .team-130 #heading {
+    border-bottom: solid 15px #CA001D; }
+
+.team-111 {
+  background: #000000; }
+  .team-111 #heading {
+    border-bottom: solid 15px #FF0F00; }
+
+.team-113 {
+  background: #D90016; }
+  .team-113 #heading {
+    border-bottom: solid 15px #0A2141; }
+
+.team-119 {
+  background: #27261F; }
+  .team-119 #heading {
+    border-bottom: solid 15px #898D8F; }
+
+.team-135 {
+  background: #E70019; }
+  .team-135 #heading {
+    border-bottom: solid 15px #000000; }
+
+.team-138 {
+  background: #372C67; }
+  .team-138 #heading {
+    border-bottom: solid 15px #C2CED5; }
+
+.team-117 {
+  background: #0A2141; }
+  .team-117 #heading {
+    border-bottom: solid 15px #FF0000; }
+
+.team-122 {
+  background: #002863; }
+  .team-122 #heading {
+    border-bottom: solid 15px #FA5E00; }
+
+.team-118 {
+  background: #004089; }
+  .team-118 #heading {
+    border-bottom: solid 15px #C59A54; }
+
+.team-124 {
+  background: #CA0000; }
+  .team-124 #heading {
+    border-bottom: solid 15px #002E64; }
+
+.team-137 #heading {
+  border-bottom: solid 15px; }
+
+.team-128 {
+  background: #000000; }
+  .team-128 #heading {
+    border-bottom: solid 15px #FF4C00; }
+
+.team-134 {
+  background: #12274C; }
+  .team-134 #heading {
+    border-bottom: solid 15px #87714A; }
+
+.team-120 {
+  background: #0A2142; }
+  .team-120 #heading {
+    border-bottom: solid 15px #CA001C; }
+
+.team-127 {
+  background: #092474; }
+  .team-127 #heading {
+    border-bottom: solid 15px #FF0F00; }
+
+.team-114 {
+  background: #172247; }
+  .team-114 #heading {
+    border-bottom: solid 15px #97999B; }
+
+.team-125 {
+  background: #003B32; }
+  .team-125 #heading {
+    border-bottom: solid 15px #F6B200; }
+
+.team-129 {
+  background: #CA001D; }
+  .team-129 #heading {
+    border-bottom: solid 15px #112189; }
+
+.team-132 {
+  background: #FFC900; }
+  .team-132 #heading {
+    border-bottom: solid 15px #27261F; }
+
+.team-139 #heading {
+  border-bottom: solid 15px; }
+
+.team-136 {
+  background: #27261F; }
+  .team-136 #heading {
+    border-bottom: solid 15px #FF0000; }
+
+.team-123 {
+  background: #0A2141; }
+  .team-123 #heading {
+    border-bottom: solid 15px #006C5F; }
+
+.team-133 {
+  background: #CA001D; }
+  .team-133 #heading {
+    border-bottom: solid 15px #0A2141; }
+
+.team-115 {
+  background: #09275D; }
+  .team-115 #heading {
+    border-bottom: solid 15px #88BBE9; }
+
+.team-121 {
+  background: #07297A; }
+  .team-121 #heading {
+    border-bottom: solid 15px #D00000; }
+
+.team-112 {
+  background: #104490; }
+  .team-112 #heading {
+    border-bottom: solid 15px #FA0000; }
+
+.team-126 {
+  background: #C90016; }
+  .team-126 #heading {
+    border-bottom: solid 15px #1A195B; }
 
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  width: 75%;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1024px;
   margin: 0 auto;
   text-align: center;
-  font-family: "Passion One", Verdana, sans-serif;
-  text-transform: uppercase; }
+  font-family: "Palanquin Dark", sans-serif;
+  text-transform: uppercase;
+  background: url(../img/bg.jpg);
+  border-right: solid #2d2d2d;
+  border-left: solid #2d2d2d; }
 
 #heading {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  grid-column: 1 / span 2;
+  border-bottom: solid 10px #ce3c2f;
+  padding: 15px 0px; }
   #heading img {
     height: auto;
     width: auto;
@@ -47,11 +204,8 @@ h3 {
       max-width: 50px;
       max-height: 50px; } }
 
-#date, #teamform {
-  width: 300px; }
-
 #today, #yesterday {
-  width: 400px; }
+  margin: 0px 25px; }
   @media (max-width: 525px) {
     #today h2, #yesterday h2 {
       font-size: 28px; } }
@@ -61,55 +215,42 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: solid 2px black;
-  padding: 15px;
+  border: solid 2px #cecece;
+  padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px; }
 
 .time h1, .WL h1 {
-  margin: 10px; }
+  margin: 10px;
+  font-weight: 400;
+  min-width: 160px; }
 
 .teams {
   display: flex;
   flex-flow: column wrap;
   text-align: center;
   width: 100%; }
-  .teams .blue-team {
-    border: solid 2px #071941;
-    background-color: #8b9abb;
-    margin: 5px; }
-  .teams .navy-team {
-    border: solid 2px black;
-    background-color: #6e7d90;
-    margin: 5px; }
-  .teams .black-team {
-    border: solid 2px black;
-    background-color: #595959;
-    margin: 5px; }
-  .teams .red-team {
-    border: solid 2px #b30000;
-    background-color: #eac8c8;
-    margin: 5px; }
-  .teams .yellow-team {
-    border: solid 2px #d69102;
-    background-color: #f4eee3;
-    margin: 5px; }
-  .teams .green-team {
-    border: solid 2px #010200;
-    background-color: #70966b;
-    margin: 5px; }
-  .teams .orange-team {
-    border: solid 2px #cd3802;
-    background-color: #f1e2dc;
-    margin: 5px; }
+  .teams h4 {
+    font-weight: 400;
+    margin: 0px;
+    text-transform: none; }
+  .teams .away {
+    border-bottom: solid 3px #cecece; }
+  .teams .away, .teams .home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .teams .away img, .teams .home img {
+      max-width: 30px; }
 
 #teamForm h3 {
   margin: 10px; }
 
 select {
-  height: 50px;
-  font-size: 28px;
-  border: solid 2px black;
-  font-family: "Passion One", Verdana, sans-serif; }
+  width: 285px;
+  font-size: 20px;
+  border: solid 2px #2d2d2d;
+  font-family: "Palanquin Dark", sans-serif; }
 
 /*# sourceMappingURL=bball.css.map */

@@ -1,45 +1,219 @@
-@import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700');
 
-$font-stack: 'Passion One', Verdana, sans-serif;
+$font-stack: 'Palanquin Dark', sans-serif;
 $h1-size: 72px;
 $h2-size: 48px;
 $h3-size: 28px;
-$blue-team: #0E3386;
-$red-team: red;
-$navy-team: #0C2340;
-$yellow-team: #FDB827;
-$black-team: black;
-$orange-team: #FD5A1E;
-$green-team: #12440b;
+$h4-size: 24px;
+
+$team-primary-colors: (
+  dbacks: #A71930,
+  braves: #002456,
+  orioles: #000000,
+  redsox: #D90016,
+  cubs: #002F6C,
+  whitesox: #27261F,
+  reds: #E70019,
+  indians: #0E203F,
+  rockies: #372C67,
+  tigers: #0A2141,
+  astros: #002863,
+  royals: #004089,
+  angels: #CA0000,
+  dodgers: #04286D,
+  marlins: #000000,
+  brewers: #12274C,
+  twins: #0A2142,
+  mets: #092474,
+  yankees: #172247,
+  as: #003B32,
+  phillies: #CA001D,
+  pirates: #FFC900,
+  cardinals: #CA001D,
+  padres: #002863,
+  giants: #27261F,
+  mariners: #0A2141,
+  rays: #09275D,
+  rangers: #07297A,
+  bluejays: #104490,
+  nationals: #C90016
+  );
+
+$team-secondary-colors: (
+  dbacks: #000000,
+  braves: #CA001D,
+  orioles: #FF0F00,
+  redsox: #0A2141,
+  cubs: #C8102E,
+  whitesox: #898D8F,
+  reds: #000000,
+  indians: #F5001E,
+  rockies: #C2CED5,
+  tigers: #FF0000,
+  astros: #FA5E00,
+  royals: #C59A54,
+  angels: #002E64,
+  dodgers: #FF002D,
+  marlins: #FF4C00,
+  brewers: #87714A,
+  twins: #CA001C,
+  mets: #FF0F00,
+  yankees: #97999B,
+  as: #F6B200,
+  phillies: #112189,
+  pirates: #27261F,
+  cardinals: #0A2141,
+  padres: #9EAAB3,
+  giants: #FF0000,
+  mariners: #006C5F,
+  rays: #88BBE9,
+  rangers: #D00000,
+  bluejays: #FA0000,
+  nationals: #1A195B
+  );
+
+@mixin team-colors($team) {
+  background: map-get($team-primary-colors, $team);
+
+  #heading {
+    border-bottom: solid 15px map-get($team-secondary-colors, $team);
+  }
+}
 
 h1 {
   font-size: $h1-size;
+  line-height: 72px;
 }
 h2 {
   font-size: $h2-size;
+  line-height: 52px;
 }
 h3 {
   font-size: $h3-size;
+  line-height: 30px;
+}
+h4 {
+  font-size: $h4-size;
+  padding: 5px;
 }
 
+body {
+  margin: 0px;
+  color: #2d2d2d;
+}
+
+.team-131 {
+  @include team-colors(cubs);
+}
+.team-140 {
+  @include team-colors(dbacks);
+}
+.team-130 {
+  @include team-colors(braves);
+}
+.team-111 {
+  @include team-colors(orioles);
+}
+.team-113 {
+  @include team-colors(redsox);
+}
+.team-119 {
+  @include team-colors(whitesox);
+}
+.team-135 {
+  @include team-colors(reds);
+}
+.team-138 {
+  @include team-colors(rockies);
+}
+.team-117 {
+  @include team-colors(tigers);
+}
+.team-122 {
+  @include team-colors(astros);
+}
+.team-118 {
+  @include team-colors(royals);
+}
+.team-124 {
+  @include team-colors(angels);
+}
+.team-137 {
+  @include team-colors(dodgerss);
+}
+.team-128 {
+  @include team-colors(marlins);
+}
+.team-134 {
+  @include team-colors(brewers);
+}
+.team-120 {
+  @include team-colors(twins);
+}
+.team-127 {
+  @include team-colors(mets);
+}
+.team-114 {
+  @include team-colors(yankees);
+}
+.team-125 {
+  @include team-colors(as);
+}
+.team-129 {
+  @include team-colors(phillies);
+}
+.team-132 {
+  @include team-colors(pirates);
+}
+.team-139 {
+  @include team-colors(piratess);
+}
+.team-136 {
+  @include team-colors(giants);
+}
+.team-123 {
+  @include team-colors(mariners);
+}
+.team-133 {
+  @include team-colors(cardinals);
+}
+.team-115 {
+  @include team-colors(rays);
+}
+.team-121 {
+  @include team-colors(rangers);
+}
+.team-112 {
+  @include team-colors(bluejays);
+}
+.team-126 {
+  @include team-colors(nationals);
+}
+
+
 .container {
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  width: 75%;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1024px;
   margin: 0 auto;
   text-align: center;
   font-family: $font-stack;
   text-transform: uppercase;
+  background: url(../img/bg.jpg);
+  border-right: solid #2d2d2d;
+  border-left: solid #2d2d2d;
 }
 
 #heading {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background: white;
+  grid-column: 1 / span 2;
+  border-bottom: solid 10px #ce3c2f;
+  padding: 15px 0px;
   img {
     height: auto;
     width: auto;
@@ -72,11 +246,8 @@ h3 {
     }
 }
 
-#date, #teamform {
-  width: 300px;
-}
 #today, #yesterday {
-  width: 400px;
+  margin: 0px 25px;
   @media (max-width: 525px){
     h2 {
       font-size: $h3-size;
@@ -88,18 +259,16 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: solid 2px black;
-  padding: 15px;
+  border: solid 2px #cecece;
+  padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
+
 }
 .time h1, .WL h1{
   margin: 10px;
-}
-@mixin team-color($color) {
-  border: solid 2px darken($color, 15%);
-  background-color: desaturate(lighten($color, 35%), 55%);
-  margin: 5px;
+  font-weight: 400;
+  min-width: 160px;
 }
 
 .teams {
@@ -107,26 +276,22 @@ h3 {
   flex-flow: column wrap;
   text-align: center;
   width: 100%;
-  .blue-team {
-    @include team-color($blue-team);
+  h4 {
+    font-weight: 400;
+    margin: 0px;
+    text-transform: none;
   }
-  .navy-team {
-    @include team-color($navy-team);
+  .away {
+    border-bottom: solid 3px #cecece;
   }
-  .black-team {
-    @include team-color($black-team);
-  }
-  .red-team {
-    @include team-color($red-team);
-  }
-  .yellow-team {
-    @include team-color($yellow-team);
-  }
-  .green-team {
-    @include team-color($green-team);
-  }
-  .orange-team {
-    @include team-color($orange-team);
+  .away, .home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      max-width: 30px;
+    }
   }
 }
 #teamForm {
@@ -135,8 +300,8 @@ h3 {
   }
 }
 select {
-  height: 50px;
-  font-size: $h3-size;
-  border: solid 2px black;
+  width: 285px;
+  font-size: 20px;
+  border: solid 2px #2d2d2d;
   font-family: $font-stack;
 }
