@@ -209,13 +209,12 @@ body {
 #heading {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   justify-content: space-around;
   align-items: center;
   background: white;
   grid-column: 1 / span 2;
   border-bottom: solid 10px #ce3c2f;
-  padding: 15px 0px;
+  padding: 15px 30px;
   img {
     height: auto;
     width: auto;
@@ -225,6 +224,9 @@ body {
   h1 {
     padding: 15px;
     margin: 15px;
+  }
+  #date {
+    margin-left: auto;
   }
   @media (max-width: 950px){
     h1 {
