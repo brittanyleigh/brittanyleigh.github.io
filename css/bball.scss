@@ -95,6 +95,7 @@ h3 {
 h4 {
   font-size: $h4-size;
   padding: 5px;
+  margin: 0px;
 }
 
 body {
@@ -202,6 +203,7 @@ body {
   background: url(../img/bg.jpg);
   border-right: solid #2d2d2d;
   border-left: solid #2d2d2d;
+  height: 100%;
 }
 
 #heading {
@@ -304,4 +306,32 @@ select {
   font-size: 20px;
   border: solid 2px #2d2d2d;
   font-family: $font-stack;
+}
+
+.standings {
+  > div {
+    background: white;
+    border: solid #cecece 2px;
+    margin: 0px 25px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-transform: none;
+      border-bottom: solid 2px #cecece;
+    }
+    div:last-child {
+      border-bottom: 0px;
+    }
+  }
+  img {
+    max-width: 30px;
+  }
+  h4 {
+    margin: 0px 5px;
+  }
+  .wins-losses {
+    margin-left: auto;
+  }
 }

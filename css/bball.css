@@ -13,7 +13,8 @@ h3 {
 
 h4 {
   font-size: 24px;
-  padding: 5px; }
+  padding: 5px;
+  margin: 0px; }
 
 body {
   margin: 0px;
@@ -174,7 +175,8 @@ body {
   text-transform: uppercase;
   background: url(../img/bg.jpg);
   border-right: solid #2d2d2d;
-  border-left: solid #2d2d2d; }
+  border-left: solid #2d2d2d;
+  height: 100%; }
 
 #heading {
   display: flex;
@@ -256,5 +258,24 @@ select {
   font-size: 20px;
   border: solid 2px #2d2d2d;
   font-family: "Palanquin Dark", sans-serif; }
+
+.standings > div {
+  background: white;
+  border: solid #cecece 2px;
+  margin: 0px 25px; }
+  .standings > div div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: none;
+    border-bottom: solid 2px #cecece; }
+  .standings > div div:last-child {
+    border-bottom: 0px; }
+.standings img {
+  max-width: 30px; }
+.standings h4 {
+  margin: 0px 5px; }
+.standings .wins-losses {
+  margin-left: auto; }
 
 /*# sourceMappingURL=bball.css.map */
