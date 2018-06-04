@@ -4,16 +4,59 @@ $(document).ready(function() {
   var teamID = '131';
   var daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var months = ['Jan. ', 'Feb. ', 'March ', 'April ', 'May ', 'June ', 'July ', 'Aug. ', 'Sep. ', 'Oct. ', 'Nov. ', 'Dec. '];
+  var divisions = {
+    '111': '0',
+    '112': '0',
+    '113': '0',
+    '114': '0',
+    '115': '0',
+    '116': '1',
+    '117': '1',
+    '118': '1',
+    '119': '1',
+    '120': '1',
+    '121': '2',
+    '122': '2',
+    '123': '2',
+    '124': '2',
+    '125': '2',
+    '126': '3',
+    '127': '3',
+    '128': '3',
+    '129': '3',
+    '130': '3',
+    '131': '4',
+    '132': '4',
+    '133': '4',
+    '134': '4',
+    '135': '4',
+    '136': '5',
+    '137': '5',
+    '138': '5',
+    '139': '5',
+    '140': '5',
+  }
+  var division_names = {
+    '0': 'AL East',
+    '1': 'AL Central',
+    '2': 'AL West',
+    '3': 'NL East',
+    '4': 'NL Central',
+    '5': 'NL West'
+  }
+
   $('.teams').hide();
   date();
   todayAjax();
   yesterdayAjax();
+  standings(teamID);
   $('#selectTeam').change(function(){
     teamID = $(this).val();
     $('#heading img').attr("src", 'img/' + teamID + '.png');
     $('body').removeClass().addClass('team-' + teamID);
     todayAjax();
     yesterdayAjax();
+    standings(teamID);
   });
 
   function date (){
@@ -139,4 +182,31 @@ $(document).ready(function() {
       $(game + ' .WL h1').html('L');
     } // else
   }
+
+  function standings(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/division_team_standings.json',
+      dataType: 'json',
+      async: false,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        console.log(data);
+        var division_number = divisions[teamID];
+        $('.standings h3 span').text(division_names[division_number]);
+        var division_standings = data.divisionteamstandings.division[division_number];
+        for (var i = 0; i < division_standings.teamentry.length; i++) {
+          var team = division_standings.teamentry[i];
+          var team_div = $('.standings div .team-' + i);
+          $(team_div).find('.rank').text(team.rank);
+          $(team_div).find('img').attr('src', 'img/' + team.team.ID + '.png');
+          $(team_div).find('.team-name').text(team.team.City + ' ' + team.team.Name);
+          $(team_div).find('.wins-losses').text(team.stats.Wins['#text'] + ' - ' + team.stats.Losses['#text']);
+        }
+      } //success
+    }); //ajax call
+  }; 
 }); //document ready
