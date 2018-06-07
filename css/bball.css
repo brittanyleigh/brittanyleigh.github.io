@@ -5,7 +5,8 @@ h1 {
 
 h2 {
   font-size: 48px;
-  line-height: 52px; }
+  line-height: 52px;
+  margin: 0px; }
 
 h3 {
   font-size: 28px;
@@ -15,6 +16,14 @@ h4 {
   font-size: 24px;
   padding: 5px;
   margin: 0px; }
+
+h5 {
+  margin: 0px;
+  font-style: italic;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #c5c5c5;
+  font-weight: normal; }
 
 body {
   margin: 0px;
@@ -176,7 +185,8 @@ body {
   background: url(../img/bg.jpg);
   border-right: solid #2d2d2d;
   border-left: solid #2d2d2d;
-  min-height: 100%; }
+  min-height: 100%;
+  padding-bottom: 50px; }
 
 #heading {
   display: flex;
@@ -195,6 +205,8 @@ body {
   #heading h1 {
     padding: 15px;
     margin: 15px; }
+  #heading h2 {
+    margin-top: 15px; }
   #heading #date {
     margin-left: auto; }
   @media (max-width: 950px) {
@@ -234,6 +246,8 @@ body {
   margin: 10px;
   font-weight: 400;
   min-width: 160px; }
+  .time h1 span, .WL h1 span {
+    font-size: 24px; }
 
 .double {
   display: none; }
@@ -266,23 +280,31 @@ select {
   border: solid 2px #2d2d2d;
   font-family: "Palanquin Dark", sans-serif; }
 
-.standings > div {
-  background: white;
-  border: solid #cecece 2px;
-  margin: 0px 25px; }
-  .standings > div div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-transform: none;
-    border-bottom: solid 2px #cecece; }
-  .standings > div div:last-child {
-    border-bottom: 0px; }
-.standings img {
-  max-width: 30px; }
-.standings h4 {
-  margin: 0px 5px; }
-.standings .wins-losses {
-  margin-left: auto; }
+.standings {
+  grid-column: 1 / span 2; }
+  .standings > div {
+    background: white;
+    border: solid #cecece 2px;
+    margin: 0px 25px; }
+    .standings > div div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-transform: none;
+      border-bottom: solid 2px #cecece; }
+    .standings > div div:last-child {
+      border-bottom: 0px; }
+  .standings img {
+    max-width: 30px; }
+  .standings h4 {
+    margin: 0px 5px;
+    font-weight: normal; }
+  .standings .wins-losses {
+    margin-left: auto; }
+  .standings .rank {
+    font-weight: bold; }
+
+.loading {
+  display: none; }
 
 /*# sourceMappingURL=bball.css.map */

@@ -87,6 +87,7 @@ h1 {
 h2 {
   font-size: $h2-size;
   line-height: 52px;
+  margin: 0px;
 }
 h3 {
   font-size: $h3-size;
@@ -96,6 +97,14 @@ h4 {
   font-size: $h4-size;
   padding: 5px;
   margin: 0px;
+}
+h5 {
+  margin: 0px;
+  font-style: italic;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #c5c5c5;
+  font-weight: normal;
 }
 
 body {
@@ -204,6 +213,7 @@ body {
   border-right: solid #2d2d2d;
   border-left: solid #2d2d2d;
   min-height: 100%;
+  padding-bottom: 50px;
 }
 
 #heading {
@@ -224,6 +234,9 @@ body {
   h1 {
     padding: 15px;
     margin: 15px;
+  }
+  h2 {
+    margin-top: 15px;
   }
   #date {
     margin-left: auto;
@@ -275,6 +288,10 @@ body {
   margin: 10px;
   font-weight: 400;
   min-width: 160px;
+
+  span {
+    font-size: 24px;
+  }
 }
 .double {
   display: none;
@@ -316,6 +333,8 @@ select {
 }
 
 .standings {
+  grid-column: 1 / span 2;
+
   > div {
     background: white;
     border: solid #cecece 2px;
@@ -337,8 +356,16 @@ select {
   }
   h4 {
     margin: 0px 5px;
+    font-weight: normal;
   }
   .wins-losses {
     margin-left: auto;
   }
+  .rank {
+    font-weight: bold;
+  }
+}
+
+.loading {
+  display: none;
 }

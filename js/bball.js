@@ -41,6 +41,10 @@ $(document).ready(function() {
     '3': 'NL East',
     '4': 'NL Central',
     '5': 'NL West'}
+  var divisions_new = {
+    '0': ['111', '112'],
+    '1': ['116', '131']
+  }
 
   $('#selectTeam').change(function(){
     teamID = $(this).val();
@@ -66,13 +70,13 @@ $(document).ready(function() {
       scoreDate = year + month + date-1;
     } 
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
-    $('#date').append(todayDisplay);
+    $('#date h2').append(todayDisplay);
   }
   function todayAjax(){
     $.ajax
     ({
       type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=20180604&team=' + teamID,
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
       dataType: 'json',
       async: false,
       headers: {
@@ -97,6 +101,7 @@ $(document).ready(function() {
     }); // ajax call
   };
   function yesterdayAjax(){
+    $('.loading').show();
     $.ajax
     ({
       type: "GET",
@@ -123,10 +128,12 @@ $(document).ready(function() {
         } else {
           $('#yesterday .game .WL h1').html('Off Day!');
         }
+        $('.loading').hide();
       } //success
     }); //ajax call
   }; 
   function todayGame (gameData, game){
+    console.log(gameData)
     var homeID = gameData.homeTeam.ID;
     var awayID = gameData.awayTeam.ID;
     var homeTeam = gameData.homeTeam.Name;
@@ -139,7 +146,7 @@ $(document).ready(function() {
     var homeImg = game + ' .teams .home img';
     $(homeImg).attr("src", 'img/' + homeID + '.png');
     $(game + ' .teams').show();
-    $(game + ' .time h1').html(time.slice(0, -2));
+    $(game + ' .time h1').html(time.slice(0, -2) + '<span>' + time.slice(-2) + '</span>');
     $(awayDiv).html(awayTeam + ' @');
     $(homeDiv).html(homeTeam);    
   }
@@ -157,8 +164,8 @@ $(document).ready(function() {
     var homeImg = game + ' .teams .home img';
     $(homeImg).attr("src", 'img/' + homeID + '.png');
     $(game + ' .teams').show();
-    $(awayDiv).html(awayTeam + ' <b>' + awayScore + '</b>');
-    $(homeDiv).html(homeTeam + ' <b>' + homeScore + '</b>');
+    $(awayDiv).html(awayTeam + ': <b>' + awayScore + '</b>');
+    $(homeDiv).html(homeTeam + ': <b>' + homeScore + '</b>');
     if (homeID == teamID && homeScore > awayScore || awayID == teamID && awayScore > homeScore){
       $(game + ' .WL h1').html('W');
     } else{
@@ -166,10 +173,11 @@ $(document).ready(function() {
     } 
   }
   function standings(teamID){
+    var param = encodeURIComponent('W,L,GB,Win %');
     $.ajax
     ({
       type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/division_team_standings.json',
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/division_team_standings.json?teamstats=' + param,
       dataType: 'json',
       async: false,
       headers: {
@@ -177,6 +185,7 @@ $(document).ready(function() {
       }, //headers
       success: function (data){
         console.log(data);
+
         var division_number = divisions[teamID];
         $('.standings h3 span').text(division_names[division_number]);
         var division_standings = data.divisionteamstandings.division[division_number];
@@ -187,6 +196,8 @@ $(document).ready(function() {
           $(team_div).find('img').attr('src', 'img/' + team.team.ID + '.png');
           $(team_div).find('.team-name').text(team.team.City + ' ' + team.team.Name);
           $(team_div).find('.wins-losses').text(team.stats.Wins['#text'] + ' - ' + team.stats.Losses['#text']);
+          $(team_div).find('.games-back').text(team.stats.GamesBack['#text']);
+          $(team_div).find('.win-pct').text(team.stats.WinPct['#text'].substr(1));
         }
       } //success
     }); //ajax call
