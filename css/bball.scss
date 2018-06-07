@@ -203,7 +203,7 @@ body {
   background: url(../img/bg.jpg);
   border-right: solid #2d2d2d;
   border-left: solid #2d2d2d;
-  height: 100%;
+  min-height: 100%;
 }
 
 #heading {
@@ -267,12 +267,17 @@ body {
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
-
+}
+.game2 {
+  display: none;
 }
 .time h1, .WL h1{
   margin: 10px;
   font-weight: 400;
   min-width: 160px;
+}
+.double {
+  display: none;
 }
 
 .teams {

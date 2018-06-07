@@ -1,7 +1,6 @@
 $(document).ready(function() {
   var data, scoreDate;
   var sfbtoa = 'britika:hYZvU4zN8jxw';
-  var teamID = '131';
   var daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var months = ['Jan. ', 'Feb. ', 'March ', 'April ', 'May ', 'June ', 'July ', 'Aug. ', 'Sep. ', 'Oct. ', 'Nov. ', 'Dec. '];
   var divisions = {
@@ -34,54 +33,46 @@ $(document).ready(function() {
     '137': '5',
     '138': '5',
     '139': '5',
-    '140': '5',
-  }
+    '140': '5',}
   var division_names = {
     '0': 'AL East',
     '1': 'AL Central',
     '2': 'AL West',
     '3': 'NL East',
     '4': 'NL Central',
-    '5': 'NL West'
-  }
+    '5': 'NL West'}
 
-  $('.teams').hide();
-  date();
-  todayAjax();
-  yesterdayAjax();
-  standings(teamID);
   $('#selectTeam').change(function(){
     teamID = $(this).val();
     $('#heading img').attr("src", 'img/' + teamID + '.png');
     $('body').removeClass().addClass('team-' + teamID);
+    $('.teams').hide();
+    $('.game2').hide();
+    $('.double').hide();
     todayAjax();
     yesterdayAjax();
     standings(teamID);
   });
-
   function date (){
     var today = new Date();
-    var yesterday = new Date();
-    yesterday.setDate(yesterday.getDate()-1);
     var day = daysOfTheWeek[today.getDay()];
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
     var date = today.getDate();
     if (month < 10) {
-      scoreDate = year + '0' + month + '' + date-1;
-    }
-    else {
-      scoreDate = year + '' + month + '' + date-1;
+      scoreDate = year + '0' + month + date-1;
+      // month is a single digit if jan-sep, api url requires MM format
+    } else {
+      scoreDate = year + month + date-1;
     } 
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
-    // month is a single digit if jan-sep, api url requires MM format
     $('#date').append(todayDisplay);
   }
   function todayAjax(){
     $.ajax
     ({
       type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=20180604&team=' + teamID,
       dataType: 'json',
       async: false,
       headers: {
@@ -91,22 +82,17 @@ $(document).ready(function() {
       function (data) {
         var dataSched = data.fullgameschedule.gameentry;
         if (dataSched){
-          $('#today h2').html('Today\'s Game') // h2 is changed to plural for doubleheaders, this ensures it changes back to singular
           todayGame(dataSched[0], '#today .game');
+
+          if (dataSched[1]){ // checking for doubleheader game
+            $('#today .game2').show().css('display', 'flex');
+            $('#today .double').show();
+            todayGame(dataSched[1], '#today .game2');
+          }
         }
         else {
           $('#today .game .time h1').html('Off Day!');
-          $('#today .teams').hide();
-          $('#today .game2').hide();
         };
-        if (dataSched[1]){ // checking for doubleheader game
-          $('#today .game2').show();
-          $('#today h2').html('Today\'s Games')
-          todayGame(dataSched[1], '#today .game2');
-        }
-        else {
-          $('#today .game2').hide();
-        }
       } // function/success
     }); // ajax call
   };
@@ -122,23 +108,21 @@ $(document).ready(function() {
       }, //headers
       success: function (data){
         var dataScore = data.scoreboard.gameScore;
+        console.log(dataScore);
         if (dataScore){
-          $('#yesterday h2').html('Yesterday\s Score'); // ensures h2 is singular if changed to plural for doubleheader previously
-          yesterdayScore(dataScore[0], '#yesterday .game');
+          if (dataScore[0].isUnplayed == 'false'){
+            yesterdayScore(dataScore[0], '#yesterday .game');
+          } else if (dataScore[0].isUnplayed == 'true') {
+            $('#yesterday .game .WL h1').html('Postponed!');
           } 
-          else {
-            $('#yesterday .game .WL h1').html('Off Day!');
-            $('#yesterday .teams').hide();
-            $('#yesterday .game2').hide();
-          } 
-          if (dataScore[1]){ // checking for doubleheader game
-            $('#yesterday .game2').show();
-            $('#yesterday h2').html('Yesterday\s Scores');
+          if (dataScore[1] && dataScore[1].isUnplayed == 'false'){ // checking for doubleheader game
+            $('#yesterday .game2').show().css('display', 'flex');
+            $('#yesterday .double').show();
             yesterdayScore(dataScore[1], '#yesterday .game2');
           } 
-          else {
-            $('#yesterday .game2').hide();
-          }
+        } else {
+          $('#yesterday .game .WL h1').html('Off Day!');
+        }
       } //success
     }); //ajax call
   }; 
@@ -177,12 +161,10 @@ $(document).ready(function() {
     $(homeDiv).html(homeTeam + ' <b>' + homeScore + '</b>');
     if (homeID == teamID && homeScore > awayScore || awayID == teamID && awayScore > homeScore){
       $(game + ' .WL h1').html('W');
-      } // if
-    else{
+    } else{
       $(game + ' .WL h1').html('L');
-    } // else
+    } 
   }
-
   function standings(teamID){
     $.ajax
     ({
@@ -209,4 +191,7 @@ $(document).ready(function() {
       } //success
     }); //ajax call
   }; 
+
+  date();
+  $('#selectTeam').triggerHandler('change');
 }); //document ready
