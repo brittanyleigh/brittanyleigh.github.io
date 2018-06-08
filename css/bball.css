@@ -11,11 +11,17 @@ h2 {
 h3 {
   font-size: 28px;
   line-height: 30px; }
+  @media screen and (max-width: 750px) {
+    h3 {
+      font-size: 24px; } }
 
 h4 {
   font-size: 24px;
   padding: 5px;
   margin: 0px; }
+  @media screen and (max-width: 950px) {
+    h4 {
+      font-size: 20px; } }
 
 h5 {
   margin: 0px;
@@ -187,6 +193,13 @@ body {
   border-left: solid #2d2d2d;
   min-height: 100%;
   padding-bottom: 50px; }
+  @media screen and (max-width: 1024px) {
+    .container {
+      border-left: 0px;
+      border-right: 0px; } }
+  @media screen and (max-width: 650px) {
+    .container {
+      grid-template-columns: 1fr; } }
 
 #heading {
   display: flex;
@@ -210,14 +223,26 @@ body {
   #heading #date {
     margin-left: auto; }
   @media (max-width: 950px) {
-    #heading h1 {
-      font-size: 48px; } }
+    #heading {
+      justify-content: center; }
+      #heading #date {
+        width: 100%; } }
   @media (max-width: 750px) {
     #heading h1 {
       font-size: 36px; }
     #heading img {
       max-width: 100px;
-      max-height: 100px; } }
+      max-height: 100px; }
+    #heading #date {
+      margin-left: 0px; }
+      #heading #date h2 {
+        font-size: 32px;
+        line-height: 32px; } }
+  @media (max-width: 650px) {
+    #heading {
+      grid-column: 1 / span 1; }
+      #heading h1 {
+        font-size: 48px; } }
   @media (max-width: 525px) {
     #heading img {
       max-width: 50px;
@@ -238,6 +263,15 @@ body {
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px; }
+  @media screen and (max-width: 850px) {
+    .game, .game2 {
+      flex-wrap: wrap; } }
+  @media screen and (max-width: 650px) {
+    .game, .game2 {
+      flex-wrap: nowrap; } }
+  @media screen and (max-width: 450px) {
+    .game, .game2 {
+      flex-wrap: wrap; } }
 
 .game2 {
   display: none; }
@@ -246,8 +280,14 @@ body {
   margin: 10px;
   font-weight: 400;
   min-width: 160px; }
+  @media screen and (max-width: 950px) {
+    .time h1, .WL h1 {
+      min-width: 125px;
+      font-size: 48px;
+      line-height: 48px; } }
   .time h1 span, .WL h1 span {
-    font-size: 24px; }
+    font-size: 24px;
+    vertical-align: top; }
 
 .double {
   display: none; }
@@ -277,11 +317,24 @@ body {
 select {
   width: 285px;
   font-size: 20px;
-  border: solid 2px #2d2d2d;
+  border: solid 2px #cecece;
+  background: #fbfbfb;
   font-family: "Palanquin Dark", sans-serif; }
 
 .standings {
   grid-column: 1 / span 2; }
+  .standings > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    border: 0; }
+    .standings > div:first-of-type h5 {
+      color: #585858;
+      margin: 0px 5px;
+      padding: 0px 5px; }
+    .standings > div:first-of-type .wins-losses {
+      margin-left: auto; }
   .standings > div {
     background: white;
     border: solid #cecece 2px;
@@ -300,9 +353,26 @@ select {
     margin: 0px 5px;
     font-weight: normal; }
   .standings .wins-losses {
-    margin-left: auto; }
+    margin-left: auto;
+    min-width: 85px;
+    text-align: right; }
   .standings .rank {
     font-weight: bold; }
+  .standings .win-pct, .standings .games-back {
+    min-width: 55px;
+    text-align: right; }
+    @media screen and (max-width: 650px) {
+      .standings .win-pct, .standings .games-back {
+        min-width: 35px; } }
+  .standings .team-abbr {
+    display: none; }
+  @media screen and (max-width: 650px) {
+    .standings {
+      grid-column: 1 / span 1; }
+      .standings .team-abbr {
+        display: block; }
+      .standings .team-name {
+        display: none; } }
 
 .loading {
   display: none; }

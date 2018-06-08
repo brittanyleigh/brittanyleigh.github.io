@@ -101,7 +101,6 @@ $(document).ready(function() {
     }); // ajax call
   };
   function yesterdayAjax(){
-    $('.loading').show();
     $.ajax
     ({
       type: "GET",
@@ -128,7 +127,6 @@ $(document).ready(function() {
         } else {
           $('#yesterday .game .WL h1').html('Off Day!');
         }
-        $('.loading').hide();
       } //success
     }); //ajax call
   }; 
@@ -195,6 +193,7 @@ $(document).ready(function() {
           $(team_div).find('.rank').text(team.rank);
           $(team_div).find('img').attr('src', 'img/' + team.team.ID + '.png');
           $(team_div).find('.team-name').text(team.team.City + ' ' + team.team.Name);
+          $(team_div).find('.team-abbr').text(team.team.Abbreviation);
           $(team_div).find('.wins-losses').text(team.stats.Wins['#text'] + ' - ' + team.stats.Losses['#text']);
           $(team_div).find('.games-back').text(team.stats.GamesBack['#text']);
           $(team_div).find('.win-pct').text(team.stats.WinPct['#text'].substr(1));

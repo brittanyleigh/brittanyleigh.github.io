@@ -92,11 +92,19 @@ h2 {
 h3 {
   font-size: $h3-size;
   line-height: 30px;
+
+  @media screen and (max-width: 750px){
+    font-size: 24px;
+  }
 }
 h4 {
   font-size: $h4-size;
   padding: 5px;
   margin: 0px;
+
+  @media screen and (max-width: 950px){
+    font-size: 20px;
+  }
 }
 h5 {
   margin: 0px;
@@ -214,6 +222,13 @@ body {
   border-left: solid #2d2d2d;
   min-height: 100%;
   padding-bottom: 50px;
+  @media screen and (max-width: 1024px){
+    border-left: 0px;
+    border-right: 0px;
+  }
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 #heading {
@@ -242,11 +257,14 @@ body {
     margin-left: auto;
   }
   @media (max-width: 950px){
-    h1 {
-      font-size: $h2-size;
+    justify-content: center;
+
+    #date {
+      width: 100%;
     }
   }
   @media (max-width: 750px){
+
     h1 {
       font-size: $h2-size - 12px;
     }
@@ -254,13 +272,27 @@ body {
       max-width: 100px;
       max-height: 100px;
     }
-  }
-    @media (max-width: 525px){
-      img {
-        max-width: 50px;
-        max-height: 50px;
+    #date {
+      margin-left: 0px;
+
+      h2 {
+        font-size: 32px;
+        line-height: 32px;
       }
     }
+  }
+  @media (max-width: 650px){
+    grid-column: 1 / span 1;
+    h1 {
+      font-size: $h2-size;
+    }
+  }
+  @media (max-width: 525px){
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
 }
 
 #today, #yesterday {
@@ -280,6 +312,16 @@ body {
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
+
+  @media screen and (max-width: 850px){
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 650px){
+    flex-wrap: nowrap;
+  }
+  @media screen and (max-width: 450px){
+    flex-wrap: wrap;
+  }
 }
 .game2 {
   display: none;
@@ -289,8 +331,15 @@ body {
   font-weight: 400;
   min-width: 160px;
 
+  @media screen and (max-width: 950px){
+    min-width: 125px;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
   span {
     font-size: 24px;
+    vertical-align: top;
   }
 }
 .double {
@@ -328,13 +377,28 @@ body {
 select {
   width: 285px;
   font-size: 20px;
-  border: solid 2px #2d2d2d;
+  border: solid 2px #cecece;
+  background: #fbfbfb;
   font-family: $font-stack;
 }
 
 .standings {
   grid-column: 1 / span 2;
-
+  > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    border: 0;
+    h5 {
+      color: #585858;
+      margin: 0px 5px;
+      padding: 0px 5px;
+    }
+    .wins-losses {
+      margin-left: auto;
+    }
+  }
   > div {
     background: white;
     border: solid #cecece 2px;
@@ -360,9 +424,33 @@ select {
   }
   .wins-losses {
     margin-left: auto;
+    min-width: 85px;
+    text-align: right;
   }
   .rank {
     font-weight: bold;
+  }
+  .win-pct, .games-back {
+    min-width: 55px;
+    text-align: right;
+
+    @media screen and (max-width: 650px){
+      min-width: 35px;
+    }
+  }
+  .team-abbr {
+    display: none;
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-column: 1 / span 1;
+
+    .team-abbr {
+      display: block;
+    }
+    .team-name {
+      display: none;
+    }
   }
 }
 
