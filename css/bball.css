@@ -182,7 +182,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 1024px;
   margin: 0 auto;
   text-align: center;
@@ -207,7 +207,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background: white;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 4;
   border-bottom: solid 10px #ce3c2f;
   padding: 15px 30px; }
   #heading img {
@@ -253,6 +253,12 @@ body {
   @media (max-width: 525px) {
     #today h2, #yesterday h2 {
       font-size: 28px; } }
+
+.games {
+  grid-column: span 2; }
+  @media screen and (max-width: 650px) {
+    .games {
+      grid-column: span 1; } }
 
 .game, .game2 {
   display: flex;
@@ -322,7 +328,7 @@ select {
   font-family: "Palanquin Dark", sans-serif; }
 
 .standings {
-  grid-column: 1 / span 2; }
+  grid-column: 1 / span 4; }
   .standings > div:first-of-type {
     display: flex;
     align-items: center;
@@ -373,6 +379,14 @@ select {
         display: block; }
       .standings .team-name {
         display: none; } }
+
+.stats {
+  background-color: white;
+  border: solid 2px #cecece;
+  padding: 0px 15px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin: 0px 25px; }
 
 .loading {
   display: none; }

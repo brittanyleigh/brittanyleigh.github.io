@@ -45,6 +45,7 @@ $(document).ready(function() {
     '0': ['111', '112'],
     '1': ['116', '131']
   }
+  var url = window.location.href;
 
   $('#selectTeam').change(function(){
     teamID = $(this).val();
@@ -56,6 +57,8 @@ $(document).ready(function() {
     todayAjax();
     yesterdayAjax();
     standings(teamID);
+    winslosses(teamID);
+    //history.pushState(null, '', url + '/#' + teamID);
   });
   function date (){
     var today = new Date();
@@ -112,7 +115,6 @@ $(document).ready(function() {
       }, //headers
       success: function (data){
         var dataScore = data.scoreboard.gameScore;
-        console.log(dataScore);
         if (dataScore){
           if (dataScore[0].isUnplayed == 'false'){
             yesterdayScore(dataScore[0], '#yesterday .game');
@@ -131,7 +133,6 @@ $(document).ready(function() {
     }); //ajax call
   }; 
   function todayGame (gameData, game){
-    console.log(gameData)
     var homeID = gameData.homeTeam.ID;
     var awayID = gameData.awayTeam.ID;
     var homeTeam = gameData.homeTeam.Name;
@@ -183,7 +184,6 @@ $(document).ready(function() {
       }, //headers
       success: function (data){
         console.log(data);
-
         var division_number = divisions[teamID];
         $('.standings h3 span').text(division_names[division_number]);
         var division_standings = data.divisionteamstandings.division[division_number];
@@ -198,6 +198,71 @@ $(document).ready(function() {
           $(team_div).find('.games-back').text(team.stats.GamesBack['#text']);
           $(team_div).find('.win-pct').text(team.stats.WinPct['#text'].substr(1));
         }
+      } //success
+    }); //ajax call
+  }; 
+
+function winslosses(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/team_gamelogs.json?team=' + teamID + '&teamstats=W,L',
+      dataType: 'json',
+      async: false,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        console.log(data);
+        var wins = []
+        var losses = []
+        var last10_wins =0;
+        var last10_losses = 0;
+        var log = data.teamgamelogs.gamelogs;
+        var streak = 1;
+        var streakType;
+        var streakStr;
+        // fetch 15 days to account for off days, sorted by oldest first, so have to go from end of array backwards
+        for (var i = log.length -1; i > (log.length - 11); i--) {
+          wins.push(log[i].stats.Wins['#text']);
+          losses.push(log[i].stats.Losses['#text']);
+          last10_wins += parseInt(log[i].stats.Wins['#text']);
+          last10_losses += parseInt(log[i].stats.Losses['#text']);
+        }
+        $('#last10 .stats').text(last10_wins + ' - ' + last10_losses);
+
+        if (wins[0] == 1) {
+          streakType = wins;
+          streakStr = 'W';
+        } else if (losses[0] == 1) {
+          streakType = losses;
+          streakStr = 'L';
+        }
+        var i = 0;
+        while (streakType[0] == streakType[i+1]){
+          streak += 1;
+          i++;
+        }
+
+        $('#streak .stats').text(streakStr + streak);
+
+        var away_wins = 0;
+        var away_losses = 0;
+        var home_wins = 0;
+        var home_losses = 0;
+
+        for (var i = 0; i < log.length; i++) {
+          if (log[i].game.homeTeam.ID == teamID) {
+            home_wins += parseInt(log[i].stats.Wins['#text']);
+            home_losses += parseInt(log[i].stats.Losses['#text']);
+          } else if (log[i].game.awayTeam.ID == teamID) {
+            away_wins += parseInt(log[i].stats.Wins['#text']);
+            away_losses += parseInt(log[i].stats.Losses['#text']);
+          }
+        }
+
+        $('#home-record .stats').text(home_wins + ' - ' + home_losses);
+        $('#away-record .stats').text(away_wins + ' - ' + away_losses);
       } //success
     }); //ajax call
   }; 
