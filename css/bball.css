@@ -199,7 +199,7 @@ body {
       border-right: 0px; } }
   @media screen and (max-width: 650px) {
     .container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr 1fr; } }
 
 #heading {
   display: flex;
@@ -240,7 +240,7 @@ body {
         line-height: 32px; } }
   @media (max-width: 650px) {
     #heading {
-      grid-column: 1 / span 1; }
+      grid-column: span 2; }
       #heading h1 {
         font-size: 48px; } }
   @media (max-width: 525px) {
@@ -256,9 +256,6 @@ body {
 
 .games {
   grid-column: span 2; }
-  @media screen and (max-width: 650px) {
-    .games {
-      grid-column: span 1; } }
 
 .game, .game2 {
   display: flex;
@@ -374,7 +371,7 @@ select {
     display: none; }
   @media screen and (max-width: 650px) {
     .standings {
-      grid-column: 1 / span 1; }
+      grid-column: span 2; }
       .standings .team-abbr {
         display: block; }
       .standings .team-name {
@@ -387,8 +384,5 @@ select {
   text-align: center;
   margin-bottom: 15px;
   margin: 0px 25px; }
-
-.loading {
-  display: none; }
 
 /*# sourceMappingURL=bball.css.map */

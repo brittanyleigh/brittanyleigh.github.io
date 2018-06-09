@@ -46,6 +46,14 @@ $(document).ready(function() {
     '1': ['116', '131']
   }
   var url = window.location.href;
+  var n = url.indexOf('#');
+  if (n !== -1){
+    var urlTeamID = url.substr(n+1);
+    var url = url.substr(0, n);
+    $('#selectTeam').val(urlTeamID.toString()).prop('selected', true);
+    console.log(urlTeamID);
+    //if url for specific team, change selected team
+  } 
 
   $('#selectTeam').change(function(){
     teamID = $(this).val();
@@ -58,8 +66,9 @@ $(document).ready(function() {
     yesterdayAjax();
     standings(teamID);
     winslosses(teamID);
-    //history.pushState(null, '', url + '/#' + teamID);
+    history.pushState(null, '', url + '#' + teamID);
   });
+
   function date (){
     var today = new Date();
     var day = daysOfTheWeek[today.getDay()];
@@ -81,7 +90,7 @@ $(document).ready(function() {
       type: "GET",
       url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
       dataType: 'json',
-      async: false,
+      async: true,
       headers: {
         "Authorization": "Basic " + btoa(sfbtoa)
       },
@@ -100,7 +109,9 @@ $(document).ready(function() {
         else {
           $('#today .game .time h1').html('Off Day!');
         };
-      } // function/success
+      },
+      complete: function(){
+      }, // function/success
     }); // ajax call
   };
   function yesterdayAjax(){
@@ -109,7 +120,7 @@ $(document).ready(function() {
       type: "GET",
       url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/scoreboard.json?fordate=' + scoreDate + '&team=' + teamID,
       dataType: 'json',
-      async: false,
+      async: true,
       headers: {
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers
@@ -178,7 +189,7 @@ $(document).ready(function() {
       type: "GET",
       url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/division_team_standings.json?teamstats=' + param,
       dataType: 'json',
-      async: false,
+      async: true,
       headers: {
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers
@@ -208,7 +219,7 @@ function winslosses(teamID){
       type: "GET",
       url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/team_gamelogs.json?team=' + teamID + '&teamstats=W,L',
       dataType: 'json',
-      async: false,
+      async: true,
       headers: {
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers

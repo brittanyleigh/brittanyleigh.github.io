@@ -227,7 +227,7 @@ body {
     border-right: 0px;
   }
   @media screen and (max-width: 650px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -282,7 +282,7 @@ body {
     }
   }
   @media (max-width: 650px){
-    grid-column: 1 / span 1;
+    grid-column: span 2;
     h1 {
       font-size: $h2-size;
     }
@@ -305,10 +305,6 @@ body {
 }
 .games {
   grid-column: span 2;
-
-  @media screen and (max-width: 650px) {
-    grid-column: span 1;
-  }
 }
 .game, .game2 {
   display: flex;
@@ -450,7 +446,7 @@ select {
   }
 
   @media screen and (max-width: 650px) {
-    grid-column: 1 / span 1;
+    grid-column: span 2;
 
     .team-abbr {
       display: block;
@@ -468,8 +464,4 @@ select {
   text-align: center;
   margin-bottom: 15px;
   margin: 0px 25px;
-}
-
-.loading {
-  display: none;
 }
