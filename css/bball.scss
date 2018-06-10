@@ -47,7 +47,7 @@ $team-secondary-colors: (
   cubs: #C8102E,
   whitesox: #898D8F,
   reds: #000000,
-  indians: #F5001E,
+  indians: #E70017,
   rockies: #C2CED5,
   tigers: #FF0000,
   astros: #FA5E00,
@@ -207,7 +207,9 @@ body {
 .team-126 {
   @include team-colors(nationals);
 }
-
+.team-116 {
+  @include team-colors(indians);
+}
 
 .container {
   display: grid;
@@ -458,6 +460,12 @@ select {
   @media screen and (max-width: 400px) {
     img {
       display: none;
+    }
+    .wins-losses {
+      min-width: 50px;
+    }
+    h4 {
+      font-size: 18px;
     }
   }
 }

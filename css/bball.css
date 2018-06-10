@@ -180,6 +180,11 @@ body {
   .team-126 #heading {
     border-bottom: solid 15px #041A43; }
 
+.team-116 {
+  background: #0E203F; }
+  .team-116 #heading {
+    border-bottom: solid 15px #E70017; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -378,7 +383,11 @@ select {
         display: none; } }
   @media screen and (max-width: 400px) {
     .standings img {
-      display: none; } }
+      display: none; }
+    .standings .wins-losses {
+      min-width: 50px; }
+    .standings h4 {
+      font-size: 18px; } }
 
 .stats {
   background-color: white;

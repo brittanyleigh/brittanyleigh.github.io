@@ -45,13 +45,13 @@ $(document).ready(function() {
     '0': ['111', '112'],
     '1': ['116', '131']
   }
+  var total_games_played, top_three;
   var url = window.location.href;
   var n = url.indexOf('#');
   if (n !== -1){
     var urlTeamID = url.substr(n+1);
     var url = url.substr(0, n);
     $('#selectTeam').val(urlTeamID.toString()).prop('selected', true);
-    console.log(urlTeamID);
     //if url for specific team, change selected team
   } 
 
@@ -62,10 +62,12 @@ $(document).ready(function() {
     $('.teams').hide();
     $('.game2').hide();
     $('.double').hide();
+    $('.WL h1').removeClass();
     todayAjax();
     yesterdayAjax();
     standings(teamID);
     winslosses(teamID);
+    getTopPlayerStats(teamID);
     history.pushState(null, '', url + '#' + teamID);
   });
 
@@ -177,7 +179,7 @@ $(document).ready(function() {
     $(awayDiv).html(awayTeam + ': <b>' + awayScore + '</b>');
     $(homeDiv).html(homeTeam + ': <b>' + homeScore + '</b>');
     if (homeID == teamID && homeScore > awayScore || awayID == teamID && awayScore > homeScore){
-      $(game + ' .WL h1').html('W');
+      $(game + ' .WL h1').addClass('animated tada').html('W');
     } else{
       $(game + ' .WL h1').html('L');
     } 
@@ -194,7 +196,6 @@ $(document).ready(function() {
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers
       success: function (data){
-        console.log(data);
         var division_number = divisions[teamID];
         $('.standings h3 span').text(division_names[division_number]);
         var division_standings = data.divisionteamstandings.division[division_number];
@@ -208,12 +209,15 @@ $(document).ready(function() {
           $(team_div).find('.wins-losses').text(team.stats.Wins['#text'] + ' - ' + team.stats.Losses['#text']);
           $(team_div).find('.games-back').text(team.stats.GamesBack['#text']);
           $(team_div).find('.win-pct').text(team.stats.WinPct['#text'].substr(1));
+
+          if (team.team.ID == teamID) {
+            total_games_played = parseInt(team.stats.Wins['#text']) + parseInt(team.stats.Losses['#text']);
+          }
         }
       } //success
     }); //ajax call
   }; 
-
-function winslosses(teamID){
+  function winslosses(teamID){
     $.ajax
     ({
       type: "GET",
@@ -224,7 +228,6 @@ function winslosses(teamID){
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers
       success: function (data){
-        console.log(data);
         var wins = []
         var losses = []
         var last10_wins =0;
@@ -254,7 +257,6 @@ function winslosses(teamID){
           streak += 1;
           i++;
         }
-
         $('#streak .stats').text(streakStr + streak);
 
         var away_wins = 0;
@@ -274,9 +276,86 @@ function winslosses(teamID){
 
         $('#home-record .stats').text(home_wins + ' - ' + home_losses);
         $('#away-record .stats').text(away_wins + ' - ' + away_losses);
-      } //success
-    }); //ajax call
+      } 
+    }); 
   }; 
+  function getTopPlayerStats(teamID){
+    playerHR(teamID);
+    playerRBI(teamID);
+    playerAVG(teamID);
+    playerOPS(teamID);
+  }
+  function playerHR(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=HR,PA&sort=stats.HR.D&limit=10',
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        topThreeStats(data);
+        console.log(top_three);
+      }
+    });
+  };
+  function playerRBI(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=RBI,PA&sort=stats.RBI.D&limit=10',
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        topThreeStats(data);
+        console.log(top_three);;
+      }
+    });
+  };
+  function playerAVG(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=AVG,PA&sort=stats.AVG.D&limit=10',
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        topThreeStats(data);
+        console.log(top_three);
+      }
+    });
+  };
+  function playerOPS(teamID){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=OPS,PA&sort=stats.OPS.D&limit=10',
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        topThreeStats(data);
+        console.log(top_three);
+      }
+    });
+  };
+  function topThreeStats(data){
+    var stats = data.cumulativeplayerstats.playerstatsentry;
+    var qualifying_stats = $.grep(stats, function( a ) {
+      return (parseInt(a.stats.PlateAppearances['#text']) / total_games_played) >= 3.1;
+    });
+    top_three = qualifying_stats.slice(0,3);
+  };
 
   date();
   $('#selectTeam').triggerHandler('change');
