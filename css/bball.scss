@@ -455,6 +455,11 @@ select {
       display: none;
     }
   }
+  @media screen and (max-width: 400px) {
+    img {
+      display: none;
+    }
+  }
 }
 
 .stats {

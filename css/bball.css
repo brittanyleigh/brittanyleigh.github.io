@@ -376,6 +376,9 @@ select {
         display: block; }
       .standings .team-name {
         display: none; } }
+  @media screen and (max-width: 400px) {
+    .standings img {
+      display: none; } }
 
 .stats {
   background-color: white;
