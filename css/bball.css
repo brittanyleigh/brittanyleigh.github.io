@@ -397,4 +397,17 @@ select {
   margin-bottom: 15px;
   margin: 0px 25px; }
 
+.player-stats {
+  grid-column: span 2; }
+  .player-stats .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: none;
+    border-bottom: solid 2px #cecece; }
+  .player-stats h4 {
+    font-weight: normal; }
+    .player-stats h4:nth-child(4) {
+      margin-left: auto; }
+
 /*# sourceMappingURL=bball.css.map */

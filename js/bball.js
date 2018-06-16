@@ -45,6 +45,7 @@ $(document).ready(function() {
     '0': ['111', '112'],
     '1': ['116', '131']
   }
+  var stats_data;
   var total_games_played, top_three;
   var url = window.location.href;
   var n = url.indexOf('#');
@@ -67,7 +68,6 @@ $(document).ready(function() {
     yesterdayAjax();
     standings(teamID);
     winslosses(teamID);
-    getTopPlayerStats(teamID);
     history.pushState(null, '', url + '#' + teamID);
   });
 
@@ -279,83 +279,6 @@ $(document).ready(function() {
       } 
     }); 
   }; 
-  function getTopPlayerStats(teamID){
-    playerHR(teamID);
-    playerRBI(teamID);
-    playerAVG(teamID);
-    playerOPS(teamID);
-  }
-  function playerHR(teamID){
-    $.ajax
-    ({
-      type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=HR,PA&sort=stats.HR.D&limit=10',
-      dataType: 'json',
-      async: true,
-      headers: {
-        "Authorization": "Basic " + btoa(sfbtoa)
-      }, //headers
-      success: function (data){
-        topThreeStats(data);
-        console.log(top_three);
-      }
-    });
-  };
-  function playerRBI(teamID){
-    $.ajax
-    ({
-      type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=RBI,PA&sort=stats.RBI.D&limit=10',
-      dataType: 'json',
-      async: true,
-      headers: {
-        "Authorization": "Basic " + btoa(sfbtoa)
-      }, //headers
-      success: function (data){
-        topThreeStats(data);
-        console.log(top_three);;
-      }
-    });
-  };
-  function playerAVG(teamID){
-    $.ajax
-    ({
-      type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=AVG,PA&sort=stats.AVG.D&limit=10',
-      dataType: 'json',
-      async: true,
-      headers: {
-        "Authorization": "Basic " + btoa(sfbtoa)
-      }, //headers
-      success: function (data){
-        topThreeStats(data);
-        console.log(top_three);
-      }
-    });
-  };
-  function playerOPS(teamID){
-    $.ajax
-    ({
-      type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/cumulative_player_stats.json?team='+ teamID + '&playerstats=OPS,PA&sort=stats.OPS.D&limit=10',
-      dataType: 'json',
-      async: true,
-      headers: {
-        "Authorization": "Basic " + btoa(sfbtoa)
-      }, //headers
-      success: function (data){
-        topThreeStats(data);
-        console.log(top_three);
-      }
-    });
-  };
-  function topThreeStats(data){
-    var stats = data.cumulativeplayerstats.playerstatsentry;
-    var qualifying_stats = $.grep(stats, function( a ) {
-      return (parseInt(a.stats.PlateAppearances['#text']) / total_games_played) >= 3.1;
-    });
-    top_three = qualifying_stats.slice(0,3);
-  };
 
   date();
   $('#selectTeam').triggerHandler('change');

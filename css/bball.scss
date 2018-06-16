@@ -478,3 +478,22 @@ select {
   margin-bottom: 15px;
   margin: 0px 25px;
 }
+
+.player-stats {
+  grid-column: span 2;
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: none;
+    border-bottom: solid 2px #cecece;
+  }
+  h4 {
+    font-weight: normal;
+
+    &:nth-child(4){
+      margin-left: auto;
+    }
+  }
+}
+
