@@ -47,6 +47,7 @@ $(document).ready(function() {
   }
   var stats_data;
   var total_games_played, top_three;
+
   var url = window.location.href;
   var n = url.indexOf('#');
   if (n !== -1){
@@ -69,6 +70,7 @@ $(document).ready(function() {
     standings(teamID);
     winslosses(teamID);
     history.pushState(null, '', url + '#' + teamID);
+    news();
   });
 
   function date (){
@@ -279,6 +281,37 @@ $(document).ready(function() {
       } 
     }); 
   }; 
+  function news(){
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://newsapi.org/v2/everything?q=chicago%20cubs&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-11&sortBy=relevancy&pageSize=7',
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": '239b38f74b804d03bd91eba94001f197'
+      }, //headers
+      success: function (data){
+        console.log(data);
+        var articles = data.articles;
+        for (var i = 0; i < articles.length; i++){
+          $('.news-' + i + ' .title').text(articles[i].title);
+          $('.news-' + i + ' .source').text(articles[i].source.name);
+          $('.news-' + i + ' img').attr('src', articles[i].urlToImage);
+          $('.news-' + i + ' a').attr('href', articles[i].url);
+        }
+      }
+    }); 
+  }; 
+
+  $('.news-carousel').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    dots: true,
+  });
+  $('.slick-next').insertAfter('.slick-prev');
 
   date();
   $('#selectTeam').triggerHandler('change');

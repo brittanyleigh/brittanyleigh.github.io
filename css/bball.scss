@@ -497,3 +497,32 @@ select {
   }
 }
 
+.news-carousel {
+  grid-column: 1 / span 4;
+
+  .news {
+    margin: 10px 25px;
+  }
+  img {
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 100%;
+  }
+  .img {
+    height: 165px;
+    overflow: hidden;
+  }
+  h4 {
+    font-weight: normal;
+    text-transform: none;
+    line-height: 1.1em;
+    font-size: 20px;
+  }
+  .slick-dots {
+  padding-left: 0px;
+
+  li {
+    display: inline-block;
+  }
+}
+}

@@ -410,4 +410,25 @@ select {
     .player-stats h4:nth-child(4) {
       margin-left: auto; }
 
+.news-carousel {
+  grid-column: 1 / span 4; }
+  .news-carousel .news {
+    margin: 10px 25px; }
+  .news-carousel img {
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 100%; }
+  .news-carousel .img {
+    height: 165px;
+    overflow: hidden; }
+  .news-carousel h4 {
+    font-weight: normal;
+    text-transform: none;
+    line-height: 1.1em;
+    font-size: 20px; }
+  .news-carousel .slick-dots {
+    padding-left: 0px; }
+    .news-carousel .slick-dots li {
+      display: inline-block; }
+
 /*# sourceMappingURL=bball.css.map */
