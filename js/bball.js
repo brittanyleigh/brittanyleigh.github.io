@@ -41,12 +41,14 @@ $(document).ready(function() {
     '3': 'NL East',
     '4': 'NL Central',
     '5': 'NL West'}
-  var divisions_new = {
-    '0': ['111', '112'],
-    '1': ['116', '131']
+  var team_strings = {
+    '131': 'Chicago Cubs',
+    '140': 'Arizona Diamondbacks',
+    '130': 'Atlanta Braves',
+    '111': 'Baltimore Orioles',
   }
   var stats_data;
-  var total_games_played, top_three;
+  var total_games_played, top_three, team_str;
 
   var url = window.location.href;
   var n = url.indexOf('#');
@@ -285,7 +287,7 @@ $(document).ready(function() {
     $.ajax
     ({
       type: "GET",
-      url: 'https://newsapi.org/v2/everything?q=chicago%20cubs&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-11&sortBy=relevancy&pageSize=7',
+      url: 'https://newsapi.org/v2/everything?q=chicago%20cubs&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-15&sortBy=relevancy&pageSize=10',
       dataType: 'json',
       async: true,
       headers: {
@@ -294,9 +296,19 @@ $(document).ready(function() {
       success: function (data){
         console.log(data);
         var articles = data.articles;
-        for (var i = 0; i < articles.length; i++){
-          $('.news-' + i + ' .title').text(articles[i].title);
-          $('.news-' + i + ' .source').text(articles[i].source.name);
+        team_str = team_strings[teamID.toString()];
+        $('.team-news .team-name').text(team_str);
+
+        for (var a = 0; a < articles.length; a++){
+          if (articles[a].author == 'OddsShark.com') {
+            articles.splice(a, 1);
+          }
+        }
+        
+        for (var i = 0; i < 7; i++){
+          var title = articles[i].title;
+          $('.news-' + i + ' .title').text(title);
+          $('.news-' + i + ' .source').text('- ' + articles[i].source.name);
           $('.news-' + i + ' img').attr('src', articles[i].urlToImage);
           $('.news-' + i + ' a').attr('href', articles[i].url);
         }
@@ -312,6 +324,10 @@ $(document).ready(function() {
     dots: true,
   });
   $('.slick-next').insertAfter('.slick-prev');
+  $('.slick-prev').html('<i class="fas fa-arrow-left"></i>');
+  $('.slick-next').html('<i class="fas fa-arrow-right"></i>');
+  $('.slick-dots li button').html('<i class="fas fa-circle"></i>');
+
 
   date();
   $('#selectTeam').triggerHandler('change');

@@ -39,151 +39,211 @@ body {
   background: #002F6C; }
   .team-131 #heading {
     border-bottom: solid 15px #C8102E; }
+  .team-131 .slick-dots .slick-active svg, .team-131 .slick-dots svg:hover, .team-131 .slick-arrow svg:hover {
+    color: #002F6C; }
 
 .team-140 {
   background: #A71930; }
   .team-140 #heading {
     border-bottom: solid 15px #000000; }
+  .team-140 .slick-dots .slick-active svg, .team-140 .slick-dots svg:hover, .team-140 .slick-arrow svg:hover {
+    color: #A71930; }
 
 .team-130 {
   background: #002456; }
   .team-130 #heading {
     border-bottom: solid 15px #CA001D; }
+  .team-130 .slick-dots .slick-active svg, .team-130 .slick-dots svg:hover, .team-130 .slick-arrow svg:hover {
+    color: #002456; }
 
 .team-111 {
   background: #000000; }
   .team-111 #heading {
     border-bottom: solid 15px #FF0F00; }
+  .team-111 .slick-dots .slick-active svg, .team-111 .slick-dots svg:hover, .team-111 .slick-arrow svg:hover {
+    color: #000000; }
 
 .team-113 {
   background: #D60020; }
   .team-113 #heading {
     border-bottom: solid 15px #0A2141; }
+  .team-113 .slick-dots .slick-active svg, .team-113 .slick-dots svg:hover, .team-113 .slick-arrow svg:hover {
+    color: #D60020; }
 
 .team-119 {
   background: #27261F; }
   .team-119 #heading {
     border-bottom: solid 15px #898D8F; }
+  .team-119 .slick-dots .slick-active svg, .team-119 .slick-dots svg:hover, .team-119 .slick-arrow svg:hover {
+    color: #27261F; }
 
 .team-135 {
   background: #E70019; }
   .team-135 #heading {
     border-bottom: solid 15px #000000; }
+  .team-135 .slick-dots .slick-active svg, .team-135 .slick-dots svg:hover, .team-135 .slick-arrow svg:hover {
+    color: #E70019; }
 
 .team-138 {
   background: #372C67; }
   .team-138 #heading {
     border-bottom: solid 15px #C2CED5; }
+  .team-138 .slick-dots .slick-active svg, .team-138 .slick-dots svg:hover, .team-138 .slick-arrow svg:hover {
+    color: #372C67; }
 
 .team-117 {
   background: #0A2141; }
   .team-117 #heading {
     border-bottom: solid 15px #FF0000; }
+  .team-117 .slick-dots .slick-active svg, .team-117 .slick-dots svg:hover, .team-117 .slick-arrow svg:hover {
+    color: #0A2141; }
 
 .team-122 {
   background: #002863; }
   .team-122 #heading {
     border-bottom: solid 15px #FA5E00; }
+  .team-122 .slick-dots .slick-active svg, .team-122 .slick-dots svg:hover, .team-122 .slick-arrow svg:hover {
+    color: #002863; }
 
 .team-118 {
   background: #004089; }
   .team-118 #heading {
     border-bottom: solid 15px #C59A54; }
+  .team-118 .slick-dots .slick-active svg, .team-118 .slick-dots svg:hover, .team-118 .slick-arrow svg:hover {
+    color: #004089; }
 
 .team-124 {
   background: #CA0000; }
   .team-124 #heading {
     border-bottom: solid 15px #002E64; }
+  .team-124 .slick-dots .slick-active svg, .team-124 .slick-dots svg:hover, .team-124 .slick-arrow svg:hover {
+    color: #CA0000; }
 
 .team-137 {
   background: #04286D; }
   .team-137 #heading {
     border-bottom: solid 15px #FF002D; }
+  .team-137 .slick-dots .slick-active svg, .team-137 .slick-dots svg:hover, .team-137 .slick-arrow svg:hover {
+    color: #04286D; }
 
 .team-128 {
   background: #000000; }
   .team-128 #heading {
     border-bottom: solid 15px #FF4C00; }
+  .team-128 .slick-dots .slick-active svg, .team-128 .slick-dots svg:hover, .team-128 .slick-arrow svg:hover {
+    color: #000000; }
 
 .team-134 {
   background: #12274C; }
   .team-134 #heading {
     border-bottom: solid 15px #87714A; }
+  .team-134 .slick-dots .slick-active svg, .team-134 .slick-dots svg:hover, .team-134 .slick-arrow svg:hover {
+    color: #12274C; }
 
 .team-120 {
   background: #0A2142; }
   .team-120 #heading {
     border-bottom: solid 15px #CA001C; }
+  .team-120 .slick-dots .slick-active svg, .team-120 .slick-dots svg:hover, .team-120 .slick-arrow svg:hover {
+    color: #0A2142; }
 
 .team-127 {
   background: #092474; }
   .team-127 #heading {
     border-bottom: solid 15px #FF6B16; }
+  .team-127 .slick-dots .slick-active svg, .team-127 .slick-dots svg:hover, .team-127 .slick-arrow svg:hover {
+    color: #092474; }
 
 .team-114 {
   background: #172247; }
   .team-114 #heading {
     border-bottom: solid 15px #97999B; }
+  .team-114 .slick-dots .slick-active svg, .team-114 .slick-dots svg:hover, .team-114 .slick-arrow svg:hover {
+    color: #172247; }
 
 .team-125 {
   background: #003B32; }
   .team-125 #heading {
     border-bottom: solid 15px #F6B200; }
+  .team-125 .slick-dots .slick-active svg, .team-125 .slick-dots svg:hover, .team-125 .slick-arrow svg:hover {
+    color: #003B32; }
 
 .team-129 {
   background: #CA001D; }
   .team-129 #heading {
     border-bottom: solid 15px #004C9D; }
+  .team-129 .slick-dots .slick-active svg, .team-129 .slick-dots svg:hover, .team-129 .slick-arrow svg:hover {
+    color: #CA001D; }
 
 .team-132 {
   background: #FFC900; }
   .team-132 #heading {
     border-bottom: solid 15px #27261F; }
+  .team-132 .slick-dots .slick-active svg, .team-132 .slick-dots svg:hover, .team-132 .slick-arrow svg:hover {
+    color: #FFC900; }
 
 .team-139 {
   background: #002863; }
   .team-139 #heading {
     border-bottom: solid 15px #9EAAB3; }
+  .team-139 .slick-dots .slick-active svg, .team-139 .slick-dots svg:hover, .team-139 .slick-arrow svg:hover {
+    color: #002863; }
 
 .team-136 {
   background: #27261F; }
   .team-136 #heading {
     border-bottom: solid 15px #FF0000; }
+  .team-136 .slick-dots .slick-active svg, .team-136 .slick-dots svg:hover, .team-136 .slick-arrow svg:hover {
+    color: #27261F; }
 
 .team-123 {
   background: #004467; }
   .team-123 #heading {
     border-bottom: solid 15px #006C5F; }
+  .team-123 .slick-dots .slick-active svg, .team-123 .slick-dots svg:hover, .team-123 .slick-arrow svg:hover {
+    color: #004467; }
 
 .team-133 {
   background: #CA001D; }
   .team-133 #heading {
     border-bottom: solid 15px #0A2141; }
+  .team-133 .slick-dots .slick-active svg, .team-133 .slick-dots svg:hover, .team-133 .slick-arrow svg:hover {
+    color: #CA001D; }
 
 .team-115 {
   background: #09275D; }
   .team-115 #heading {
     border-bottom: solid 15px #88BBE9; }
+  .team-115 .slick-dots .slick-active svg, .team-115 .slick-dots svg:hover, .team-115 .slick-arrow svg:hover {
+    color: #09275D; }
 
 .team-121 {
   background: #004286; }
   .team-121 #heading {
     border-bottom: solid 15px #DE0033; }
+  .team-121 .slick-dots .slick-active svg, .team-121 .slick-dots svg:hover, .team-121 .slick-arrow svg:hover {
+    color: #004286; }
 
 .team-112 {
   background: #104490; }
   .team-112 #heading {
     border-bottom: solid 15px #EB0000; }
+  .team-112 .slick-dots .slick-active svg, .team-112 .slick-dots svg:hover, .team-112 .slick-arrow svg:hover {
+    color: #104490; }
 
 .team-126 {
   background: #C90016; }
   .team-126 #heading {
     border-bottom: solid 15px #041A43; }
+  .team-126 .slick-dots .slick-active svg, .team-126 .slick-dots svg:hover, .team-126 .slick-arrow svg:hover {
+    color: #C90016; }
 
 .team-116 {
   background: #0E203F; }
   .team-116 #heading {
     border-bottom: solid 15px #E70017; }
+  .team-116 .slick-dots .slick-active svg, .team-116 .slick-dots svg:hover, .team-116 .slick-arrow svg:hover {
+    color: #0E203F; }
 
 .container {
   display: grid;
@@ -410,10 +470,27 @@ select {
     .player-stats h4:nth-child(4) {
       margin-left: auto; }
 
+.team-news {
+  grid-column: 1 / span 4; }
+  .team-news h3 {
+    margin-bottom: 0px;
+    margin-top: 50px; }
+  .team-news h5 a {
+    color: #a8a8a8; }
+    .team-news h5 a:hover {
+      color: #8f8f8f; }
+
 .news-carousel {
   grid-column: 1 / span 4; }
   .news-carousel .news {
-    margin: 10px 25px; }
+    margin: 10px 25px;
+    background: white;
+    border: solid 2px #cecece;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column; }
+    .news-carousel .news:hover {
+      border-color: #a8a8a8; }
   .news-carousel img {
     max-width: 100%;
     overflow: hidden;
@@ -426,9 +503,34 @@ select {
     text-transform: none;
     line-height: 1.1em;
     font-size: 20px; }
+  .news-carousel .source {
+    margin-top: auto;
+    text-align: right;
+    margin-right: 10px;
+    text-transform: lowercase;
+    font-style: 16px; }
   .news-carousel .slick-dots {
     padding-left: 0px; }
     .news-carousel .slick-dots li {
       display: inline-block; }
+  .news-carousel a {
+    text-decoration: none;
+    color: #2d2d2d; }
+  .news-carousel button {
+    background: transparent;
+    border: none; }
+    .news-carousel button:focus {
+      outline: 0; }
+  .news-carousel .slick-arrow svg {
+    height: 24px;
+    width: 24px;
+    color: #a8a8a8; }
+    .news-carousel .slick-arrow svg:hover {
+      cursor: pointer; }
+
+.slick-dots svg {
+  color: #cecece; }
+  .slick-dots svg:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=bball.css.map */
