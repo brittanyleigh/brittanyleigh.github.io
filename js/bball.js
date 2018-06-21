@@ -42,11 +42,36 @@ $(document).ready(function() {
     '4': 'NL Central',
     '5': 'NL West'}
   var team_strings = {
-    '131': 'Chicago Cubs',
-    '140': 'Arizona Diamondbacks',
-    '130': 'Atlanta Braves',
     '111': 'Baltimore Orioles',
-  }
+    '112': 'Toronto Blue Jays',
+    '113': 'Boston Red Sox',
+    '114': 'New York Yankees',
+    '115': 'Tampa Bay Rays',
+    '116': 'Cleveland Indians',
+    '117': 'Detroit Tigers',
+    '118': 'Kansas City Royals',
+    '119': 'Chicago White Sox',
+    '120': 'Minnesota Twins',
+    '121': 'Texas Rangers',
+    '122': 'Houston Astros',
+    '123': 'Seattle Mariners',
+    '124': 'Los Angeles Angels',
+    '125': 'Oakland Athletics',
+    '126': 'Washington Nationals',
+    '127': 'New York Mets',
+    '128': 'Miami Marlins',
+    '129': 'Philadelphia Phillies',
+    '130': 'Atlanta Braves',
+    '131': 'Chicago Cubs',
+    '132': 'Pittsburgh Pirates',
+    '133': 'St. Louis Cardinals',
+    '134': 'Milwaukee Brewers',
+    '135': 'Cincinnatti Reds',
+    '136': 'San Francisco Giants',
+    '137': 'Los Angeles Dodgers',
+    '138': 'Colorado Rockies',
+    '139': 'San Diego Padres',
+    '140': 'Arizona Diamondbacks',}
   var stats_data;
   var total_games_played, top_three, team_str;
 
@@ -57,9 +82,17 @@ $(document).ready(function() {
     var url = url.substr(0, n);
     $('#selectTeam').val(urlTeamID.toString()).prop('selected', true);
     //if url for specific team, change selected team
-  } 
+  }
+
+  var windowWidth = $(window).width();
+  $(window).resize(function(){
+    slickStyles();
+    // slick gallery responsive settings reset modified markup
+    // re-modify markup on site resize to keep icons etc
+  });
 
   $('#selectTeam').change(function(){
+    $('.placeholders').removeClass('placeholders');
     teamID = $(this).val();
     $('#heading img').attr("src", 'img/' + teamID + '.png');
     $('body').removeClass().addClass('team-' + teamID);
@@ -283,22 +316,22 @@ $(document).ready(function() {
       } 
     }); 
   }; 
-  function news(){
+  function news(){ 
+    team_str = team_strings[teamID.toString()];
+    $('.team-news .team-name').text(team_str);
+    team_search = encodeURIComponent(team_str);
+
     $.ajax
     ({
       type: "GET",
-      url: 'https://newsapi.org/v2/everything?q=chicago%20cubs&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-15&sortBy=relevancy&pageSize=10',
+      url: 'https://newsapi.org/v2/everything?q=' + team_search + '&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-15&sortBy=relevancy&pageSize=10',
       dataType: 'json',
       async: true,
       headers: {
         "Authorization": '239b38f74b804d03bd91eba94001f197'
       }, //headers
       success: function (data){
-        console.log(data);
         var articles = data.articles;
-        team_str = team_strings[teamID.toString()];
-        $('.team-news .team-name').text(team_str);
-
         for (var a = 0; a < articles.length; a++){
           if (articles[a].author == 'OddsShark.com') {
             articles.splice(a, 1);
@@ -322,13 +355,37 @@ $(document).ready(function() {
     slidesToScroll: 1,
     adaptiveHeight: true,
     dots: true,
+    responsive: [
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        dots: true,
+      }
+    }
+  ]
   });
-  $('.slick-next').insertAfter('.slick-prev');
-  $('.slick-prev').html('<i class="fas fa-arrow-left"></i>');
-  $('.slick-next').html('<i class="fas fa-arrow-right"></i>');
-  $('.slick-dots li button').html('<i class="fas fa-circle"></i>');
+
+  function slickStyles(){
+    $('.slick-next').insertAfter('.slick-prev');
+    $('.slick-prev').html('<i class="fas fa-arrow-left"></i>');
+    $('.slick-next').html('<i class="fas fa-arrow-right"></i>');
+    $('.slick-dots li button').html('<i class="fas fa-circle"></i>');
+  }
 
 
+  slickStyles();
   date();
   $('#selectTeam').triggerHandler('change');
 }); //document ready

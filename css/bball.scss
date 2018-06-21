@@ -6,6 +6,8 @@ $h2-size: 48px;
 $h3-size: 28px;
 $h4-size: 24px;
 
+$gray: #CECECE;
+
 $team-primary-colors: (
   dbacks: #A71930,
   braves: #002456,
@@ -117,7 +119,6 @@ h5 {
   color: #c5c5c5;
   font-weight: normal;
 }
-
 body {
   margin: 0px;
   color: #2d2d2d;
@@ -316,10 +317,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: solid 2px #cecece;
+  border: solid 2px $gray;
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
+  min-height: 111px;
 
   @media screen and (max-width: 850px){
     flex-wrap: wrap;
@@ -350,6 +352,10 @@ body {
     vertical-align: top;
   }
 }
+.time h1 {
+  font-size: 56px;
+}
+
 .double {
   display: none;
 }
@@ -365,7 +371,7 @@ body {
     text-transform: none;
   }
   .away {
-    border-bottom: solid 3px #cecece;
+    border-bottom: solid 3px $gray;
   }
   .away, .home {
     display: flex;
@@ -385,7 +391,7 @@ body {
 select {
   width: 285px;
   font-size: 20px;
-  border: solid 2px #cecece;
+  border: solid 2px $gray;
   background: #fbfbfb;
   font-family: $font-stack;
 }
@@ -409,7 +415,7 @@ select {
   }
   > div {
     background: white;
-    border: solid #cecece 2px;
+    border: solid $gray 2px;
     margin: 0px 25px;
 
     div {
@@ -417,7 +423,7 @@ select {
       align-items: center;
       justify-content: space-around;
       text-transform: none;
-      border-bottom: solid 2px #cecece;
+      border-bottom: solid 2px $gray;
     }
     div:last-child {
       border-bottom: 0px;
@@ -475,7 +481,7 @@ select {
 
 .stats {
   background-color: white;
-  border: solid 2px #cecece;
+  border: solid 2px $gray;
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
@@ -489,7 +495,7 @@ select {
     align-items: center;
     justify-content: space-around;
     text-transform: none;
-    border-bottom: solid 2px #cecece;
+    border-bottom: solid 2px $gray;
   }
   h4 {
     font-weight: normal;
@@ -502,6 +508,10 @@ select {
 
 .team-news {
   grid-column: 1 / span 4;
+
+  @media screen and (max-width: 650px) {
+    grid-column: span 2;
+  }
   h3 {
     margin-bottom: 0px;
     margin-top: 50px;
@@ -517,16 +527,20 @@ select {
 .news-carousel {
   grid-column: 1 / span 4;
 
+  @media screen and (max-width: 650px) {
+    grid-column: span 2;
+  }
+
   .news {
     margin: 10px 25px;
     background: white;
-    border: solid 2px #cecece;
+    border: solid 2px $gray;
     min-height: 280px;
     display: flex;
     flex-direction: column;
 
     &:hover {
-      border-color: darken(#cecece, 15%);
+      border-color: darken($gray, 15%);
     }
   }
   img {
@@ -571,7 +585,7 @@ select {
   .slick-arrow svg {
     height: 24px;
     width: 24px;
-    color: darken(#cecece, 15%);
+    color: darken($gray, 15%);
 
     &:hover {
       cursor: pointer;
@@ -580,9 +594,28 @@ select {
 }
 
 .slick-dots svg {
-  color: #cecece;
+  color: $gray;
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.placeholders {
+  .time, .WL {
+    h1 {
+      color: $gray;
+    }
+  }
+  .teams, .standings {
+    h4 {
+      color: $gray;
+    }
+    .away {
+    border-bottom: solid 3px $gray;
+    }
+  }
+  .stats {
+    color: $gray;
   }
 }

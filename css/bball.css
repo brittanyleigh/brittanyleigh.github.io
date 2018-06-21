@@ -327,10 +327,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border: solid 2px #cecece;
+  border: solid 2px #CECECE;
   padding: 0px 15px;
   text-align: center;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  min-height: 111px; }
   @media screen and (max-width: 850px) {
     .game, .game2 {
       flex-wrap: wrap; } }
@@ -357,6 +358,9 @@ body {
     font-size: 24px;
     vertical-align: top; }
 
+.time h1 {
+  font-size: 56px; }
+
 .double {
   display: none; }
 
@@ -370,7 +374,7 @@ body {
     margin: 0px;
     text-transform: none; }
   .teams .away {
-    border-bottom: solid 3px #cecece; }
+    border-bottom: solid 3px #CECECE; }
   .teams .away, .teams .home {
     display: flex;
     align-items: center;
@@ -385,7 +389,7 @@ body {
 select {
   width: 285px;
   font-size: 20px;
-  border: solid 2px #cecece;
+  border: solid 2px #CECECE;
   background: #fbfbfb;
   font-family: "Palanquin Dark", sans-serif; }
 
@@ -405,14 +409,14 @@ select {
       margin-left: auto; }
   .standings > div {
     background: white;
-    border: solid #cecece 2px;
+    border: solid #CECECE 2px;
     margin: 0px 25px; }
     .standings > div div {
       display: flex;
       align-items: center;
       justify-content: space-around;
       text-transform: none;
-      border-bottom: solid 2px #cecece; }
+      border-bottom: solid 2px #CECECE; }
     .standings > div div:last-child {
       border-bottom: 0px; }
   .standings img {
@@ -451,7 +455,7 @@ select {
 
 .stats {
   background-color: white;
-  border: solid 2px #cecece;
+  border: solid 2px #CECECE;
   padding: 0px 15px;
   text-align: center;
   margin-bottom: 15px;
@@ -464,7 +468,7 @@ select {
     align-items: center;
     justify-content: space-around;
     text-transform: none;
-    border-bottom: solid 2px #cecece; }
+    border-bottom: solid 2px #CECECE; }
   .player-stats h4 {
     font-weight: normal; }
     .player-stats h4:nth-child(4) {
@@ -472,6 +476,9 @@ select {
 
 .team-news {
   grid-column: 1 / span 4; }
+  @media screen and (max-width: 650px) {
+    .team-news {
+      grid-column: span 2; } }
   .team-news h3 {
     margin-bottom: 0px;
     margin-top: 50px; }
@@ -482,10 +489,13 @@ select {
 
 .news-carousel {
   grid-column: 1 / span 4; }
+  @media screen and (max-width: 650px) {
+    .news-carousel {
+      grid-column: span 2; } }
   .news-carousel .news {
     margin: 10px 25px;
     background: white;
-    border: solid 2px #cecece;
+    border: solid 2px #CECECE;
     min-height: 280px;
     display: flex;
     flex-direction: column; }
@@ -529,8 +539,17 @@ select {
       cursor: pointer; }
 
 .slick-dots svg {
-  color: #cecece; }
+  color: #CECECE; }
   .slick-dots svg:hover {
     cursor: pointer; }
+
+.placeholders .time h1, .placeholders .WL h1 {
+  color: #CECECE; }
+.placeholders .teams h4, .placeholders .standings h4 {
+  color: #CECECE; }
+.placeholders .teams .away, .placeholders .standings .away {
+  border-bottom: solid 3px #CECECE; }
+.placeholders .stats {
+  color: #CECECE; }
 
 /*# sourceMappingURL=bball.css.map */
