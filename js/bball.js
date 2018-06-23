@@ -74,6 +74,7 @@ $(document).ready(function() {
     '140': 'Arizona Diamondbacks',}
   var stats_data;
   var total_games_played, top_three, team_str;
+  var newsDate;
 
   var url = window.location.href;
   var n = url.indexOf('#');
@@ -92,7 +93,6 @@ $(document).ready(function() {
   });
 
   $('#selectTeam').change(function(){
-    $('.placeholders').removeClass('placeholders');
     teamID = $(this).val();
     $('#heading img').attr("src", 'img/' + teamID + '.png');
     $('body').removeClass().addClass('team-' + teamID);
@@ -106,6 +106,7 @@ $(document).ready(function() {
     winslosses(teamID);
     history.pushState(null, '', url + '#' + teamID);
     news();
+    $('.placeholders').removeClass('placeholders');
   });
 
   function date (){
@@ -116,9 +117,12 @@ $(document).ready(function() {
     var date = today.getDate();
     if (month < 10) {
       scoreDate = year + '0' + month + date-1;
+      newsDate = year.toString() + '-0' + month.toString() + '-' + (date-2).toString();;
       // month is a single digit if jan-sep, api url requires MM format
     } else {
       scoreDate = year + month + date-1;
+      newsDate = year.toString() + '-' + month.toString() + '-' + (date-2).toString();
+
     } 
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
     $('#date h2').append(todayDisplay);
@@ -320,11 +324,10 @@ $(document).ready(function() {
     team_str = team_strings[teamID.toString()];
     $('.team-news .team-name').text(team_str);
     team_search = encodeURIComponent(team_str);
-
     $.ajax
     ({
       type: "GET",
-      url: 'https://newsapi.org/v2/everything?q=' + team_search + '&domains=mlb.com,espn.com,bleacherreport.com&from=2018-06-15&sortBy=relevancy&pageSize=10',
+      url: 'https://newsapi.org/v2/everything?q=' + team_search + '&domains=mlb.com,espn.com,bleacherreport.com&from=' + newsDate + '&sortBy=relevancy&pageSize=10',
       dataType: 'json',
       async: true,
       headers: {
