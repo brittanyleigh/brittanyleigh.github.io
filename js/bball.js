@@ -74,7 +74,6 @@ $(document).ready(function() {
     '140': 'Arizona Diamondbacks',}
   var stats_data;
   var total_games_played, top_three, team_str;
-  var newsDate;
 
   var url = window.location.href;
   var n = url.indexOf('#');
@@ -106,7 +105,6 @@ $(document).ready(function() {
     winslosses(teamID);
     history.pushState(null, '', url + '#' + teamID);
     news();
-    $('.placeholders').removeClass('placeholders');
   });
 
   function date (){
@@ -117,17 +115,15 @@ $(document).ready(function() {
     var date = today.getDate();
     if (month < 10) {
       scoreDate = year + '0' + month + date-1;
-      newsDate = year.toString() + '-0' + month.toString() + '-' + (date-2).toString();;
       // month is a single digit if jan-sep, api url requires MM format
     } else {
       scoreDate = year + month + date-1;
-      newsDate = year.toString() + '-' + month.toString() + '-' + (date-2).toString();
-
     } 
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
     $('#date h2').append(todayDisplay);
   }
   function todayAjax(){
+    $('#today').addClass('placeholders');
     $.ajax
     ({
       type: "GET",
@@ -152,12 +148,12 @@ $(document).ready(function() {
         else {
           $('#today .game .time h1').html('Off Day!');
         };
+        $('#today').removeClass();
       },
-      complete: function(){
-      }, // function/success
     }); // ajax call
   };
   function yesterdayAjax(){
+    $('#yesterday').addClass('placeholders');
     $.ajax
     ({
       type: "GET",
@@ -183,6 +179,7 @@ $(document).ready(function() {
         } else {
           $('#yesterday .game .WL h1').html('Off Day!');
         }
+        $('#yesterday').removeClass();
       } //success
     }); //ajax call
   }; 
@@ -201,7 +198,7 @@ $(document).ready(function() {
     $(game + ' .teams').show();
     $(game + ' .time h1').html(time.slice(0, -2) + '<span>' + time.slice(-2) + '</span>');
     $(awayDiv).html(awayTeam + ' @');
-    $(homeDiv).html(homeTeam);    
+    $(homeDiv).html(homeTeam);  
   }
   function yesterdayScore(gameData, game){
     var homeID = gameData.game.homeTeam.ID;
@@ -227,6 +224,7 @@ $(document).ready(function() {
   }
   function standings(teamID){
     var param = encodeURIComponent('W,L,GB,Win %');
+    $('.standings').addClass('placeholders');
     $.ajax
     ({
       type: "GET",
@@ -255,6 +253,7 @@ $(document).ready(function() {
             total_games_played = parseInt(team.stats.Wins['#text']) + parseInt(team.stats.Losses['#text']);
           }
         }
+        $('.standings').removeClass('placeholders');
       } //success
     }); //ajax call
   }; 
@@ -327,7 +326,7 @@ $(document).ready(function() {
     $.ajax
     ({
       type: "GET",
-      url: 'https://newsapi.org/v2/everything?q=' + team_search + '&domains=mlb.com,espn.com,bleacherreport.com&from=' + newsDate + '&sortBy=relevancy&pageSize=10',
+      url: 'https://newsapi.org/v2/everything?q=' + team_search + '&domains=mlb.com,espn.com,bleacherreport.com&sortBy=publishedAt&pageSize=10',
       dataType: 'json',
       async: true,
       headers: {

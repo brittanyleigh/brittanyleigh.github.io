@@ -500,7 +500,7 @@ select {
     display: flex;
     flex-direction: column; }
     .news-carousel .news:hover {
-      border-color: #a8a8a8; }
+      opacity: .85; }
   .news-carousel img {
     max-width: 100%;
     overflow: hidden;
