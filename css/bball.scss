@@ -630,3 +630,40 @@ select {
     color: $gray;
   }
 }
+
+.error-alert {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: #2d2d2da1;
+  height: 100%;
+
+  .box {
+    min-height: 50px;
+    background: white;
+    display: inline-block;
+    margin-top: 50px;
+    border: solid 2px;
+    font-weight: normal;
+    padding: 15px;
+
+    h4 {
+      text-transform: none;
+      font-weight: normal;
+      margin-top: -25px;
+    }
+  }
+
+  .close-error {
+    text-align: right;
+
+    svg {
+      font-size: 32px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}

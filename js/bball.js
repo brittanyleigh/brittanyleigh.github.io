@@ -151,6 +151,9 @@ $(document).ready(function() {
         };
         $('#today').removeClass();
       },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
+      }
     }); // ajax call
   };
   function yesterdayAjax(){
@@ -181,7 +184,10 @@ $(document).ready(function() {
           $('#yesterday .game .WL h1').html('Off Day!');
         }
         $('#yesterday').removeClass();
-      } //success
+      }, //success
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
+      }
     }); //ajax call
   }; 
   function todayGame (gameData, game){
@@ -255,7 +261,10 @@ $(document).ready(function() {
           }
         }
         $('.standings').removeClass('placeholders');
-      } //success
+      }, //success
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
+      }
     }); //ajax call
   }; 
   function winslosses(teamID){
@@ -317,6 +326,9 @@ $(document).ready(function() {
 
         $('#home-record .stats').text(home_wins + ' - ' + home_losses);
         $('#away-record .stats').text(away_wins + ' - ' + away_losses);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       } 
     }); 
   }; 
@@ -348,6 +360,9 @@ $(document).ready(function() {
           $('.news-' + i + ' img').attr('src', articles[i].urlToImage);
           $('.news-' + i + ' a').attr('href', articles[i].url);
         }
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       }
     }); 
   }; 
@@ -370,6 +385,9 @@ $(document).ready(function() {
         var avg_stats, top_avg;
         topThreeStats(data, avg_stats, top_avg, 'avg', 'BattingAvg');
         setTimeout(playerHR(teamID), 50);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       }
     });
   };
@@ -387,6 +405,9 @@ $(document).ready(function() {
         var hr_stats, top_hr;
         topThreeStats(data, hr_stats, top_hr, 'hr', 'Homeruns');
         setTimeout(playerRBI(teamID), 50);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       }
     });
   };
@@ -404,6 +425,9 @@ $(document).ready(function() {
         var rbi_stats, top_rbi;
         topThreeStats(data, rbi_stats, top_rbi, 'rbi', 'RunsBattedIn');
         setTimeout(playerOPS(teamID), 50);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       }
     });
   };
@@ -420,6 +444,9 @@ $(document).ready(function() {
       success: function (data){
         var ops_stats, top_ops;
         topThreeStats(data, ops_stats, top_ops, 'ops', 'BatterOnBasePlusSluggingPct');
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
       }
     });
   };
@@ -473,6 +500,10 @@ $(document).ready(function() {
     $('.slick-next').html('<i class="fas fa-arrow-right"></i>');
     $('.slick-dots li button').html('<i class="fas fa-circle"></i>');
   }
+
+  $('.error-alert .close-error').on('click', function(){
+    $('.error-alert').fadeOut(250);
+  });
 
 
   slickStyles();

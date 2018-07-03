@@ -557,4 +557,30 @@ select {
 .placeholders .stats {
   color: #CECECE; }
 
+.error-alert {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: #2d2d2da1;
+  height: 100%; }
+  .error-alert .box {
+    min-height: 50px;
+    background: white;
+    display: inline-block;
+    margin-top: 50px;
+    border: solid 2px;
+    font-weight: normal;
+    padding: 15px; }
+    .error-alert .box h4 {
+      text-transform: none;
+      font-weight: normal;
+      margin-top: -25px; }
+  .error-alert .close-error {
+    text-align: right; }
+    .error-alert .close-error svg {
+      font-size: 32px; }
+      .error-alert .close-error svg:hover {
+        cursor: pointer; }
+
 /*# sourceMappingURL=bball.css.map */
