@@ -458,7 +458,6 @@ select {
   border: solid 2px #CECECE;
   padding: 0px 15px;
   text-align: center;
-  margin-bottom: 15px;
   margin: 0px 25px; }
 
 .player-stats {
@@ -468,11 +467,16 @@ select {
     align-items: center;
     justify-content: space-around;
     text-transform: none;
-    border-bottom: solid 2px #CECECE; }
-  .player-stats h4 {
-    font-weight: normal; }
-    .player-stats h4:nth-child(4) {
-      margin-left: auto; }
+    border-top: 0px; }
+    .player-stats .stats:nth-child(2) {
+      border-top: solid 2px #CECECE; }
+    .player-stats .stats h4 {
+      font-weight: normal; }
+      .player-stats .stats h4:nth-child(3) {
+        margin-left: auto; }
+
+#last10, #streak, #home-record, #away-record {
+  margin-top: 25px; }
 
 .team-news {
   grid-column: 1 / span 4; }
@@ -500,11 +504,12 @@ select {
     display: flex;
     flex-direction: column; }
     .news-carousel .news:hover {
-      opacity: .85; }
+      border: solid 2px #9b9b9b; }
   .news-carousel img {
     max-width: 100%;
     overflow: hidden;
-    min-height: 100%; }
+    min-height: 100%;
+    pointer-events: none; }
   .news-carousel .img {
     height: 165px;
     overflow: hidden; }

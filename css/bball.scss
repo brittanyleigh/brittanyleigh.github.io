@@ -484,7 +484,7 @@ select {
   border: solid 2px $gray;
   padding: 0px 15px;
   text-align: center;
-  margin-bottom: 15px;
+  //margin-bottom: 15px;
   margin: 0px 25px;
 }
 
@@ -495,15 +495,24 @@ select {
     align-items: center;
     justify-content: space-around;
     text-transform: none;
-    border-bottom: solid 2px $gray;
-  }
-  h4 {
-    font-weight: normal;
+    border-top: 0px;
 
-    &:nth-child(4){
-      margin-left: auto;
+      &:nth-child(2) {
+        border-top: solid 2px $gray;
+      }
+
+      h4 {
+      font-weight: normal;
+
+      &:nth-child(3){
+        margin-left: auto;
+      }
     }
   }
+}
+
+#last10, #streak, #home-record, #away-record {
+  margin-top: 25px;
 }
 
 .team-news {
@@ -540,14 +549,15 @@ select {
     flex-direction: column;
 
     &:hover {
-      //border-color: darken($gray, 15%);
-      opacity: .85;
+      border: solid 2px darken($gray, 20%);
     }
+
   }
   img {
     max-width: 100%;
     overflow: hidden;
     min-height: 100%;
+    pointer-events:none;
   }
   .img {
     height: 165px;
