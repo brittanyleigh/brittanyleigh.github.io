@@ -597,4 +597,8 @@ select {
       .error-alert .close-error svg:hover {
         cursor: pointer; }
 
+.season-over {
+  grid-column: 1 / span 4;
+  margin: 50px 25px; }
+
 /*# sourceMappingURL=bball.css.map */

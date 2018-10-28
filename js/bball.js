@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var data, scoreDate;
+  var data, scoreDate, todayString;
   var sfbtoa = 'britika:hYZvU4zN8jxw';
   var daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var months = ['Jan. ', 'Feb. ', 'March ', 'April ', 'May ', 'June ', 'July ', 'Aug. ', 'Sep. ', 'Oct. ', 'Nov. ', 'Dec. '];
@@ -99,11 +99,17 @@ $(document).ready(function() {
     $('.game2').hide();
     $('.double').hide();
     $('.WL h1').removeClass();
-    todayAjax();
-    yesterdayAjax();
-    standings(teamID);
-    winslosses(teamID);
-    getTopPlayerStats(teamID);
+    if (checkSeason()){
+      todayAjax();
+      yesterdayAjax();
+      standings(teamID);
+      winslosses(teamID);
+      getTopPlayerStats(teamID);
+    } else {
+      $('.games, .standings, #last10, #streak, #home-record, #away-record, .player-stats-heading, .player-stats').hide();
+      $('.season-over').show();
+    }
+
     history.pushState(null, '', url + '#' + teamID);
     news();
   });
@@ -114,11 +120,19 @@ $(document).ready(function() {
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
     var date = today.getDate();
+
+    var yesterday = new Date(Date.now() - 864e5);
+    var yester_year = yesterday.getFullYear();
+    var yester_month = yesterday.getMonth() + 1;
+    var yester_date = yesterday.getDate();
+
     if (month < 10) {
-      scoreDate = year + '0' + month + date-1;
+      scoreDate = yester_year + '0' + yester_month + yester_date-1;
+      todayString = year + '0' + month + date;
       // month is a single digit if jan-sep, api url requires MM format
     } else {
-      scoreDate = year + month + date-1;
+      scoreDate = yester_year.toString() + yester_month + yester_date-1;
+      todayString = year.toString() + month + date;
     } 
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
     $('#date h2').append(todayDisplay);
@@ -505,8 +519,32 @@ $(document).ready(function() {
     $('.error-alert').fadeOut(250);
   });
 
+  // need to add logic to display playoff games at some point
+  function checkSeason(){
+    date();
+    $.ajax
+    ({
+      type: "GET",
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current_season.json?fordate=' + todayString,
+      dataType: 'json',
+      async: true,
+      headers: {
+        "Authorization": "Basic " + btoa(sfbtoa)
+      }, //headers
+      success: function (data){
+        if (data.currentseason.season[0].details.intervalType == "regular"){
+          return true;
+        } else {
+          return false;
+        }
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('.error-alert').show();
+      }
+    });
+  }
+
 
   slickStyles();
-  date();
   $('#selectTeam').triggerHandler('change');
 }); //document ready
