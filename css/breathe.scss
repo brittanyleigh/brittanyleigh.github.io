@@ -99,6 +99,9 @@ body {
   h3 {
     font-family: $styledFont;
     font-size: 2em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 5px;
   }
 }
 
@@ -139,6 +142,16 @@ body {
   img {
     width: 60px;
     animation: bounce 3s infinite;
+  }
+}
+
+.floater2 {
+  animation: float 240s infinite;
+  bottom: 50px;
+  left: 250px;
+  img {
+    width: 40px;
+    animation: bounce 5s infinite;
   }
 }
 
