@@ -40,6 +40,7 @@ body {
   min-height: 100vh;
   @include flex-center();
   overflow: hidden;
+  position: relative;
   h2 {
     margin-bottom: 50px;
     font-size: 18px;
@@ -152,10 +153,13 @@ body {
 
 .quote {
   z-index: 10;
+  margin: 0px 15px;
+  text-align: center;
 }
 .toggle {
   text-align: center;
   z-index: 10;
+  padding-top: 30px;
 
   div {
     display: inline-block;
