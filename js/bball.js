@@ -133,7 +133,7 @@ $(document).ready(function() {
     } else {
       scoreDate = yester_year.toString() + yester_month + yester_date-1;
       todayString = year.toString() + month + date;
-    } 
+    }
     var todayDisplay = day + '<br>' + months[month-1] + date + ', ' + year;
     $('#date h2').append(todayDisplay);
   }
@@ -142,7 +142,7 @@ $(document).ready(function() {
     $.ajax
     ({
       type: "GET",
-      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=today&team=' + teamID,
+      url: 'https://api.mysportsfeeds.com/v1.2/pull/mlb/current/full_game_schedule.json?date=20180704&team=' + teamID,
       dataType: 'json',
       async: true,
       headers: {
@@ -188,12 +188,12 @@ $(document).ready(function() {
             yesterdayScore(dataScore[0], '#yesterday .game');
           } else if (dataScore[0].isUnplayed == 'true') {
             $('#yesterday .game .WL h1').html('Postponed!');
-          } 
+          }
           if (dataScore[1] && dataScore[1].isUnplayed == 'false'){ // checking for doubleheader game
             $('#yesterday .game2').show().css('display', 'flex');
             $('#yesterday .double').show();
             yesterdayScore(dataScore[1], '#yesterday .game2');
-          } 
+          }
         } else {
           $('#yesterday .game .WL h1').html('Off Day!');
         }
@@ -203,7 +203,7 @@ $(document).ready(function() {
         $('.error-alert').show();
       }
     }); //ajax call
-  }; 
+  };
   function todayGame (gameData, game){
     var homeID = gameData.homeTeam.ID;
     var awayID = gameData.awayTeam.ID;
@@ -219,7 +219,7 @@ $(document).ready(function() {
     $(game + ' .teams').show();
     $(game + ' .time h1').html(time.slice(0, -2) + '<span>' + time.slice(-2) + '</span>');
     $(awayDiv).html(awayTeam + ' @');
-    $(homeDiv).html(homeTeam);  
+    $(homeDiv).html(homeTeam);
   }
   function yesterdayScore(gameData, game){
     var homeID = gameData.game.homeTeam.ID;
@@ -241,7 +241,7 @@ $(document).ready(function() {
       $(game + ' .WL h1').addClass('animated tada').html('W');
     } else{
       $(game + ' .WL h1').html('L');
-    } 
+    }
   }
   function standings(teamID){
     var param = encodeURIComponent('W,L,GB,Win %');
@@ -280,7 +280,7 @@ $(document).ready(function() {
         $('.error-alert').show();
       }
     }); //ajax call
-  }; 
+  };
   function winslosses(teamID){
     $.ajax
     ({
@@ -343,10 +343,10 @@ $(document).ready(function() {
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         $('.error-alert').show();
-      } 
-    }); 
-  }; 
-  function news(){ 
+      }
+    });
+  };
+  function news(){
     team_str = team_strings[teamID.toString()];
     $('.team-news .team-name').text(team_str);
     team_search = encodeURIComponent(team_str);
@@ -366,7 +366,7 @@ $(document).ready(function() {
             articles.splice(a, 1);
           }
         }
-        
+
         for (var i = 0; i < 7; i++){
           var title = articles[i].title;
           $('.news-' + i + ' .title').text(title);
@@ -378,8 +378,8 @@ $(document).ready(function() {
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         $('.error-alert').show();
       }
-    }); 
-  }; 
+    });
+  };
 
   function getTopPlayerStats(teamID){
     $('.player-stats div').addClass('placeholders');
@@ -531,6 +531,7 @@ $(document).ready(function() {
       headers: {
         "Authorization": "Basic " + btoa(sfbtoa)
       }, //headers
+
       success: function (data){
         if (data.currentseason.season[0].details.intervalType == "regular"){
           return true;
