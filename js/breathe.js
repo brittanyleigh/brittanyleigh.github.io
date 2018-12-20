@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.toggle div').on('click', function(){
+  $(document).on('click', '.toggle .inactive', function(){
     toggleDayNight();
   });
 
@@ -11,6 +11,6 @@ $(document).ready(function() {
 
   function toggleDayNight(){
     $('.container').toggleClass('night day');
-    $('.toggle div').toggleClass('active');
+    $('.toggle div').toggleClass('inactive active');
   }
 });
