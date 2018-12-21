@@ -235,19 +235,6 @@ body {
     transform: scale(0.8);
   }
 }
-@keyframes clouds {
-  100% {
-    margin-left: 100vw;
-  }
-}
-@keyframes clouds2 {
-  0% {
-    margin-right: -100vw;
-   }
-  100% {
-    margin-right: 100vw;
-  }
-}
 
 @keyframes shift {
   0%, 50%, 100% {
