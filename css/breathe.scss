@@ -64,7 +64,7 @@ body {
   			top: random(100) + vh;
   			left: random(100) + vw;
         opacity: random(5)*.1 +.5;
-  			animation: twinkle 10s random(30) + s infinite;
+  			animation: twinkle 10s random(10) + s infinite;
   		}
   	}
   }
