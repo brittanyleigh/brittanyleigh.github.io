@@ -35,712 +35,712 @@ body {
     position: absolute;
     border-radius: 50%; }
     .night span:nth-child(0) {
-      width: 4px;
-      height: 4px;
-      top: 93vh;
-      left: 43vw;
+      width: 1px;
+      height: 1px;
+      top: 52vh;
+      left: 36vw;
       opacity: 0.8;
-      animation: twinkle 10s 1s infinite; }
+      animation: twinkle 10s 8s infinite; }
     .night span:nth-child(1) {
-      width: 4px;
-      height: 4px;
-      top: 49vh;
-      left: 34vw;
-      opacity: 0.7;
-      animation: twinkle 10s 15s infinite; }
-    .night span:nth-child(2) {
-      width: 3px;
-      height: 3px;
-      top: 26vh;
-      left: 85vw;
-      opacity: 0.9;
-      animation: twinkle 10s 9s infinite; }
-    .night span:nth-child(3) {
-      width: 4px;
-      height: 4px;
-      top: 50vh;
-      left: 96vw;
-      opacity: 1;
-      animation: twinkle 10s 8s infinite; }
-    .night span:nth-child(4) {
-      width: 1px;
-      height: 1px;
-      top: 96vh;
-      left: 67vw;
-      opacity: 0.7;
-      animation: twinkle 10s 30s infinite; }
-    .night span:nth-child(5) {
-      width: 2px;
-      height: 2px;
-      top: 72vh;
-      left: 69vw;
-      opacity: 1;
-      animation: twinkle 10s 14s infinite; }
-    .night span:nth-child(6) {
-      width: 1px;
-      height: 1px;
-      top: 44vh;
-      left: 78vw;
-      opacity: 0.9;
-      animation: twinkle 10s 23s infinite; }
-    .night span:nth-child(7) {
-      width: 1px;
-      height: 1px;
-      top: 85vh;
-      left: 5vw;
-      opacity: 0.6;
-      animation: twinkle 10s 18s infinite; }
-    .night span:nth-child(8) {
-      width: 4px;
-      height: 4px;
-      top: 72vh;
-      left: 11vw;
-      opacity: 0.9;
-      animation: twinkle 10s 9s infinite; }
-    .night span:nth-child(9) {
-      width: 3px;
-      height: 3px;
-      top: 20vh;
-      left: 35vw;
-      opacity: 0.9;
-      animation: twinkle 10s 10s infinite; }
-    .night span:nth-child(10) {
-      width: 4px;
-      height: 4px;
-      top: 30vh;
-      left: 5vw;
-      opacity: 0.8;
-      animation: twinkle 10s 28s infinite; }
-    .night span:nth-child(11) {
-      width: 2px;
-      height: 2px;
-      top: 36vh;
-      left: 5vw;
-      opacity: 0.8;
-      animation: twinkle 10s 30s infinite; }
-    .night span:nth-child(12) {
-      width: 4px;
-      height: 4px;
-      top: 13vh;
-      left: 14vw;
-      opacity: 0.7;
-      animation: twinkle 10s 11s infinite; }
-    .night span:nth-child(13) {
-      width: 2px;
-      height: 2px;
-      top: 6vh;
-      left: 17vw;
-      opacity: 0.8;
-      animation: twinkle 10s 15s infinite; }
-    .night span:nth-child(14) {
-      width: 4px;
-      height: 4px;
-      top: 95vh;
-      left: 17vw;
-      opacity: 0.9;
-      animation: twinkle 10s 28s infinite; }
-    .night span:nth-child(15) {
-      width: 1px;
-      height: 1px;
-      top: 60vh;
-      left: 15vw;
-      opacity: 0.9;
-      animation: twinkle 10s 14s infinite; }
-    .night span:nth-child(16) {
-      width: 1px;
-      height: 1px;
-      top: 16vh;
-      left: 93vw;
-      opacity: 1;
-      animation: twinkle 10s 15s infinite; }
-    .night span:nth-child(17) {
-      width: 3px;
-      height: 3px;
-      top: 73vh;
-      left: 91vw;
-      opacity: 0.6;
-      animation: twinkle 10s 3s infinite; }
-    .night span:nth-child(18) {
-      width: 3px;
-      height: 3px;
-      top: 96vh;
-      left: 66vw;
-      opacity: 1;
-      animation: twinkle 10s 27s infinite; }
-    .night span:nth-child(19) {
-      width: 2px;
-      height: 2px;
-      top: 76vh;
-      left: 9vw;
-      opacity: 0.6;
-      animation: twinkle 10s 21s infinite; }
-    .night span:nth-child(20) {
-      width: 2px;
-      height: 2px;
-      top: 69vh;
-      left: 66vw;
-      opacity: 0.8;
-      animation: twinkle 10s 27s infinite; }
-    .night span:nth-child(21) {
-      width: 2px;
-      height: 2px;
-      top: 25vh;
-      left: 18vw;
-      opacity: 0.6;
-      animation: twinkle 10s 26s infinite; }
-    .night span:nth-child(22) {
-      width: 3px;
-      height: 3px;
-      top: 5vh;
-      left: 88vw;
-      opacity: 1;
-      animation: twinkle 10s 1s infinite; }
-    .night span:nth-child(23) {
-      width: 1px;
-      height: 1px;
-      top: 97vh;
-      left: 45vw;
-      opacity: 0.6;
-      animation: twinkle 10s 21s infinite; }
-    .night span:nth-child(24) {
-      width: 2px;
-      height: 2px;
-      top: 62vh;
-      left: 60vw;
-      opacity: 0.7;
-      animation: twinkle 10s 11s infinite; }
-    .night span:nth-child(25) {
-      width: 3px;
-      height: 3px;
-      top: 20vh;
-      left: 87vw;
-      opacity: 0.9;
-      animation: twinkle 10s 23s infinite; }
-    .night span:nth-child(26) {
-      width: 4px;
-      height: 4px;
-      top: 91vh;
-      left: 100vw;
-      opacity: 0.7;
-      animation: twinkle 10s 9s infinite; }
-    .night span:nth-child(27) {
-      width: 2px;
-      height: 2px;
-      top: 67vh;
-      left: 1vw;
-      opacity: 0.9;
-      animation: twinkle 10s 2s infinite; }
-    .night span:nth-child(28) {
-      width: 3px;
-      height: 3px;
-      top: 37vh;
-      left: 8vw;
-      opacity: 0.8;
-      animation: twinkle 10s 8s infinite; }
-    .night span:nth-child(29) {
-      width: 3px;
-      height: 3px;
-      top: 43vh;
-      left: 84vw;
-      opacity: 0.8;
-      animation: twinkle 10s 7s infinite; }
-    .night span:nth-child(30) {
-      width: 3px;
-      height: 3px;
-      top: 84vh;
-      left: 44vw;
-      opacity: 0.6;
-      animation: twinkle 10s 12s infinite; }
-    .night span:nth-child(31) {
-      width: 4px;
-      height: 4px;
-      top: 43vh;
-      left: 91vw;
-      opacity: 0.9;
-      animation: twinkle 10s 26s infinite; }
-    .night span:nth-child(32) {
-      width: 3px;
-      height: 3px;
-      top: 90vh;
-      left: 42vw;
-      opacity: 0.7;
-      animation: twinkle 10s 22s infinite; }
-    .night span:nth-child(33) {
-      width: 3px;
-      height: 3px;
-      top: 90vh;
-      left: 71vw;
-      opacity: 1;
-      animation: twinkle 10s 18s infinite; }
-    .night span:nth-child(34) {
-      width: 4px;
-      height: 4px;
-      top: 80vh;
-      left: 68vw;
-      opacity: 0.9;
-      animation: twinkle 10s 6s infinite; }
-    .night span:nth-child(35) {
-      width: 4px;
-      height: 4px;
-      top: 34vh;
-      left: 73vw;
-      opacity: 1;
-      animation: twinkle 10s 24s infinite; }
-    .night span:nth-child(36) {
-      width: 2px;
-      height: 2px;
-      top: 80vh;
-      left: 38vw;
-      opacity: 1;
-      animation: twinkle 10s 3s infinite; }
-    .night span:nth-child(37) {
-      width: 2px;
-      height: 2px;
-      top: 4vh;
-      left: 19vw;
-      opacity: 0.6;
-      animation: twinkle 10s 7s infinite; }
-    .night span:nth-child(38) {
-      width: 3px;
-      height: 3px;
-      top: 65vh;
-      left: 81vw;
-      opacity: 0.7;
-      animation: twinkle 10s 7s infinite; }
-    .night span:nth-child(39) {
       width: 1px;
       height: 1px;
       top: 100vh;
-      left: 30vw;
-      opacity: 0.6;
-      animation: twinkle 10s 9s infinite; }
-    .night span:nth-child(40) {
+      left: 42vw;
+      opacity: 0.8;
+      animation: twinkle 10s 3s infinite; }
+    .night span:nth-child(2) {
+      width: 2px;
+      height: 2px;
+      top: 46vh;
+      left: 68vw;
+      opacity: 0.9;
+      animation: twinkle 10s 18s infinite; }
+    .night span:nth-child(3) {
       width: 1px;
       height: 1px;
-      top: 20vh;
-      left: 17vw;
-      opacity: 0.6;
-      animation: twinkle 10s 17s infinite; }
-    .night span:nth-child(41) {
+      top: 31vh;
+      left: 22vw;
+      opacity: 1;
+      animation: twinkle 10s 13s infinite; }
+    .night span:nth-child(4) {
+      width: 4px;
+      height: 4px;
+      top: 55vh;
+      left: 81vw;
+      opacity: 0.8;
+      animation: twinkle 10s 23s infinite; }
+    .night span:nth-child(5) {
+      width: 2px;
+      height: 2px;
+      top: 87vh;
+      left: 48vw;
+      opacity: 0.7;
+      animation: twinkle 10s 29s infinite; }
+    .night span:nth-child(6) {
       width: 3px;
       height: 3px;
-      top: 99vh;
-      left: 47vw;
+      top: 12vh;
+      left: 34vw;
       opacity: 0.8;
-      animation: twinkle 10s 1s infinite; }
-    .night span:nth-child(42) {
+      animation: twinkle 10s 28s infinite; }
+    .night span:nth-child(7) {
+      width: 1px;
+      height: 1px;
+      top: 78vh;
+      left: 79vw;
+      opacity: 0.6;
+      animation: twinkle 10s 21s infinite; }
+    .night span:nth-child(8) {
+      width: 2px;
+      height: 2px;
+      top: 77vh;
+      left: 24vw;
+      opacity: 0.9;
+      animation: twinkle 10s 10s infinite; }
+    .night span:nth-child(9) {
+      width: 2px;
+      height: 2px;
+      top: 28vh;
+      left: 42vw;
+      opacity: 1;
+      animation: twinkle 10s 22s infinite; }
+    .night span:nth-child(10) {
+      width: 2px;
+      height: 2px;
+      top: 88vh;
+      left: 33vw;
+      opacity: 0.7;
+      animation: twinkle 10s 27s infinite; }
+    .night span:nth-child(11) {
+      width: 3px;
+      height: 3px;
+      top: 91vh;
+      left: 67vw;
+      opacity: 0.8;
+      animation: twinkle 10s 11s infinite; }
+    .night span:nth-child(12) {
+      width: 4px;
+      height: 4px;
+      top: 6vh;
+      left: 24vw;
+      opacity: 1;
+      animation: twinkle 10s 8s infinite; }
+    .night span:nth-child(13) {
+      width: 1px;
+      height: 1px;
+      top: 1vh;
+      left: 16vw;
+      opacity: 0.7;
+      animation: twinkle 10s 9s infinite; }
+    .night span:nth-child(14) {
+      width: 3px;
+      height: 3px;
+      top: 86vh;
+      left: 22vw;
+      opacity: 0.6;
+      animation: twinkle 10s 23s infinite; }
+    .night span:nth-child(15) {
+      width: 1px;
+      height: 1px;
+      top: 34vh;
+      left: 42vw;
+      opacity: 0.6;
+      animation: twinkle 10s 13s infinite; }
+    .night span:nth-child(16) {
+      width: 2px;
+      height: 2px;
+      top: 25vh;
+      left: 82vw;
+      opacity: 0.7;
+      animation: twinkle 10s 27s infinite; }
+    .night span:nth-child(17) {
       width: 4px;
       height: 4px;
       top: 67vh;
-      left: 72vw;
-      opacity: 0.8;
-      animation: twinkle 10s 22s infinite; }
-    .night span:nth-child(43) {
-      width: 1px;
-      height: 1px;
-      top: 44vh;
-      left: 93vw;
+      left: 89vw;
       opacity: 1;
-      animation: twinkle 10s 27s infinite; }
-    .night span:nth-child(44) {
-      width: 3px;
-      height: 3px;
-      top: 92vh;
-      left: 69vw;
-      opacity: 0.9;
-      animation: twinkle 10s 30s infinite; }
-    .night span:nth-child(45) {
-      width: 3px;
-      height: 3px;
-      top: 35vh;
-      left: 28vw;
-      opacity: 0.6;
-      animation: twinkle 10s 23s infinite; }
-    .night span:nth-child(46) {
+      animation: twinkle 10s 26s infinite; }
+    .night span:nth-child(18) {
       width: 4px;
       height: 4px;
-      top: 39vh;
-      left: 73vw;
+      top: 59vh;
+      left: 54vw;
       opacity: 0.8;
-      animation: twinkle 10s 20s infinite; }
-    .night span:nth-child(47) {
+      animation: twinkle 10s 23s infinite; }
+    .night span:nth-child(19) {
+      width: 1px;
+      height: 1px;
+      top: 88vh;
+      left: 43vw;
+      opacity: 0.8;
+      animation: twinkle 10s 26s infinite; }
+    .night span:nth-child(20) {
+      width: 4px;
+      height: 4px;
+      top: 88vh;
+      left: 67vw;
+      opacity: 0.8;
+      animation: twinkle 10s 27s infinite; }
+    .night span:nth-child(21) {
+      width: 1px;
+      height: 1px;
+      top: 9vh;
+      left: 38vw;
+      opacity: 0.8;
+      animation: twinkle 10s 10s infinite; }
+    .night span:nth-child(22) {
+      width: 3px;
+      height: 3px;
+      top: 78vh;
+      left: 19vw;
+      opacity: 0.9;
+      animation: twinkle 10s 18s infinite; }
+    .night span:nth-child(23) {
+      width: 1px;
+      height: 1px;
+      top: 48vh;
+      left: 57vw;
+      opacity: 0.8;
+      animation: twinkle 10s 9s infinite; }
+    .night span:nth-child(24) {
+      width: 4px;
+      height: 4px;
+      top: 44vh;
+      left: 60vw;
+      opacity: 0.6;
+      animation: twinkle 10s 2s infinite; }
+    .night span:nth-child(25) {
+      width: 2px;
+      height: 2px;
+      top: 19vh;
+      left: 11vw;
+      opacity: 0.9;
+      animation: twinkle 10s 2s infinite; }
+    .night span:nth-child(26) {
+      width: 1px;
+      height: 1px;
+      top: 36vh;
+      left: 74vw;
+      opacity: 0.9;
+      animation: twinkle 10s 1s infinite; }
+    .night span:nth-child(27) {
+      width: 1px;
+      height: 1px;
+      top: 85vh;
+      left: 72vw;
+      opacity: 0.7;
+      animation: twinkle 10s 21s infinite; }
+    .night span:nth-child(28) {
+      width: 3px;
+      height: 3px;
+      top: 31vh;
+      left: 37vw;
+      opacity: 1;
+      animation: twinkle 10s 11s infinite; }
+    .night span:nth-child(29) {
+      width: 2px;
+      height: 2px;
+      top: 48vh;
+      left: 100vw;
+      opacity: 0.9;
+      animation: twinkle 10s 15s infinite; }
+    .night span:nth-child(30) {
       width: 3px;
       height: 3px;
       top: 80vh;
-      left: 23vw;
-      opacity: 0.9;
-      animation: twinkle 10s 20s infinite; }
-    .night span:nth-child(48) {
-      width: 3px;
-      height: 3px;
-      top: 1vh;
-      left: 61vw;
-      opacity: 0.8;
-      animation: twinkle 10s 2s infinite; }
-    .night span:nth-child(49) {
+      left: 69vw;
+      opacity: 0.7;
+      animation: twinkle 10s 11s infinite; }
+    .night span:nth-child(31) {
       width: 1px;
       height: 1px;
-      top: 74vh;
-      left: 83vw;
+      top: 31vh;
+      left: 81vw;
       opacity: 0.6;
-      animation: twinkle 10s 7s infinite; }
-    .night span:nth-child(50) {
+      animation: twinkle 10s 12s infinite; }
+    .night span:nth-child(32) {
+      width: 2px;
+      height: 2px;
+      top: 68vh;
+      left: 48vw;
+      opacity: 0.9;
+      animation: twinkle 10s 12s infinite; }
+    .night span:nth-child(33) {
       width: 4px;
       height: 4px;
-      top: 84vh;
-      left: 94vw;
-      opacity: 0.8;
-      animation: twinkle 10s 18s infinite; }
-    .night span:nth-child(51) {
+      top: 80vh;
+      left: 58vw;
+      opacity: 0.9;
+      animation: twinkle 10s 29s infinite; }
+    .night span:nth-child(34) {
+      width: 1px;
+      height: 1px;
+      top: 24vh;
+      left: 14vw;
+      opacity: 0.7;
+      animation: twinkle 10s 7s infinite; }
+    .night span:nth-child(35) {
+      width: 3px;
+      height: 3px;
+      top: 40vh;
+      left: 76vw;
+      opacity: 0.6;
+      animation: twinkle 10s 15s infinite; }
+    .night span:nth-child(36) {
+      width: 2px;
+      height: 2px;
+      top: 34vh;
+      left: 32vw;
+      opacity: 1;
+      animation: twinkle 10s 22s infinite; }
+    .night span:nth-child(37) {
+      width: 2px;
+      height: 2px;
+      top: 76vh;
+      left: 30vw;
+      opacity: 0.7;
+      animation: twinkle 10s 19s infinite; }
+    .night span:nth-child(38) {
+      width: 3px;
+      height: 3px;
+      top: 48vh;
+      left: 12vw;
+      opacity: 0.7;
+      animation: twinkle 10s 6s infinite; }
+    .night span:nth-child(39) {
+      width: 3px;
+      height: 3px;
+      top: 73vh;
+      left: 5vw;
+      opacity: 0.9;
+      animation: twinkle 10s 16s infinite; }
+    .night span:nth-child(40) {
       width: 1px;
       height: 1px;
       top: 91vh;
-      left: 51vw;
-      opacity: 0.8;
-      animation: twinkle 10s 11s infinite; }
-    .night span:nth-child(52) {
-      width: 4px;
-      height: 4px;
-      top: 65vh;
-      left: 66vw;
-      opacity: 0.6;
-      animation: twinkle 10s 21s infinite; }
-    .night span:nth-child(53) {
-      width: 4px;
-      height: 4px;
-      top: 26vh;
-      left: 82vw;
-      opacity: 0.9;
-      animation: twinkle 10s 2s infinite; }
-    .night span:nth-child(54) {
-      width: 1px;
-      height: 1px;
-      top: 53vh;
-      left: 69vw;
-      opacity: 0.9;
-      animation: twinkle 10s 23s infinite; }
-    .night span:nth-child(55) {
+      left: 18vw;
+      opacity: 0.7;
+      animation: twinkle 10s 18s infinite; }
+    .night span:nth-child(41) {
+      width: 2px;
+      height: 2px;
+      top: 50vh;
+      left: 36vw;
+      opacity: 1;
+      animation: twinkle 10s 12s infinite; }
+    .night span:nth-child(42) {
       width: 3px;
       height: 3px;
-      top: 74vh;
-      left: 84vw;
+      top: 62vh;
+      left: 82vw;
+      opacity: 1;
+      animation: twinkle 10s 2s infinite; }
+    .night span:nth-child(43) {
+      width: 3px;
+      height: 3px;
+      top: 92vh;
+      left: 68vw;
+      opacity: 0.7;
+      animation: twinkle 10s 7s infinite; }
+    .night span:nth-child(44) {
+      width: 4px;
+      height: 4px;
+      top: 43vh;
+      left: 50vw;
       opacity: 0.6;
-      animation: twinkle 10s 6s infinite; }
+      animation: twinkle 10s 23s infinite; }
+    .night span:nth-child(45) {
+      width: 4px;
+      height: 4px;
+      top: 81vh;
+      left: 62vw;
+      opacity: 0.6;
+      animation: twinkle 10s 17s infinite; }
+    .night span:nth-child(46) {
+      width: 3px;
+      height: 3px;
+      top: 53vh;
+      left: 62vw;
+      opacity: 0.6;
+      animation: twinkle 10s 13s infinite; }
+    .night span:nth-child(47) {
+      width: 4px;
+      height: 4px;
+      top: 89vh;
+      left: 90vw;
+      opacity: 0.9;
+      animation: twinkle 10s 10s infinite; }
+    .night span:nth-child(48) {
+      width: 3px;
+      height: 3px;
+      top: 34vh;
+      left: 45vw;
+      opacity: 0.6;
+      animation: twinkle 10s 20s infinite; }
+    .night span:nth-child(49) {
+      width: 1px;
+      height: 1px;
+      top: 7vh;
+      left: 29vw;
+      opacity: 1;
+      animation: twinkle 10s 3s infinite; }
+    .night span:nth-child(50) {
+      width: 3px;
+      height: 3px;
+      top: 99vh;
+      left: 92vw;
+      opacity: 0.9;
+      animation: twinkle 10s 10s infinite; }
+    .night span:nth-child(51) {
+      width: 2px;
+      height: 2px;
+      top: 11vh;
+      left: 2vw;
+      opacity: 0.8;
+      animation: twinkle 10s 14s infinite; }
+    .night span:nth-child(52) {
+      width: 3px;
+      height: 3px;
+      top: 87vh;
+      left: 96vw;
+      opacity: 0.9;
+      animation: twinkle 10s 21s infinite; }
+    .night span:nth-child(53) {
+      width: 1px;
+      height: 1px;
+      top: 17vh;
+      left: 89vw;
+      opacity: 1;
+      animation: twinkle 10s 7s infinite; }
+    .night span:nth-child(54) {
+      width: 4px;
+      height: 4px;
+      top: 24vh;
+      left: 54vw;
+      opacity: 0.9;
+      animation: twinkle 10s 2s infinite; }
+    .night span:nth-child(55) {
+      width: 1px;
+      height: 1px;
+      top: 100vh;
+      left: 56vw;
+      opacity: 1;
+      animation: twinkle 10s 25s infinite; }
     .night span:nth-child(56) {
       width: 3px;
       height: 3px;
-      top: 45vh;
-      left: 22vw;
-      opacity: 1;
-      animation: twinkle 10s 20s infinite; }
+      top: 4vh;
+      left: 97vw;
+      opacity: 0.9;
+      animation: twinkle 10s 7s infinite; }
     .night span:nth-child(57) {
-      width: 1px;
-      height: 1px;
-      top: 16vh;
-      left: 61vw;
-      opacity: 0.7;
-      animation: twinkle 10s 3s infinite; }
+      width: 3px;
+      height: 3px;
+      top: 4vh;
+      left: 29vw;
+      opacity: 0.8;
+      animation: twinkle 10s 4s infinite; }
     .night span:nth-child(58) {
       width: 4px;
       height: 4px;
       top: 67vh;
-      left: 26vw;
-      opacity: 0.8;
-      animation: twinkle 10s 7s infinite; }
+      left: 50vw;
+      opacity: 1;
+      animation: twinkle 10s 2s infinite; }
     .night span:nth-child(59) {
-      width: 1px;
-      height: 1px;
-      top: 35vh;
-      left: 40vw;
-      opacity: 0.8;
-      animation: twinkle 10s 28s infinite; }
+      width: 3px;
+      height: 3px;
+      top: 55vh;
+      left: 16vw;
+      opacity: 1;
+      animation: twinkle 10s 1s infinite; }
     .night span:nth-child(60) {
       width: 4px;
       height: 4px;
-      top: 32vh;
-      left: 3vw;
+      top: 79vh;
+      left: 30vw;
       opacity: 0.8;
-      animation: twinkle 10s 5s infinite; }
+      animation: twinkle 10s 16s infinite; }
     .night span:nth-child(61) {
-      width: 4px;
-      height: 4px;
-      top: 9vh;
-      left: 13vw;
+      width: 3px;
+      height: 3px;
+      top: 48vh;
+      left: 38vw;
       opacity: 0.6;
-      animation: twinkle 10s 21s infinite; }
+      animation: twinkle 10s 20s infinite; }
     .night span:nth-child(62) {
-      width: 1px;
-      height: 1px;
-      top: 34vh;
-      left: 90vw;
+      width: 2px;
+      height: 2px;
+      top: 98vh;
+      left: 91vw;
       opacity: 0.6;
       animation: twinkle 10s 26s infinite; }
     .night span:nth-child(63) {
-      width: 1px;
-      height: 1px;
-      top: 84vh;
-      left: 26vw;
-      opacity: 0.6;
-      animation: twinkle 10s 15s infinite; }
+      width: 4px;
+      height: 4px;
+      top: 38vh;
+      left: 41vw;
+      opacity: 0.8;
+      animation: twinkle 10s 27s infinite; }
     .night span:nth-child(64) {
       width: 2px;
       height: 2px;
-      top: 77vh;
-      left: 61vw;
-      opacity: 1;
-      animation: twinkle 10s 14s infinite; }
+      top: 11vh;
+      left: 83vw;
+      opacity: 0.6;
+      animation: twinkle 10s 23s infinite; }
     .night span:nth-child(65) {
-      width: 1px;
-      height: 1px;
-      top: 95vh;
-      left: 10vw;
-      opacity: 0.8;
-      animation: twinkle 10s 7s infinite; }
+      width: 2px;
+      height: 2px;
+      top: 100vh;
+      left: 24vw;
+      opacity: 0.6;
+      animation: twinkle 10s 22s infinite; }
     .night span:nth-child(66) {
       width: 1px;
       height: 1px;
-      top: 98vh;
-      left: 63vw;
-      opacity: 0.7;
-      animation: twinkle 10s 29s infinite; }
-    .night span:nth-child(67) {
-      width: 2px;
-      height: 2px;
-      top: 75vh;
-      left: 100vw;
-      opacity: 0.7;
-      animation: twinkle 10s 27s infinite; }
-    .night span:nth-child(68) {
-      width: 4px;
-      height: 4px;
-      top: 29vh;
-      left: 5vw;
-      opacity: 0.9;
-      animation: twinkle 10s 17s infinite; }
-    .night span:nth-child(69) {
-      width: 4px;
-      height: 4px;
-      top: 49vh;
+      top: 72vh;
       left: 10vw;
       opacity: 0.9;
-      animation: twinkle 10s 6s infinite; }
-    .night span:nth-child(70) {
+      animation: twinkle 10s 9s infinite; }
+    .night span:nth-child(67) {
+      width: 3px;
+      height: 3px;
+      top: 1vh;
+      left: 20vw;
+      opacity: 0.8;
+      animation: twinkle 10s 30s infinite; }
+    .night span:nth-child(68) {
+      width: 3px;
+      height: 3px;
+      top: 53vh;
+      left: 25vw;
+      opacity: 0.9;
+      animation: twinkle 10s 7s infinite; }
+    .night span:nth-child(69) {
       width: 1px;
       height: 1px;
-      top: 46vh;
-      left: 60vw;
-      opacity: 1;
+      top: 62vh;
+      left: 18vw;
+      opacity: 0.8;
       animation: twinkle 10s 4s infinite; }
+    .night span:nth-child(70) {
+      width: 4px;
+      height: 4px;
+      top: 65vh;
+      left: 2vw;
+      opacity: 0.7;
+      animation: twinkle 10s 16s infinite; }
     .night span:nth-child(71) {
       width: 2px;
       height: 2px;
-      top: 8vh;
-      left: 12vw;
-      opacity: 0.7;
+      top: 43vh;
+      left: 48vw;
+      opacity: 0.9;
       animation: twinkle 10s 20s infinite; }
     .night span:nth-child(72) {
-      width: 1px;
-      height: 1px;
-      top: 46vh;
-      left: 41vw;
-      opacity: 1;
-      animation: twinkle 10s 20s infinite; }
+      width: 2px;
+      height: 2px;
+      top: 11vh;
+      left: 25vw;
+      opacity: 0.9;
+      animation: twinkle 10s 12s infinite; }
     .night span:nth-child(73) {
-      width: 4px;
-      height: 4px;
-      top: 99vh;
-      left: 72vw;
-      opacity: 1;
-      animation: twinkle 10s 1s infinite; }
+      width: 2px;
+      height: 2px;
+      top: 42vh;
+      left: 53vw;
+      opacity: 0.8;
+      animation: twinkle 10s 8s infinite; }
     .night span:nth-child(74) {
       width: 4px;
       height: 4px;
       top: 92vh;
-      left: 52vw;
+      left: 30vw;
       opacity: 0.7;
-      animation: twinkle 10s 16s infinite; }
+      animation: twinkle 10s 14s infinite; }
     .night span:nth-child(75) {
-      width: 3px;
-      height: 3px;
-      top: 57vh;
-      left: 1vw;
-      opacity: 0.8;
-      animation: twinkle 10s 2s infinite; }
+      width: 4px;
+      height: 4px;
+      top: 40vh;
+      left: 16vw;
+      opacity: 1;
+      animation: twinkle 10s 22s infinite; }
     .night span:nth-child(76) {
-      width: 2px;
-      height: 2px;
-      top: 71vh;
-      left: 89vw;
-      opacity: 0.8;
-      animation: twinkle 10s 6s infinite; }
-    .night span:nth-child(77) {
       width: 1px;
       height: 1px;
-      top: 45vh;
-      left: 31vw;
-      opacity: 0.9;
-      animation: twinkle 10s 22s infinite; }
+      top: 83vh;
+      left: 66vw;
+      opacity: 0.8;
+      animation: twinkle 10s 5s infinite; }
+    .night span:nth-child(77) {
+      width: 3px;
+      height: 3px;
+      top: 9vh;
+      left: 85vw;
+      opacity: 0.7;
+      animation: twinkle 10s 19s infinite; }
     .night span:nth-child(78) {
       width: 3px;
       height: 3px;
-      top: 76vh;
+      top: 42vh;
+      left: 48vw;
+      opacity: 0.7;
+      animation: twinkle 10s 2s infinite; }
+    .night span:nth-child(79) {
+      width: 4px;
+      height: 4px;
+      top: 10vh;
       left: 81vw;
       opacity: 0.9;
-      animation: twinkle 10s 8s infinite; }
-    .night span:nth-child(79) {
-      width: 1px;
-      height: 1px;
-      top: 90vh;
-      left: 1vw;
-      opacity: 1;
-      animation: twinkle 10s 9s infinite; }
+      animation: twinkle 10s 28s infinite; }
     .night span:nth-child(80) {
       width: 3px;
       height: 3px;
-      top: 87vh;
-      left: 53vw;
-      opacity: 1;
-      animation: twinkle 10s 12s infinite; }
+      top: 92vh;
+      left: 9vw;
+      opacity: 0.7;
+      animation: twinkle 10s 21s infinite; }
     .night span:nth-child(81) {
       width: 4px;
       height: 4px;
-      top: 18vh;
-      left: 79vw;
-      opacity: 0.8;
-      animation: twinkle 10s 1s infinite; }
-    .night span:nth-child(82) {
-      width: 1px;
-      height: 1px;
-      top: 96vh;
-      left: 38vw;
-      opacity: 0.8;
-      animation: twinkle 10s 17s infinite; }
-    .night span:nth-child(83) {
-      width: 1px;
-      height: 1px;
-      top: 78vh;
-      left: 89vw;
+      top: 51vh;
+      left: 45vw;
       opacity: 1;
-      animation: twinkle 10s 23s infinite; }
-    .night span:nth-child(84) {
+      animation: twinkle 10s 12s infinite; }
+    .night span:nth-child(82) {
+      width: 3px;
+      height: 3px;
+      top: 34vh;
+      left: 97vw;
+      opacity: 0.8;
+      animation: twinkle 10s 11s infinite; }
+    .night span:nth-child(83) {
       width: 4px;
       height: 4px;
-      top: 77vh;
-      left: 33vw;
+      top: 34vh;
+      left: 99vw;
       opacity: 0.8;
-      animation: twinkle 10s 2s infinite; }
+      animation: twinkle 10s 12s infinite; }
+    .night span:nth-child(84) {
+      width: 1px;
+      height: 1px;
+      top: 15vh;
+      left: 10vw;
+      opacity: 0.6;
+      animation: twinkle 10s 10s infinite; }
     .night span:nth-child(85) {
       width: 2px;
       height: 2px;
-      top: 80vh;
-      left: 46vw;
-      opacity: 0.7;
+      top: 59vh;
+      left: 11vw;
+      opacity: 0.6;
       animation: twinkle 10s 14s infinite; }
     .night span:nth-child(86) {
       width: 4px;
       height: 4px;
-      top: 27vh;
-      left: 70vw;
+      top: 49vh;
+      left: 27vw;
       opacity: 0.7;
-      animation: twinkle 10s 9s infinite; }
+      animation: twinkle 10s 23s infinite; }
     .night span:nth-child(87) {
-      width: 1px;
-      height: 1px;
-      top: 43vh;
-      left: 15vw;
-      opacity: 1;
-      animation: twinkle 10s 3s infinite; }
-    .night span:nth-child(88) {
       width: 2px;
       height: 2px;
-      top: 35vh;
-      left: 100vw;
-      opacity: 0.6;
-      animation: twinkle 10s 28s infinite; }
-    .night span:nth-child(89) {
+      top: 20vh;
+      left: 60vw;
+      opacity: 0.9;
+      animation: twinkle 10s 6s infinite; }
+    .night span:nth-child(88) {
       width: 4px;
       height: 4px;
-      top: 69vh;
-      left: 58vw;
-      opacity: 0.6;
-      animation: twinkle 10s 3s infinite; }
+      top: 50vh;
+      left: 3vw;
+      opacity: 0.9;
+      animation: twinkle 10s 4s infinite; }
+    .night span:nth-child(89) {
+      width: 1px;
+      height: 1px;
+      top: 34vh;
+      left: 75vw;
+      opacity: 0.7;
+      animation: twinkle 10s 1s infinite; }
     .night span:nth-child(90) {
       width: 3px;
       height: 3px;
-      top: 4vh;
-      left: 32vw;
-      opacity: 0.7;
-      animation: twinkle 10s 28s infinite; }
+      top: 37vh;
+      left: 73vw;
+      opacity: 1;
+      animation: twinkle 10s 7s infinite; }
     .night span:nth-child(91) {
-      width: 3px;
-      height: 3px;
-      top: 55vh;
-      left: 60vw;
+      width: 1px;
+      height: 1px;
+      top: 85vh;
+      left: 47vw;
       opacity: 0.7;
-      animation: twinkle 10s 22s infinite; }
+      animation: twinkle 10s 1s infinite; }
     .night span:nth-child(92) {
       width: 1px;
       height: 1px;
-      top: 58vh;
-      left: 33vw;
-      opacity: 0.9;
-      animation: twinkle 10s 27s infinite; }
+      top: 14vh;
+      left: 80vw;
+      opacity: 0.8;
+      animation: twinkle 10s 16s infinite; }
     .night span:nth-child(93) {
       width: 4px;
       height: 4px;
-      top: 40vh;
-      left: 86vw;
+      top: 6vh;
+      left: 87vw;
       opacity: 0.6;
-      animation: twinkle 10s 21s infinite; }
+      animation: twinkle 10s 6s infinite; }
     .night span:nth-child(94) {
+      width: 3px;
+      height: 3px;
+      top: 9vh;
+      left: 66vw;
+      opacity: 0.7;
+      animation: twinkle 10s 23s infinite; }
+    .night span:nth-child(95) {
       width: 4px;
       height: 4px;
-      top: 15vh;
-      left: 56vw;
-      opacity: 1;
-      animation: twinkle 10s 9s infinite; }
-    .night span:nth-child(95) {
-      width: 2px;
-      height: 2px;
-      top: 99vh;
-      left: 40vw;
-      opacity: 0.7;
+      top: 80vh;
+      left: 77vw;
+      opacity: 0.6;
       animation: twinkle 10s 9s infinite; }
     .night span:nth-child(96) {
       width: 3px;
       height: 3px;
-      top: 72vh;
-      left: 33vw;
+      top: 71vh;
+      left: 46vw;
       opacity: 0.6;
-      animation: twinkle 10s 15s infinite; }
+      animation: twinkle 10s 5s infinite; }
     .night span:nth-child(97) {
       width: 1px;
       height: 1px;
-      top: 90vh;
-      left: 69vw;
-      opacity: 0.9;
-      animation: twinkle 10s 28s infinite; }
-    .night span:nth-child(98) {
-      width: 3px;
-      height: 3px;
-      top: 61vh;
-      left: 66vw;
+      top: 53vh;
+      left: 49vw;
       opacity: 0.7;
-      animation: twinkle 10s 17s infinite; }
+      animation: twinkle 10s 22s infinite; }
+    .night span:nth-child(98) {
+      width: 2px;
+      height: 2px;
+      top: 46vh;
+      left: 76vw;
+      opacity: 0.9;
+      animation: twinkle 10s 16s infinite; }
     .night span:nth-child(99) {
-      width: 1px;
-      height: 1px;
-      top: 18vh;
-      left: 95vw;
-      opacity: 1;
-      animation: twinkle 10s 28s infinite; }
-    .night span:nth-child(100) {
-      width: 3px;
-      height: 3px;
-      top: 79vh;
-      left: 17vw;
+      width: 2px;
+      height: 2px;
+      top: 6vh;
+      left: 13vw;
       opacity: 0.8;
-      animation: twinkle 10s 5s infinite; }
+      animation: twinkle 10s 10s infinite; }
+    .night span:nth-child(100) {
+      width: 4px;
+      height: 4px;
+      top: 55vh;
+      left: 50vw;
+      opacity: 0.7;
+      animation: twinkle 10s 6s infinite; }
 
 .day {
   background-image: linear-gradient(-25deg, #d5e7f0 0%, #91cdea 100%);
@@ -787,259 +787,259 @@ body {
   position: absolute; }
   .cloud:nth-child(0) {
     opacity: .3;
-    transform: scale(1.33333);
-    animation: float 180s 7s infinite;
+    transform: scale(1.16667);
+    animation: float 120s 16s infinite;
     margin-left: 10%; }
     .cloud:nth-child(0) img {
-      width: 58vw;
+      width: 54vw;
       animation: shift 18s infinite; }
   .cloud.cloud-even:nth-child(0) {
-    transform: scale(1.1) rotateY(180deg);
-    top: 99%;
-    left: 15%; }
+    transform: scale(1.13333) rotateY(180deg);
+    top: 18vh;
+    left: 63vw; }
   .cloud.cloud-odd:nth-child(0) {
-    bottom: 74%;
-    right: 52%; }
+    top: 2vh;
+    right: 62vw; }
   .cloud:nth-child(1) {
     opacity: .3;
-    transform: scale(1.16667);
-    animation: float 120s 13s infinite;
+    transform: scale(1.26667);
+    animation: float 120s 17s infinite;
     margin-left: 10%; }
     .cloud:nth-child(1) img {
-      width: 59vw;
+      width: 63vw;
       animation: shift 15s infinite; }
   .cloud.cloud-even:nth-child(1) {
-    transform: scale(1.1) rotateY(180deg);
-    top: 90%;
-    left: 74%; }
+    transform: scale(1.06667) rotateY(180deg);
+    top: 38vh;
+    left: 39vw; }
   .cloud.cloud-odd:nth-child(1) {
-    bottom: 98%;
-    right: 20%; }
+    top: 16vh;
+    right: 97vw; }
   .cloud:nth-child(2) {
     opacity: .3;
-    transform: scale(1.33333);
-    animation: float 120s 29s infinite;
+    transform: scale(1.26667);
+    animation: float 120s 3s infinite;
     margin-left: 10%; }
     .cloud:nth-child(2) img {
-      width: 59vw;
-      animation: shift 15s infinite; }
-  .cloud.cloud-even:nth-child(2) {
-    transform: scale(1.3) rotateY(180deg);
-    top: 17%;
-    left: 45%; }
-  .cloud.cloud-odd:nth-child(2) {
-    bottom: 73%;
-    right: 69%; }
-  .cloud:nth-child(3) {
-    opacity: .3;
-    transform: scale(1.26667);
-    animation: float 120s 5s infinite;
-    margin-left: 10%; }
-    .cloud:nth-child(3) img {
-      width: 51vw;
-      animation: shift 19s infinite; }
-  .cloud.cloud-even:nth-child(3) {
-    transform: scale(1.06667) rotateY(180deg);
-    top: 52%;
-    left: 56%; }
-  .cloud.cloud-odd:nth-child(3) {
-    bottom: 82%;
-    right: 97%; }
-  .cloud:nth-child(4) {
-    opacity: .3;
-    transform: scale(1.33333);
-    animation: float 120s 22s infinite;
-    margin-left: 10%; }
-    .cloud:nth-child(4) img {
-      width: 61vw;
-      animation: shift 12s infinite; }
-  .cloud.cloud-even:nth-child(4) {
-    transform: scale(1.16667) rotateY(180deg);
-    top: 13%;
-    left: 49%; }
-  .cloud.cloud-odd:nth-child(4) {
-    bottom: 59%;
-    right: 58%; }
-  .cloud:nth-child(5) {
-    opacity: .3;
-    transform: scale(1.2);
-    animation: float 180s 11s infinite;
-    margin-left: 10%; }
-    .cloud:nth-child(5) img {
-      width: 61vw;
-      animation: shift 17s infinite; }
-  .cloud.cloud-even:nth-child(5) {
-    transform: scale(1.33333) rotateY(180deg);
-    top: 65%;
-    left: 57%; }
-  .cloud.cloud-odd:nth-child(5) {
-    bottom: 9%;
-    right: 16%; }
-  .cloud:nth-child(6) {
-    opacity: .3;
-    transform: scale(1.3);
-    animation: float 60s 11s infinite;
-    margin-left: 10%; }
-    .cloud:nth-child(6) img {
       width: 62vw;
       animation: shift 15s infinite; }
-  .cloud.cloud-even:nth-child(6) {
-    transform: scale(1.2) rotateY(180deg);
-    top: 43%;
-    left: 95%; }
-  .cloud.cloud-odd:nth-child(6) {
-    bottom: 13%;
-    right: 88%; }
-  .cloud:nth-child(7) {
+  .cloud.cloud-even:nth-child(2) {
+    transform: scale(1.06667) rotateY(180deg);
+    top: 30vh;
+    left: 49vw; }
+  .cloud.cloud-odd:nth-child(2) {
+    top: 33vh;
+    right: 87vw; }
+  .cloud:nth-child(3) {
     opacity: .3;
-    transform: scale(1.2);
-    animation: float 60s 15s infinite;
+    transform: scale(1.06667);
+    animation: float 60s 23s infinite;
     margin-left: 10%; }
-    .cloud:nth-child(7) img {
-      width: 65vw;
-      animation: shift 16s infinite; }
-  .cloud.cloud-even:nth-child(7) {
-    transform: scale(1.26667) rotateY(180deg);
-    top: 79%;
-    left: 64%; }
-  .cloud.cloud-odd:nth-child(7) {
-    bottom: 12%;
-    right: 94%; }
-  .cloud:nth-child(8) {
-    opacity: .3;
-    transform: scale(1.33333);
-    animation: float 180s 23s infinite;
-    margin-left: 10%; }
-    .cloud:nth-child(8) img {
-      width: 56vw;
-      animation: shift 14s infinite; }
-  .cloud.cloud-even:nth-child(8) {
-    transform: scale(1.2) rotateY(180deg);
-    top: 43%;
-    left: 11%; }
-  .cloud.cloud-odd:nth-child(8) {
-    bottom: 82%;
-    right: 49%; }
-  .cloud:nth-child(9) {
+    .cloud:nth-child(3) img {
+      width: 54vw;
+      animation: shift 12s infinite; }
+  .cloud.cloud-even:nth-child(3) {
+    transform: scale(1.1) rotateY(180deg);
+    top: 33vh;
+    left: 58vw; }
+  .cloud.cloud-odd:nth-child(3) {
+    top: 19vh;
+    right: 63vw; }
+  .cloud:nth-child(4) {
     opacity: .3;
     transform: scale(1.1);
-    animation: float 120s 12s infinite;
+    animation: float 60s 2s infinite;
+    margin-left: 10%; }
+    .cloud:nth-child(4) img {
+      width: 63vw;
+      animation: shift 20s infinite; }
+  .cloud.cloud-even:nth-child(4) {
+    transform: scale(1.33333) rotateY(180deg);
+    top: 12vh;
+    left: 57vw; }
+  .cloud.cloud-odd:nth-child(4) {
+    top: 2vh;
+    right: 95vw; }
+  .cloud:nth-child(5) {
+    opacity: .3;
+    transform: scale(1.23333);
+    animation: float 60s 14s infinite;
+    margin-left: 10%; }
+    .cloud:nth-child(5) img {
+      width: 62vw;
+      animation: shift 12s infinite; }
+  .cloud.cloud-even:nth-child(5) {
+    transform: scale(1.23333) rotateY(180deg);
+    top: 33vh;
+    left: 85vw; }
+  .cloud.cloud-odd:nth-child(5) {
+    top: 4vh;
+    right: 23vw; }
+  .cloud:nth-child(6) {
+    opacity: .3;
+    transform: scale(1.2);
+    animation: float 120s 11s infinite;
+    margin-left: 10%; }
+    .cloud:nth-child(6) img {
+      width: 55vw;
+      animation: shift 16s infinite; }
+  .cloud.cloud-even:nth-child(6) {
+    transform: scale(1.2) rotateY(180deg);
+    top: 38vh;
+    left: 95vw; }
+  .cloud.cloud-odd:nth-child(6) {
+    top: 8vh;
+    right: 24vw; }
+  .cloud:nth-child(7) {
+    opacity: .3;
+    transform: scale(1.33333);
+    animation: float 180s 18s infinite;
+    margin-left: 10%; }
+    .cloud:nth-child(7) img {
+      width: 59vw;
+      animation: shift 20s infinite; }
+  .cloud.cloud-even:nth-child(7) {
+    transform: scale(1.23333) rotateY(180deg);
+    top: 22vh;
+    left: 44vw; }
+  .cloud.cloud-odd:nth-child(7) {
+    top: 21vh;
+    right: 59vw; }
+  .cloud:nth-child(8) {
+    opacity: .3;
+    transform: scale(1.13333);
+    animation: float 120s 8s infinite;
+    margin-left: 10%; }
+    .cloud:nth-child(8) img {
+      width: 51vw;
+      animation: shift 18s infinite; }
+  .cloud.cloud-even:nth-child(8) {
+    transform: scale(1.26667) rotateY(180deg);
+    top: 4vh;
+    left: 34vw; }
+  .cloud.cloud-odd:nth-child(8) {
+    top: 20vh;
+    right: 42vw; }
+  .cloud:nth-child(9) {
+    opacity: .3;
+    transform: scale(1.13333);
+    animation: float 60s 9s infinite;
     margin-left: 10%; }
     .cloud:nth-child(9) img {
-      width: 55vw;
-      animation: shift 13s infinite; }
+      width: 65vw;
+      animation: shift 18s infinite; }
   .cloud.cloud-even:nth-child(9) {
-    transform: scale(1.26667) rotateY(180deg);
-    top: 13%;
-    left: 56%; }
+    transform: scale(1.33333) rotateY(180deg);
+    top: 1vh;
+    left: 23vw; }
   .cloud.cloud-odd:nth-child(9) {
-    bottom: 46%;
-    right: 94%; }
+    top: 14vh;
+    right: 92vw; }
   .cloud:nth-child(10) {
     opacity: .3;
     transform: scale(1.3);
-    animation: float 120s 1s infinite;
+    animation: float 180s 1s infinite;
     margin-left: 10%; }
     .cloud:nth-child(10) img {
-      width: 57vw;
-      animation: shift 19s infinite; }
+      width: 64vw;
+      animation: shift 13s infinite; }
   .cloud.cloud-even:nth-child(10) {
-    transform: scale(1.16667) rotateY(180deg);
-    top: 21%;
-    left: 52%; }
+    transform: scale(1.33333) rotateY(180deg);
+    top: 9vh;
+    left: 49vw; }
   .cloud.cloud-odd:nth-child(10) {
-    bottom: 25%;
-    right: 51%; }
+    top: 36vh;
+    right: 21vw; }
   .cloud:nth-child(11) {
     opacity: .3;
-    transform: scale(1.23333);
-    animation: float 120s 8s infinite;
+    transform: scale(1.13333);
+    animation: float 120s 20s infinite;
     margin-left: 10%; }
     .cloud:nth-child(11) img {
-      width: 52vw;
-      animation: shift 11s infinite; }
+      width: 53vw;
+      animation: shift 13s infinite; }
   .cloud.cloud-even:nth-child(11) {
-    transform: scale(1.26667) rotateY(180deg);
-    top: 55%;
-    left: 32%; }
+    transform: scale(1.3) rotateY(180deg);
+    top: 38vh;
+    left: 80vw; }
   .cloud.cloud-odd:nth-child(11) {
-    bottom: 9%;
-    right: 96%; }
+    top: 11vh;
+    right: 37vw; }
   .cloud:nth-child(12) {
     opacity: .3;
-    transform: scale(1.16667);
-    animation: float 60s 6s infinite;
+    transform: scale(1.23333);
+    animation: float 180s 13s infinite;
     margin-left: 10%; }
     .cloud:nth-child(12) img {
-      width: 60vw;
-      animation: shift 20s infinite; }
+      width: 55vw;
+      animation: shift 12s infinite; }
   .cloud.cloud-even:nth-child(12) {
-    transform: scale(1.16667) rotateY(180deg);
-    top: 18%;
-    left: 47%; }
+    transform: scale(1.2) rotateY(180deg);
+    top: 10vh;
+    left: 28vw; }
   .cloud.cloud-odd:nth-child(12) {
-    bottom: 55%;
-    right: 24%; }
+    top: 4vh;
+    right: 87vw; }
   .cloud:nth-child(13) {
     opacity: .3;
-    transform: scale(1.06667);
-    animation: float 60s 27s infinite;
+    transform: scale(1.16667);
+    animation: float 180s 7s infinite;
     margin-left: 10%; }
     .cloud:nth-child(13) img {
-      width: 61vw;
-      animation: shift 19s infinite; }
+      width: 59vw;
+      animation: shift 18s infinite; }
   .cloud.cloud-even:nth-child(13) {
-    transform: scale(1.03333) rotateY(180deg);
-    top: 26%;
-    left: 27%; }
+    transform: scale(1.26667) rotateY(180deg);
+    top: 2vh;
+    left: 10vw; }
   .cloud.cloud-odd:nth-child(13) {
-    bottom: 62%;
-    right: 75%; }
+    top: 34vh;
+    right: 86vw; }
   .cloud:nth-child(14) {
     opacity: .3;
     transform: scale(1.3);
-    animation: float 60s 28s infinite;
+    animation: float 180s 25s infinite;
     margin-left: 10%; }
     .cloud:nth-child(14) img {
-      width: 61vw;
-      animation: shift 16s infinite; }
+      width: 53vw;
+      animation: shift 19s infinite; }
   .cloud.cloud-even:nth-child(14) {
-    transform: scale(1.1) rotateY(180deg);
-    top: 61%;
-    left: 26%; }
+    transform: scale(1.2) rotateY(180deg);
+    top: 7vh;
+    left: 31vw; }
   .cloud.cloud-odd:nth-child(14) {
-    bottom: 5%;
-    right: 81%; }
+    top: 46vh;
+    right: 61vw; }
   .cloud:nth-child(15) {
     opacity: .3;
     transform: scale(1.03333);
-    animation: float 60s 20s infinite;
+    animation: float 60s 5s infinite;
     margin-left: 10%; }
     .cloud:nth-child(15) img {
-      width: 59vw;
-      animation: shift 14s infinite; }
+      width: 53vw;
+      animation: shift 17s infinite; }
   .cloud.cloud-even:nth-child(15) {
-    transform: scale(1.23333) rotateY(180deg);
-    top: 29%;
-    left: 55%; }
+    transform: scale(1.06667) rotateY(180deg);
+    top: 21vh;
+    left: 39vw; }
   .cloud.cloud-odd:nth-child(15) {
-    bottom: 49%;
-    right: 69%; }
+    top: 16vh;
+    right: 96vw; }
   .cloud:nth-child(16) {
     opacity: .3;
-    transform: scale(1.03333);
-    animation: float 60s 1s infinite;
+    transform: scale(1.3);
+    animation: float 60s 9s infinite;
     margin-left: 10%; }
     .cloud:nth-child(16) img {
-      width: 59vw;
-      animation: shift 14s infinite; }
+      width: 58vw;
+      animation: shift 16s infinite; }
   .cloud.cloud-even:nth-child(16) {
-    transform: scale(1.23333) rotateY(180deg);
-    top: 28%;
-    left: 29%; }
+    transform: scale(1.26667) rotateY(180deg);
+    top: 35vh;
+    left: 15vw; }
   .cloud.cloud-odd:nth-child(16) {
-    bottom: 53%;
-    right: 30%; }
+    top: 18vh;
+    right: 64vw; }
 
 .floater {
   position: absolute;

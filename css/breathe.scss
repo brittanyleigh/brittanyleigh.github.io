@@ -122,12 +122,12 @@ body {
     }
     &.cloud-even:nth-child(#{$i}) {
       transform: scale(random(10)/30 + 1) rotateY(180deg);
-      top: percentage(random(100) / 100);
-      left: percentage(random(100) / 100);
+      top: random(50) + vh;
+      left: random(100) + vw;
     }
     &.cloud-odd:nth-child(#{$i}) {
-      bottom: percentage(random(100) / 100);
-      right: percentage(random(100) / 100);
+      top: random(50) + vh;
+      right: random(100) + vw;
     }
   }
 }
