@@ -1,16 +1,12 @@
 $(document).ready(function() {
-  $(document).on('click', '.toggle .inactive', function(){
-    toggleDayNight();
+  $('.toggle').on('click', 'div', function(){
+    toggleView(this);
   });
 
-  var date = new Date();
-  var time = date.getHours();
-  if (time >= 7 && time <= 17){
-    toggleDayNight();
-  }
-
-  function toggleDayNight(){
-    $('.container').toggleClass('night day');
-    $('.toggle div').toggleClass('inactive active');
+  function toggleView(toggle){
+    var view = $(toggle).attr('id');
+    $('.container').attr('class', 'container ' + view);
+    $('.toggle div').removeClass('active');
+    $(toggle).addClass('active');
   }
 });
