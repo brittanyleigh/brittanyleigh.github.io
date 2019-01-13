@@ -26,7 +26,11 @@ $day-one: #d5e7f0;
 $mid-day: #B4DAED;
 $day-two: #91cdea;
 $day-color: desaturate(darken($mid-day, 50%), 30%);
-
+$rain-one: #687a84;
+$rain-two: #2f4e5d;
+$mid-rain: #506470;
+$rain-color: #a3bdce;
+$raindrops: #667c8a;
 
 body {
   margin: 0px;
@@ -78,6 +82,47 @@ body {
     border: 5px solid darken($mid-day, 1%);
     background: lighten(transparentize($mid-day, .5), 10%);
     color: $day-color;
+  }
+}
+
+.rain {
+  background-image: linear-gradient(-25deg, $rain-one 0%, $rain-two 100%);
+  color: $rain-color;
+
+  .breathe {
+    border: 5px solid #628092;
+    background: lighten(transparentize($mid-rain, .5), 10%);
+    color: $rain-color;
+  }
+  .raindrops {
+    span {
+      background: $raindrops;
+      position: absolute;
+      border-radius: 1000px;
+
+      @for $i from 0 through 400 {
+        $width: random(3) + px;
+        $height: random(20) + 15 + px;
+        $top: random(100);
+        &:nth-child(#{$i}) {
+          width: $width;
+          height: $height;
+          top: -$top - 30;
+          left: random(100) + vw;
+          opacity: random(5)*.1 +.5;
+          animation: drop-#{$i} random(5) + 3s random(30) + s infinite;
+        }
+
+        @keyframes drop-#{$i} {
+          0% {
+            top: -$top - 30;
+          }
+          100% {
+            top: $top + 100%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -155,12 +200,17 @@ body {
   }
 }
 
-.day .astronaut {
+.butterfly, .clouds, .astronaut {
   display: none;
 }
-.night {
+.day {
   .butterfly, .clouds {
-    display: none;
+    display: block;
+  }
+}
+.night {
+  .astronaut {
+    display: block;
   }
 }
 
@@ -208,6 +258,7 @@ body {
     margin-left: 10%;
   }
 }
+
 @keyframes twinkle {
   0% {
     transform: scale(1);
