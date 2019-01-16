@@ -95,12 +95,46 @@ body {
     color: $rain-color;
   }
   .raindrops {
+    .raining {
+      display: block;
+    }
     span {
       background: $raindrops;
       position: absolute;
       border-radius: 1000px;
 
-      @for $i from 0 through 400 {
+      img {
+        max-width: 30px;
+      }
+
+      @for $i from 1 through 8 {
+        $width: 30px;
+        $top: random(100);
+        opacity: .5;
+        &:nth-child(#{$i}) {
+          @if $i < 5 {
+            left: random(50) + vw;
+          }
+          @if $i > 4 {
+            left: random(50) + 50vw;
+          }
+          width: $width;
+          height: $width;
+          background: transparent;
+          top: -$top - 30;
+          animation: drop-#{$i} random(5) + 10s random(5) + s infinite;
+        }
+
+        @keyframes drop-#{$i} {
+          0% {
+            top: -$top - 30;
+          }
+          100% {
+            top: $top + 100%;
+          }
+        }
+      }
+      @for $i from 9 through 400 {
         $width: random(3) + px;
         $height: random(20) + 15 + px;
         $top: random(100);
@@ -110,7 +144,7 @@ body {
           top: -$top - 30;
           left: random(100) + vw;
           opacity: random(5)*.1 +.5;
-          animation: drop-#{$i} random(5) + 3s random(30) + s infinite;
+          animation: drop-#{$i} random(10) + 5s random(30) + s infinite;
         }
 
         @keyframes drop-#{$i} {
@@ -123,6 +157,12 @@ body {
         }
       }
     }
+
+  }
+
+  .floater, .floater2 {
+    width: 100%;
+    animation: drop 15s infinite;
   }
 }
 
@@ -200,7 +240,7 @@ body {
   }
 }
 
-.butterfly, .clouds, .astronaut {
+.butterfly, .clouds, .astronaut, .raining {
   display: none;
 }
 .day {
@@ -294,4 +334,13 @@ body {
     transform: translateY(-10px) scale(1);}
   75% {
     transform: translateY(10px) scale(.9);}
+  }
+
+  @keyframes drop {
+    0% {
+      top: -200;
+    }
+    100% {
+      top: 200 + 100%;
+    }
   }
