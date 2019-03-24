@@ -154,7 +154,7 @@ $(document).ready(function() {
     colorInfo[i]['description'] = 'Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value.';
   });
 
-  var sliders = $('.slider-progress');
+  var sliders = $('.slider__progress');
   var inputs = $('input[type="range"]');
 
   for (j = 0; j < inputs.length; j++){
@@ -175,9 +175,9 @@ $(document).ready(function() {
       var description = info[index]['description'];
 
       var $sectionDiv = $('#' + sectionName + '-section');
-      $sectionDiv.find('.grade').text(grade);
-      $sectionDiv.find('.name').text(name);
-      $sectionDiv.find('.description').text(description);
+      $sectionDiv.find('.section__grade').text(grade);
+      $sectionDiv.find('.section__name').text(name);
+      $sectionDiv.find('.section__description').text(description);
 
       updateSliderProgress(section, slider);
     })

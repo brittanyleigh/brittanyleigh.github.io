@@ -191,7 +191,7 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.fancy {
+.heading--fancy {
   font-family: $fancyfont;
 }
 
@@ -205,7 +205,7 @@ a {
   top: 0;
 }
 
-.section-container {
+.container {
   @include flex-center();
   position: relative;
   padding: 50px 0px;
@@ -216,7 +216,7 @@ a {
   }
 }
 
-.section-heading, .main-heading {
+.section__heading, .heading {
   position: relative;
   overflow: hidden;
   margin-bottom: -8px;
@@ -248,13 +248,13 @@ a {
     width: 110%;
   }
 
-  .info, h1 {
+  .section__title, h1 {
     position: relative;
     z-index: 1;
   }
 }
 
-.main-heading {
+.heading {
   h1 {
     margin: 0px;
     padding: 15px 15px 45px;
@@ -287,7 +287,7 @@ a {
     $light: lighten($color, 30%);
     &:nth-of-type(#{$i}) {
       @include range($color);
-      .section-heading {
+      .section__heading {
           border-top: solid 8px $color;
         &:after {
           background: $color;
@@ -296,7 +296,7 @@ a {
           background: $light;
         }
       }
-      .slider-background {
+      .slider__background {
         background: lighten($light, 10%);
       }
       a {
@@ -308,7 +308,7 @@ a {
     }
   }
 
-  .section-heading {
+  .section__heading {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 7px 15px 15px;
@@ -324,7 +324,7 @@ a {
       }
     }
   }
-  .section-info {
+  .section__body {
     padding: 30px 10%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -334,10 +334,6 @@ a {
     flex-grow: 1;
     @include flex();
     @include flex-direction-col();
-
-    .grade {
-      font-weight: 900;
-    }
 
     > *:first-child {
       margin-top: 0px;
@@ -358,18 +354,18 @@ a {
     background: transparent;
     z-index: 2;
   }
-  .slider-progress, .slider-background {
+  .slider__progress, .slider__background {
     height: 6px;
     border-radius: 100px;
     position: absolute;
     margin-top: 9px;
   }
-  .slider-progress {
+  .slider__progress {
     background: $gray;
     width: 0%;
     z-index: 1;
   }
-  .slider-background {
+  .slider__background {
     width: 100%;
     z-index: 0;
   }
