@@ -253,17 +253,6 @@ a {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 7px 15px 15px;
-
-    h2 {
-      margin: 0px;
-      color: $light-color;
-      &::first-letter {
-        font-family: $fancyfont;
-        font-size: 42px;
-        vertical-align: sub;
-        padding-right: 3px;
-      }
-    }
   }
   
   &__title {
@@ -276,6 +265,20 @@ a {
     &--extra-padding {
       margin: 0px;
       padding: 15px 15px 45px;
+    }
+    &--light-color {
+      color: $light-color;
+    }
+    &--no-margin {
+      margin: 0px;
+    }
+    &--fancy-first-letter {
+      &::first-letter {
+        font-family: $fancyfont;
+        font-size: 42px;
+        vertical-align: sub;
+        padding-right: 3px;        
+      }
     }
   }
 }

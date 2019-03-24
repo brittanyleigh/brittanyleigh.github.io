@@ -127,16 +127,6 @@ a {
   border-top-right-radius: 8px;
   padding: 7px 15px 15px;
 }
-.heading--rounded-top h2 {
-  margin: 0px;
-  color: #ffffff;
-}
-.heading--rounded-top h2::first-letter {
-  font-family: "Monoton", sans-serif;
-  font-size: 42px;
-  vertical-align: sub;
-  padding-right: 3px;
-}
 .heading__title {
   position: relative;
   z-index: 1;
@@ -147,6 +137,18 @@ a {
 .heading__title--extra-padding {
   margin: 0px;
   padding: 15px 15px 45px;
+}
+.heading__title--light-color {
+  color: #ffffff;
+}
+.heading__title--no-margin {
+  margin: 0px;
+}
+.heading__title--fancy-first-letter::first-letter {
+  font-family: "Monoton", sans-serif;
+  font-size: 42px;
+  vertical-align: sub;
+  padding-right: 3px;
 }
 
 .section {
