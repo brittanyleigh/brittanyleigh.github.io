@@ -258,16 +258,13 @@ a {
   &__title {
     position: relative;
     z-index: 1;
+    color: $light-color;
     
     &--fancy {
       font-family: $fancyfont;
     }
     &--extra-padding {
-      margin: 0px;
       padding: 15px 15px 45px;
-    }
-    &--light-color {
-      color: $light-color;
     }
     &--no-margin {
       margin: 0px;

@@ -130,16 +130,13 @@ a {
 .heading__title {
   position: relative;
   z-index: 1;
+  color: #ffffff;
 }
 .heading__title--fancy {
   font-family: "Monoton", sans-serif;
 }
 .heading__title--extra-padding {
-  margin: 0px;
   padding: 15px 15px 45px;
-}
-.heading__title--light-color {
-  color: #ffffff;
 }
 .heading__title--no-margin {
   margin: 0px;
