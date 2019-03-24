@@ -170,15 +170,15 @@ a {
 .section:nth-of-type(1) {
   /* Generated at http://danielstern.ca/range.css/#/ */
 }
-.section:nth-of-type(1) input[type=range] {
+.section:nth-of-type(1) .slider__range {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
 }
-.section:nth-of-type(1) input[type=range]:focus {
+.section:nth-of-type(1) .slider__range:focus {
   outline: none;
 }
-.section:nth-of-type(1) input[type=range]::-webkit-slider-runnable-track {
+.section:nth-of-type(1) .slider__range::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -188,7 +188,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(1) input[type=range]::-webkit-slider-thumb {
+.section:nth-of-type(1) .slider__range::-webkit-slider-thumb {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0px;
@@ -202,10 +202,10 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(1) input[type=range]:focus::-webkit-slider-runnable-track {
+.section:nth-of-type(1) .slider__range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
-.section:nth-of-type(1) input[type=range]::-moz-range-track {
+.section:nth-of-type(1) .slider__range::-moz-range-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -214,7 +214,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(1) input[type=range]::-moz-range-thumb {
+.section:nth-of-type(1) .slider__range::-moz-range-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -225,7 +225,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(1) input[type=range]::-ms-track {
+.section:nth-of-type(1) .slider__range::-ms-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -233,19 +233,19 @@ a {
   border-color: transparent;
   color: transparent;
 }
-.section:nth-of-type(1) input[type=range]::-ms-fill-lower {
+.section:nth-of-type(1) .slider__range::-ms-fill-lower {
   background: transparent;
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
 }
-.section:nth-of-type(1) input[type=range]::-ms-fill-upper {
+.section:nth-of-type(1) .slider__range::-ms-fill-upper {
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
   background: transparent;
 }
-.section:nth-of-type(1) input[type=range]::-ms-thumb {
+.section:nth-of-type(1) .slider__range::-ms-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -257,7 +257,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(1) input[type=range]:focus::-ms-fill-upper {
+.section:nth-of-type(1) .slider__range:focus::-ms-fill-upper {
   background: transparent;
 }
 .section:nth-of-type(1) .heading--rounded-top {
@@ -269,7 +269,7 @@ a {
 .section:nth-of-type(1) .heading--rounded-top:before {
   background: #6087d6;
 }
-.section:nth-of-type(1) .slider__background {
+.section:nth-of-type(1) .slider__background--color {
   background: #88a6e1;
 }
 .section:nth-of-type(1) a {
@@ -281,15 +281,15 @@ a {
 .section:nth-of-type(2) {
   /* Generated at http://danielstern.ca/range.css/#/ */
 }
-.section:nth-of-type(2) input[type=range] {
+.section:nth-of-type(2) .slider__range {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
 }
-.section:nth-of-type(2) input[type=range]:focus {
+.section:nth-of-type(2) .slider__range:focus {
   outline: none;
 }
-.section:nth-of-type(2) input[type=range]::-webkit-slider-runnable-track {
+.section:nth-of-type(2) .slider__range::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -299,7 +299,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(2) input[type=range]::-webkit-slider-thumb {
+.section:nth-of-type(2) .slider__range::-webkit-slider-thumb {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0px;
@@ -313,10 +313,10 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(2) input[type=range]:focus::-webkit-slider-runnable-track {
+.section:nth-of-type(2) .slider__range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
-.section:nth-of-type(2) input[type=range]::-moz-range-track {
+.section:nth-of-type(2) .slider__range::-moz-range-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -325,7 +325,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(2) input[type=range]::-moz-range-thumb {
+.section:nth-of-type(2) .slider__range::-moz-range-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -336,7 +336,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(2) input[type=range]::-ms-track {
+.section:nth-of-type(2) .slider__range::-ms-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -344,19 +344,19 @@ a {
   border-color: transparent;
   color: transparent;
 }
-.section:nth-of-type(2) input[type=range]::-ms-fill-lower {
+.section:nth-of-type(2) .slider__range::-ms-fill-lower {
   background: transparent;
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
 }
-.section:nth-of-type(2) input[type=range]::-ms-fill-upper {
+.section:nth-of-type(2) .slider__range::-ms-fill-upper {
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
   background: transparent;
 }
-.section:nth-of-type(2) input[type=range]::-ms-thumb {
+.section:nth-of-type(2) .slider__range::-ms-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -368,7 +368,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(2) input[type=range]:focus::-ms-fill-upper {
+.section:nth-of-type(2) .slider__range:focus::-ms-fill-upper {
   background: transparent;
 }
 .section:nth-of-type(2) .heading--rounded-top {
@@ -380,7 +380,7 @@ a {
 .section:nth-of-type(2) .heading--rounded-top:before {
   background: #87d5df;
 }
-.section:nth-of-type(2) .slider__background {
+.section:nth-of-type(2) .slider__background--color {
   background: #afe3ea;
 }
 .section:nth-of-type(2) a {
@@ -392,15 +392,15 @@ a {
 .section:nth-of-type(3) {
   /* Generated at http://danielstern.ca/range.css/#/ */
 }
-.section:nth-of-type(3) input[type=range] {
+.section:nth-of-type(3) .slider__range {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
 }
-.section:nth-of-type(3) input[type=range]:focus {
+.section:nth-of-type(3) .slider__range:focus {
   outline: none;
 }
-.section:nth-of-type(3) input[type=range]::-webkit-slider-runnable-track {
+.section:nth-of-type(3) .slider__range::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -410,7 +410,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(3) input[type=range]::-webkit-slider-thumb {
+.section:nth-of-type(3) .slider__range::-webkit-slider-thumb {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0px;
@@ -424,10 +424,10 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(3) input[type=range]:focus::-webkit-slider-runnable-track {
+.section:nth-of-type(3) .slider__range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
-.section:nth-of-type(3) input[type=range]::-moz-range-track {
+.section:nth-of-type(3) .slider__range::-moz-range-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -436,7 +436,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(3) input[type=range]::-moz-range-thumb {
+.section:nth-of-type(3) .slider__range::-moz-range-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -447,7 +447,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(3) input[type=range]::-ms-track {
+.section:nth-of-type(3) .slider__range::-ms-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -455,19 +455,19 @@ a {
   border-color: transparent;
   color: transparent;
 }
-.section:nth-of-type(3) input[type=range]::-ms-fill-lower {
+.section:nth-of-type(3) .slider__range::-ms-fill-lower {
   background: transparent;
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
 }
-.section:nth-of-type(3) input[type=range]::-ms-fill-upper {
+.section:nth-of-type(3) .slider__range::-ms-fill-upper {
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
   background: transparent;
 }
-.section:nth-of-type(3) input[type=range]::-ms-thumb {
+.section:nth-of-type(3) .slider__range::-ms-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -479,7 +479,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(3) input[type=range]:focus::-ms-fill-upper {
+.section:nth-of-type(3) .slider__range:focus::-ms-fill-upper {
   background: transparent;
 }
 .section:nth-of-type(3) .heading--rounded-top {
@@ -491,7 +491,7 @@ a {
 .section:nth-of-type(3) .heading--rounded-top:before {
   background: #b2d8c7;
 }
-.section:nth-of-type(3) .slider__background {
+.section:nth-of-type(3) .slider__background--color {
   background: #d4e9e0;
 }
 .section:nth-of-type(3) a {
@@ -503,15 +503,15 @@ a {
 .section:nth-of-type(4) {
   /* Generated at http://danielstern.ca/range.css/#/ */
 }
-.section:nth-of-type(4) input[type=range] {
+.section:nth-of-type(4) .slider__range {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
 }
-.section:nth-of-type(4) input[type=range]:focus {
+.section:nth-of-type(4) .slider__range:focus {
   outline: none;
 }
-.section:nth-of-type(4) input[type=range]::-webkit-slider-runnable-track {
+.section:nth-of-type(4) .slider__range::-webkit-slider-runnable-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -521,7 +521,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(4) input[type=range]::-webkit-slider-thumb {
+.section:nth-of-type(4) .slider__range::-webkit-slider-thumb {
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0px;
@@ -535,10 +535,10 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(4) input[type=range]:focus::-webkit-slider-runnable-track {
+.section:nth-of-type(4) .slider__range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
-.section:nth-of-type(4) input[type=range]::-moz-range-track {
+.section:nth-of-type(4) .slider__range::-moz-range-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -547,7 +547,7 @@ a {
   border: 0px;
   background: transparent;
 }
-.section:nth-of-type(4) input[type=range]::-moz-range-thumb {
+.section:nth-of-type(4) .slider__range::-moz-range-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -558,7 +558,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(4) input[type=range]::-ms-track {
+.section:nth-of-type(4) .slider__range::-ms-track {
   width: 100%;
   height: 6px;
   cursor: pointer;
@@ -566,19 +566,19 @@ a {
   border-color: transparent;
   color: transparent;
 }
-.section:nth-of-type(4) input[type=range]::-ms-fill-lower {
+.section:nth-of-type(4) .slider__range::-ms-fill-lower {
   background: transparent;
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
 }
-.section:nth-of-type(4) input[type=range]::-ms-fill-upper {
+.section:nth-of-type(4) .slider__range::-ms-fill-upper {
   border: 0px;
   border-radius: 200px;
   box-shadow: none;
   background: transparent;
 }
-.section:nth-of-type(4) input[type=range]::-ms-thumb {
+.section:nth-of-type(4) .slider__range::-ms-thumb {
   box-shadow: none;
   border: 0px;
   height: 20px;
@@ -590,7 +590,7 @@ a {
   z-index: 10;
   position: relative;
 }
-.section:nth-of-type(4) input[type=range]:focus::-ms-fill-upper {
+.section:nth-of-type(4) .slider__range:focus::-ms-fill-upper {
   background: transparent;
 }
 .section:nth-of-type(4) .heading--rounded-top {
@@ -602,7 +602,7 @@ a {
 .section:nth-of-type(4) .heading--rounded-top:before {
   background: #d9e1bb;
 }
-.section:nth-of-type(4) .slider__background {
+.section:nth-of-type(4) .slider__background--color {
   background: #edf1de;
 }
 .section:nth-of-type(4) a {
@@ -645,18 +645,18 @@ a {
   background: transparent;
   z-index: 2;
 }
-.slider__progress, .slider__background {
+.slider__background {
   height: 6px;
   border-radius: 100px;
   position: absolute;
   margin-top: 9px;
 }
-.slider__progress {
+.slider__background--progress {
   background: #dcdcdc;
   width: 0%;
   z-index: 1;
 }
-.slider__background {
+.slider__background--color {
   width: 100%;
   z-index: 0;
 }

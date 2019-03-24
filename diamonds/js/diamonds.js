@@ -154,7 +154,7 @@ $(document).ready(function() {
     colorInfo[i]['description'] = 'Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value.';
   });
 
-  var sliders = $('.slider__progress');
+  var sliders = $('.slider__background--progress');
   var inputs = $('input[type="range"]');
 
   for (j = 0; j < inputs.length; j++){
