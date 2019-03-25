@@ -14,7 +14,6 @@ h1 {
   font-weight: 500;
   line-height: normal;
   font-size: 42px;
-  width: 100%;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -136,7 +135,7 @@ a {
   font-family: "Monoton", sans-serif;
 }
 .heading__title--extra-padding {
-  padding: 15px 15px 45px;
+  padding: 15px;
 }
 .heading__title--no-margin {
   margin: 0px;
@@ -658,6 +657,52 @@ a {
 .slider__background--color {
   width: 100%;
   z-index: 0;
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.nav--extra-bottom-padding {
+  padding-bottom: 45px;
+}
+.nav__ul {
+  padding-left: 0px;
+}
+.nav__li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px;
+}
+.nav__li:nth-of-type(1) .nav__a:hover {
+  color: #203f7d;
+}
+.nav__li:nth-of-type(1) .nav__a:focus, .nav__li:nth-of-type(1) .nav__a:active {
+  color: #6087d6;
+}
+.nav__li:nth-of-type(2) .nav__a:hover {
+  color: #2b95a2;
+}
+.nav__li:nth-of-type(2) .nav__a:focus, .nav__li:nth-of-type(2) .nav__a:active {
+  color: #87d5df;
+}
+.nav__li:nth-of-type(3) .nav__a:hover {
+  color: #51a07d;
+}
+.nav__li:nth-of-type(3) .nav__a:focus, .nav__li:nth-of-type(3) .nav__a:active {
+  color: #b2d8c7;
+}
+.nav__li:nth-of-type(4) .nav__a:hover {
+  color: #9db350;
+}
+.nav__li:nth-of-type(4) .nav__a:focus, .nav__li:nth-of-type(4) .nav__a:active {
+  color: #d9e1bb;
+}
+.nav__a {
+  color: #ffffff;
+  border-bottom-color: #3c3c3c;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

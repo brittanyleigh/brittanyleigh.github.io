@@ -19,64 +19,106 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <div class="heading">
-      <h1 class="heading__title heading__title--extra-padding heading__title--no-margin">The <span class="heading__title--fancy">4 C</span>'s of <span class="heading__title--fancy">Diamonds</span></h1>
-    </div>
+    <header role="banner">
+      <div class="heading">
+        <h1 class="heading__title heading__title--extra-padding heading__title--no-margin">The <span class="heading__title--fancy">4 C</span>'s of <span class="heading__title--fancy">Diamonds</span></h1>
+        <nav role="navigation" class="nav nav--extra-bottom-padding">
+          <ul class="nav__ul">
+            <li class="nav__li">
+              <a href="#clarity-section" class="nav__a">Clarity</a>
+            </li>
+            <li class="nav__li">
+              <a href="#color-section" class="nav__a">Color</a>
+            </li>
+            <li class="nav__li">
+              <a href="#carat-section" class="nav__a">Carat</a>
+            </li>
+            <li class="nav__li">
+              <a href="#cut-section" class="nav__a">Cut</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="overlay"></div>
-    <div class="container">
+    <main role="main">
+      <div class="container">
 
-      <div class="section" id="clarity-section">
-        <div class="heading heading--rounded-top">
-          <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Clarity</h2>
-        </div>
-        <div class="section__body">
-          <h3><b class="section__grade">FL</b>: <span class="section__name">Flawless</span></h3>
-          <div class="slider">
-            <div class="slider__background slider__background--progress"></div>
-            <div class="slider__background slider__background--color"></div>
-            <input class="slider__range" type="range" id="clarity" name="clarity" min="1" value="1">
-          </div>
-          <p class="section__description">No inclusions and no blemishes visible to a skilled clarityr using 10x magnification.</p>
-          <h6><a href="https://www.gia.edu/gia-about-4cs-color" target="_blank">Learn More</a></h6>
-        </div>
-      </div>
+        <article role="article" class="section" id="clarity-section">
+          <header class="heading heading--rounded-top">
+            <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Clarity</h2>
+          </header>
+          <section class="section__body">
+            <h3><b class="section__grade">FL</b>: <span class="section__name">Flawless</span></h3>
+            <div class="slider">
+              <div class="slider__background slider__background--progress"></div>
+              <div class="slider__background slider__background--color"></div>
+              <input 
+                class="slider__range" 
+                type="range" 
+                id="clarity" 
+                name="clarity" 
+                min="1" 
+                value="1" 
+                aria-label="Clarity Scale" 
+                aria-valuemin="1" 
+                aria-valuenow="1"
+                aria-valuetext="FL Flawless No inclusions and no blemishes visible to a skilled clarityr using 10x magnification."
+              >
+            </div>
+            <p class="section__description">No inclusions and no blemishes visible to a skilled clarityr using 10x magnification.</p>
+            <h6><a href="https://www.gia.edu/gia-about-4cs-color" target="_blank" aria-label="Learn more about diamond clarity">Learn More</a></h6>
+          </section>
+        </article>
 
-      <div class="section" id="color-section">
-        <div class="heading heading--rounded-top">
-          <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Color</h2>
-        </div>
-        <div class="section__body">
-          <h3><b class="section__grade">D</b>: <span class="section__name">Colorless</span></h3>
-          <div class="slider">
-            <div class="slider__background slider__background--progress"></div>
-            <div class="slider__background slider__background--color"></div>
-            <input class="slider__range" type="range" id="color" name="color" min="1" value="1">
-          </div>
-          <p class="section__description">Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value.</p>
-          <h6><a href="https://www.gia.edu/gia-about-4cs-color" target="_blank">Learn More</a></h6>
-        </div>
-      </div>
-      <hr />
-      <div class="section">
-        <div class="heading heading--rounded-top">
-          <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Carat</h2>
-        </div>
-        <div class="section__body">
-          <p class="section__description">Diamonds and other gemstones are weighed in metric carats: one carat is equal to 0.2 grams, about the same weight as a paperclip.</p>
-          <h6><a href="https://www.gia.edu/gia-about/4cs-carat" target="_blank">Learn More</a></h6>
-        </div>
-      </div>
+        <article role="article" class="section" id="color-section">
+          <header class="heading heading--rounded-top">
+            <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Color</h2>
+          </header>
+          <section class="section__body">
+            <h3><b class="section__grade">D</b>: <span class="section__name">Colorless</span></h3>
+            <div class="slider">
+              <div class="slider__background slider__background--progress"></div>
+              <div class="slider__background slider__background--color"></div>
+              <input 
+                class="slider__range" 
+                type="range" 
+                id="color" 
+                name="color" 
+                min="1" 
+                value="1" 
+                aria-label="Color Scale" 
+                aria-valuemin="1" 
+                aria-valuenow="1"
+                aria-valuetext="D Colorless"
+              >
+            </div>
+            <p class="section__description">Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value.</p>
+            <h6><a href="https://www.gia.edu/gia-about-4cs-color" target="_blank" aria-label="Learn more about diamond colors">Learn More</a></h6>
+          </section>
+        </article>
+        <hr />
+        <article role="article" class="section" id="carat-section">
+          <header class="heading heading--rounded-top">
+            <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Carat</h2>
+          </header>
+          <section class="section__body">
+            <p class="section__description">Diamonds and other gemstones are weighed in metric carats: one carat is equal to 0.2 grams, about the same weight as a paperclip.</p>
+            <h6><a href="https://www.gia.edu/gia-about/4cs-carat" target="_blank" aria-label="Learn more about diamond carats">Learn More</a></h6>
+          </section>
+        </article>
 
-      <div class="section">
-        <div class="heading heading--rounded-top">
-          <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Cut</h2>
-        </div>
-        <div class="section__body">
-          <p class="section__description">Diamond cuts are graded based on seven different components. Brightness, fire, scintillation, weight ratio, durability, polish, and symmetry. </p>
-          <h6><a href="https://www.gia.edu/gia-about/4cs-cut" target="_blank">Learn More</a></h6>
-        </div>
-      </div>
+        <article role="article" class="section" id="cut-section">
+          <header class="heading heading--rounded-top">
+            <h2 class="heading__title heading__title--no-margin heading__title--fancy-first-letter">Cut</h2>
+          </header>
+          <section class="section__body">
+            <p class="section__description">Diamond cuts are graded based on seven different components. Brightness, fire, scintillation, weight ratio, durability, polish, and symmetry. </p>
+            <h6><a href="https://www.gia.edu/gia-about/4cs-cut" target="_blank" aria-label="Learn more about diamond cuts">Learn More</a></h6>
+          </section>
+        </article>
 
-    </div>
+      </div>
+    </main>
   </body>
 </html>

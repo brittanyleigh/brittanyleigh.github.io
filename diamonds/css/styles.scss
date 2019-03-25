@@ -156,7 +156,6 @@ h1 {
   font-weight: 500;
   line-height: normal;
   font-size: 42px;
-  width: 100%;
   text-align: center;
   color: $light-color;
   text-transform: uppercase;
@@ -264,7 +263,7 @@ a {
       font-family: $fancyfont;
     }
     &--extra-padding {
-      padding: 15px 15px 45px;
+      padding: 15px;
     }
     &--no-margin {
       margin: 0px;
@@ -367,5 +366,46 @@ a {
       width: 100%;
       z-index: 0;
     }
+  }
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  
+  &--extra-bottom-padding {
+    padding-bottom: 45px;
+  }
+  
+  &__ul {
+    padding-left: 0px;
+  }
+  
+  &__li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+    
+    @each $color in $c-colors{
+      $i: index($c-colors, $color);
+      $light: lighten($color, 30%);
+      &:nth-of-type(#{$i}) {
+        .nav__a {
+          &:hover {
+            color: $color;
+          }
+          &:focus, &:active {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+  
+  &__a {
+    color: $light-color;
+    border-bottom-color: #3c3c3c;
+    padding-bottom: 5px;
   }
 }
