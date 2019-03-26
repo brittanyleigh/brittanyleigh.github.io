@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <title>Breathe Meditation Page</title>
   <link rel="stylesheet" href="css/breathe.css">
-
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/breathe.js"></script>
@@ -20,26 +20,27 @@
 
 </head>
 
-<body>
-
-  <div class="container night">
-    <div class="toggle">
-      <div class="day-toggle" id="day">
-        <i class="fas fa-cloud-sun"></i>
-        <p>Clouds</p>
-      </div>
-      <div class="night-toggle active" id="night">
-        <i class="fas fa-moon"></i>
-        <p>Night</p>
-      </div>
-      <div class="rain-toggle" id="rain">
-        <i class="fas fa-cloud-showers-heavy"></i>
-        <p>Rain</p>
-      </div>
-    </div>
-    <div class="quote">
-      <h2>"Quiet the mind, and the soul will speak."</h2>
-      </div>
+<body class="container night">
+  <header role="banner" aria-label="Breathe Meditation Page">
+    <nav class="toggle">
+      <ul>
+        <li class="day-toggle" id="day" aria-label="Choose cloudy day scene">
+          <i class="fas fa-cloud-sun" aria-hidden="true"></i>
+          <p>Clouds</p>
+        </li>
+        <li class="night-toggle active" id="night" aria-label="Choose starry night scene">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+          <p>Night</p>
+        </li>
+        <li class="rain-toggle" id="rain" aria-label="Choose rainy day scene">
+          <i class="fas fa-cloud-showers-heavy" aria-hidden="true"></i>
+          <p>Rain</p>
+        </li>        
+      </ul>
+    </nav>
+  </header>
+  <main role="main">
+    <h2 class="quote">"Quiet the mind, and the soul will speak."</h2>
     <div class="stars">
       <span></span>
       <span></span>
@@ -195,32 +196,32 @@
 
     </div>
     <div class="raindrops">
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
-      <span><img class="raining" src="img/dog.png" alt="dog" /></span>
-      <span><img class="raining" src="img/cat.png" alt="cat" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
+      <span><img class="raining" src="img/dog.png" alt="small dog graphic" /></span>
+      <span><img class="raining" src="img/cat.png" alt="small cat graphic" /></span>
     </div>
     <div class="floater">
-      <img class="astronaut" src="img/astronaut.png" alt="astronaut">
-      <img class="butterfly" src="img/butterfly.png" alt="butterfly">
+      <img class="astronaut" src="img/astronaut.png" alt="cute astronaut graphic">
+      <img class="butterfly" src="img/butterfly.png" alt="blue butterfly graphic">
     </div>
     <div class="floater floater2">
-      <img class="butterfly" src="img/butterfly2.png" alt="butterfly">
+      <img class="butterfly" src="img/butterfly2.png" alt="orange butterfly graphic">
     </div>
     <div class="breathe" id="breathe">
       <h3>Breathe</h3>
     </div>
-  </div>
+  </main>
 </body>

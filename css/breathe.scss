@@ -243,12 +243,16 @@ body {
   z-index: 10;
   padding-top: 30px;
 
-  div {
+  ul {
+    padding: 0px;
+  }
+  li {
     display: inline-block;
     font-size: 2em;
     margin: 0px 10px;
     opacity: .7;
     transition: all 1s;
+    list-style-type: none;
     p {
       font-size: 10px;
     }
@@ -257,6 +261,14 @@ body {
       cursor: pointer;
     }
   }
+}
+
+main {
+  @include flex-center();
+}
+
+header {
+  z-index: 1;
 }
 
 @keyframes bounce {
