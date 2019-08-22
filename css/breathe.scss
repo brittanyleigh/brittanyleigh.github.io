@@ -102,49 +102,28 @@ body {
       background: $raindrops;
       position: absolute;
       border-radius: 1000px;
+      opacity: .5;
 
       img {
         max-width: 30px;
       }
 
-      @for $i from 1 through 8 {
+      @for $i from 1 through 16 {
         $width: 30px;
         $top: random(100);
-        opacity: .5;
+
         &:nth-child(#{$i}) {
-          @if $i < 5 {
+          @if $i < 9 {
             left: random(50) + vw;
           }
-          @if $i > 4 {
+          @if $i > 8 {
             left: random(50) + 50vw;
           }
           width: $width;
           height: $width;
           background: transparent;
-          top: -$top - 30;
-          animation: drop-#{$i} random(5) + 10s random(5) + s infinite;
-        }
-
-        @keyframes drop-#{$i} {
-          0% {
-            top: -$top - 30;
-          }
-          100% {
-            top: $top + 100%;
-          }
-        }
-      }
-      @for $i from 9 through 400 {
-        $width: random(3) + px;
-        $height: random(20) + 15 + px;
-        $top: random(100);
-        &:nth-child(#{$i}) {
-          width: $width;
-          height: $height;
-          top: -$top - 30;
-          left: random(100) + vw;
-          opacity: random(5)*.1 +.5;
-          animation: drop-#{$i} random(10) + 5s random(30) + s infinite;
+          top: -$top - 30px;
+          animation: drop-#{$i} random(3) + 3s random(5) + s infinite;
         }
 
         @keyframes drop-#{$i} {
@@ -264,12 +243,16 @@ body {
   z-index: 10;
   padding-top: 30px;
 
-  div {
+  ul {
+    padding: 0px;
+  }
+  li {
     display: inline-block;
     font-size: 2em;
     margin: 0px 10px;
     opacity: .7;
     transition: all 1s;
+    list-style-type: none;
     p {
       font-size: 10px;
     }
@@ -278,6 +261,14 @@ body {
       cursor: pointer;
     }
   }
+}
+
+main {
+  @include flex-center();
+}
+
+header {
+  z-index: 1;
 }
 
 @keyframes bounce {

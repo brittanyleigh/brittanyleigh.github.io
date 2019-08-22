@@ -154,8 +154,8 @@ $(document).ready(function() {
     colorInfo[i]['description'] = 'Diamonds are valued by how closely they approach colorlessness – the less color, the higher their value.';
   });
 
-  var sliders = $('.slider-progress');
-  var inputs = $('input[type="range"]');
+  var sliders = $('.slider__background--progress');
+  var inputs = $('.slider__range');
 
   for (j = 0; j < inputs.length; j++){
     var info = eval($(inputs[j]).attr('id') + 'Info');
@@ -165,6 +165,7 @@ $(document).ready(function() {
 
   function setupSlider(input, info, slider, sectionName){
     $(input).attr('max', info.length);
+    $(input).attr('aria-valuemax', info.length);
     updateSliderProgress($(input).val(), slider);
 
     $(input).on('change', function(){
@@ -173,11 +174,17 @@ $(document).ready(function() {
       var grade = info[index]['grade'];
       var name = info[index]['name'];
       var description = info[index]['description'];
+      var ariaTextValue = grade + ' ' + name;
+      
+      if ($(input).attr('id') == 'clarity') {
+        ariaTextValue += ' ' + description;
+      }
 
       var $sectionDiv = $('#' + sectionName + '-section');
-      $sectionDiv.find('.grade').text(grade);
-      $sectionDiv.find('.name').text(name);
-      $sectionDiv.find('.description').text(description);
+      $sectionDiv.find('.section__grade').text(grade);
+      $sectionDiv.find('.section__name').text(name);
+      $sectionDiv.find('.section__description').text(description);
+      $(this).attr('aria-valuetext', ariaTextValue);
 
       updateSliderProgress(section, slider);
     })

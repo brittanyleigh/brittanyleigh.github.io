@@ -51,15 +51,15 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
 
 @mixin range($color){
   /* Generated at http://danielstern.ca/range.css/#/ */
-  input[type=range] {
+  .slider__range {
     -webkit-appearance: none;
     width: 100%;
     margin: 7px 0;
   }
-  input[type=range]:focus {
+  .slider__range:focus {
     outline: none;
   }
-  input[type=range]::-webkit-slider-runnable-track {
+  .slider__range::-webkit-slider-runnable-track {
     width: 100%;
     height: 6px;
     cursor: pointer;
@@ -69,7 +69,7 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     border: 0px;
     background: transparent;
   }
-  input[type=range]::-webkit-slider-thumb {
+  .slider__range::-webkit-slider-thumb {
     -webkit-box-shadow: none;
             box-shadow: none;
     border: 0px;
@@ -83,10 +83,10 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     z-index: 10;
     position: relative;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  .slider__range:focus::-webkit-slider-runnable-track {
     background: transparent;
   }
-  input[type=range]::-moz-range-track {
+  .slider__range::-moz-range-track {
     width: 100%;
     height: 6px;
     cursor: pointer;
@@ -95,7 +95,7 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     border: 0px;
     background: transparent;
   }
-  input[type=range]::-moz-range-thumb {
+  .slider__range::-moz-range-thumb {
     box-shadow: none;
     border: 0px;
     height: 20px;
@@ -106,7 +106,7 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     z-index: 10;
     position: relative;
   }
-  input[type=range]::-ms-track {
+  .slider__range::-ms-track {
     width: 100%;
     height: 6px;
     cursor: pointer;
@@ -114,19 +114,19 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     border-color: transparent;
     color: transparent;
   }
-  input[type=range]::-ms-fill-lower {
+  .slider__range::-ms-fill-lower {
     background: transparent;
     border: 0px;
     border-radius: 200px;
     box-shadow: none;
   }
-  input[type=range]::-ms-fill-upper {
+  .slider__range::-ms-fill-upper {
     border: 0px;
     border-radius: 200px;
     box-shadow: none;
     background: transparent;
   }
-  input[type=range]::-ms-thumb {
+  .slider__range::-ms-thumb {
     box-shadow: none;
     border: 0px;
     height: 20px;
@@ -138,7 +138,7 @@ $c-colors: ( #203f7d, #2b95a2, #51a07d, #9db350);
     z-index: 10;
     position: relative;
   }
-  input[type=range]:focus::-ms-fill-upper {
+  .slider__range:focus::-ms-fill-upper {
     background: transparent;
   }
 }
@@ -156,9 +156,8 @@ h1 {
   font-weight: 500;
   line-height: normal;
   font-size: 42px;
-  width: 100%;
   text-align: center;
-  color: white;
+  color: $light-color;
   text-transform: uppercase;
 }
 h2 {
@@ -191,9 +190,6 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.fancy {
-  font-family: $fancyfont;
-}
 
 .overlay {
   height: 100%;
@@ -205,7 +201,7 @@ a {
   top: 0;
 }
 
-.section-container {
+.container {
   @include flex-center();
   position: relative;
   padding: 50px 0px;
@@ -216,7 +212,7 @@ a {
   }
 }
 
-.section-heading, .main-heading {
+.heading {
   position: relative;
   overflow: hidden;
   margin-bottom: -8px;
@@ -237,6 +233,7 @@ a {
             transform-origin: bottom right;
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
+    background: transparentize($primary-color, .75);
   }
 
   &:after {
@@ -246,28 +243,43 @@ a {
             transform-origin: bottom left;
     height: 100%;
     width: 110%;
-  }
-
-  .info, h1 {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.main-heading {
-  h1 {
-    margin: 0px;
-    padding: 15px 15px 45px;
-  }
-  &:before {
-    background: transparentize($primary-color, .75);
-  }
-  &:after {
     background: $primary-color;
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg);
   }
+  
+  &--rounded-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 7px 15px 15px;
+  }
+  
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: $light-color;
+    
+    &--fancy {
+      font-family: $fancyfont;
+    }
+    &--extra-padding {
+      padding: 15px;
+    }
+    &--no-margin {
+      margin: 0px;
+    }
+    &--fancy-first-letter {
+      &::first-letter {
+        font-family: $fancyfont;
+        font-size: 42px;
+        vertical-align: sub;
+        padding-right: 3px;        
+      }
+    }
+  }
 }
+
+
 
 .section {
   max-width: 415px;
@@ -287,7 +299,7 @@ a {
     $light: lighten($color, 30%);
     &:nth-of-type(#{$i}) {
       @include range($color);
-      .section-heading {
+      .heading--rounded-top {
           border-top: solid 8px $color;
         &:after {
           background: $color;
@@ -296,7 +308,7 @@ a {
           background: $light;
         }
       }
-      .slider-background {
+      .slider__background--color {
         background: lighten($light, 10%);
       }
       a {
@@ -307,24 +319,8 @@ a {
       }
     }
   }
-
-  .section-heading {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 7px 15px 15px;
-
-    h2 {
-      margin: 0px;
-      color: $light-color;
-      &::first-letter {
-        font-family: $fancyfont;
-        font-size: 42px;
-        vertical-align: sub;
-        padding-right: 3px;
-      }
-    }
-  }
-  .section-info {
+  
+  &__body {
     padding: 30px 10%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -335,10 +331,6 @@ a {
     @include flex();
     @include flex-direction-col();
 
-    .grade {
-      font-weight: 900;
-    }
-
     > *:first-child {
       margin-top: 0px;
     }
@@ -348,29 +340,72 @@ a {
       padding: 25px 0px 5px;
     }
   }
+}
 
-  .slider {
-    position: relative;
-  }
-  input[type="range"] {
+
+.slider {
+  position: relative;
+  
+  &__range {
     margin-bottom: 30px;
     position: relative;
     background: transparent;
     z-index: 2;
   }
-  .slider-progress, .slider-background {
+  &__background {
     height: 6px;
     border-radius: 100px;
     position: absolute;
     margin-top: 9px;
+    &--progress {
+      background: $gray;
+      width: 0%;
+      z-index: 1;
+    }
+    &--color {
+      width: 100%;
+      z-index: 0;
+    }
   }
-  .slider-progress {
-    background: $gray;
-    width: 0%;
-    z-index: 1;
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  
+  &--extra-bottom-padding {
+    padding-bottom: 45px;
   }
-  .slider-background {
-    width: 100%;
-    z-index: 0;
+  
+  &__ul {
+    padding-left: 0px;
+  }
+  
+  &__li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+    
+    @each $color in $c-colors{
+      $i: index($c-colors, $color);
+      $light: lighten($color, 30%);
+      &:nth-of-type(#{$i}) {
+        .nav__a {
+          &:hover {
+            color: $color;
+          }
+          &:focus, &:active {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+  
+  &__a {
+    color: $light-color;
+    border-bottom-color: #3c3c3c;
+    padding-bottom: 5px;
   }
 }
